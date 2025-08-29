@@ -1,0 +1,19 @@
+{
+  "name": "WIN_AND_BTTS",
+  "description": "Team A, Team B… to win AND BTTS (each leg: team wins + both teams to score in that match)",
+  "positive": [
+    "win\\s*(?:&|and)\\s*btts",
+    "both\\s*to\\s*win\\s*(?:&|and)\\s*(?:all\\s*\\d+\\s*teams\\s*to\\s*score|btts\\s*in\\s*each)",
+    "all\\s*to\\s*win\\s*(?:&|and)\\s*btts",
+    "to\\s*win\\s*(?:&|and)\\s*both\\s*teams\\s*to\\s*score"
+  ],
+  "negative": [
+    "anytime\\s*scorer",
+    "to\\s*score\\s*anytime",
+    "first\\s*goalscorer",
+    "over\\s*\\d+(?:\\.5)?\\s*goals?",
+    "1st\\s*half",
+    "cards?",
+    "corners?"
+  ]
+}

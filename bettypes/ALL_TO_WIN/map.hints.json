@@ -1,0 +1,5 @@
+{
+"marketType": "MATCH_ODDS",
+"selectionTemplate": "{TEAM} to Win",
+"scope": "FT"
+}

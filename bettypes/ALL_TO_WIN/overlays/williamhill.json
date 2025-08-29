@@ -1,0 +1,8 @@
+{
+  "//": "Exclude WH composite boosts like 'Both To Win & All 4 Teams To Score'",
+  "negative": [
+    "\\bboth\\s+to\\s+win\\s*(?:&|and)\\s*all\\s*\\d+\\s*teams\\s*to\\s*score\\b",
+    "\\b(?:&|and)\\s*all\\s*\\d+\\s*teams\\s*to\\s*score\\b",
+    "\\bBTTS\\s+in\\s+both\\b"
+  ]
+}

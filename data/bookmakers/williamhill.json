@@ -1,0 +1,25 @@
+{
+"name": "williamhill",
+"baseUrls": [
+"https://sports.williamhill.com/betting/en-gb/football/OB_EV36809470/fri-29th-august-football-boosted-accas"
+],
+"consentSelectors": [
+"button#onetrust-accept-btn-handler",
+"button:has-text(\"Accept all cookies\")"
+],
+"navigate": {
+"steps": [
+{ "action": "goto", "urlRef": 0 },
+{ "action": "consent" },
+{ "action": "waitForText", "any": ["Enhanced", "Boost", "Price Boost"], "timeoutMs": 15000 },
+{ "action": "scrollToBottom", "untilNoChangeMs": 1000 },
+{ "action": "clickWhileAppears", "selector": "button:has-text(\"Show more\")", "max": 10 }
+]
+},
+"parser": {
+"offerItemSelector": "section *, div *, li *",
+"titleHeuristics": ["Boost", "Enhanced", "Win", "BTTS"],
+"oddsHeuristics": ["/", "EVS", "Evs", "\u2044"]
+},
+"textDrops": ["(90 mins)", "Was ", "(was", "Price Boost"]
+}

@@ -1,0 +1,5 @@
+{
+"BTTS": ["btts", "both teams to score", "both to score"],
+"MATCH_ODDS": ["to win", "win", "wins", "all to win"],
+"MO_BTTS": ["win & btts", "to win and both teams score", "& btts", "to win and both teams to score"]
+}

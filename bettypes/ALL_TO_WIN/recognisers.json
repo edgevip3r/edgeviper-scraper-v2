@@ -1,0 +1,30 @@
+{
+  "name": "ALL_TO_WIN",
+  "description": "Team A, Team B, … all/both to win (MO multiples only)",
+  "positive": [
+    "all to win",
+    "both to win",
+    "double",
+    "treble",
+    "fourfold",
+    "to win$",
+    "wins$"
+  ],
+  "negative": [
+    "\\bBTTS\\b",
+    "\\bboth\\s+teams\\s+to\\s+score\\b",
+    "\\bboth\\s+to\\s+score\\b",
+    "\\ball\\s+\\d+\\s+teams?\\s+to\\s+score\\b",
+    "\\bto\\s+score\\b",
+    "\\banytime\\s+scorer\\b",
+    "over\\s*\\d+(?:\\.5)?",
+    "first\\s*half\\s*over\\s*0\\.5",
+    "1st\\s*half\\s*over\\s*0\\.5",
+    "goals?\\s+in\\s+each"
+  ],
+  "examples": [
+    "Arsenal, PSG & Inter all to win",
+    "Liverpool & Marseille both to win",
+    "Real Madrid, Red Star Belgrade & Club Brugge All To Win"
+  ]
+}

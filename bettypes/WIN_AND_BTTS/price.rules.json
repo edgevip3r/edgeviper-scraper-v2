@@ -1,0 +1,8 @@
+{
+  "combine": "productOfLegMids",
+  "allowSynthesis": false,
+  "overrides": {
+    "maxSpreadPct": 40,
+    "minLiquidity": 5
+  }
+}

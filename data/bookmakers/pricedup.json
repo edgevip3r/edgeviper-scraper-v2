@@ -1,0 +1,24 @@
+{
+"name": "pricedup",
+"baseUrls": [
+"https://pricedup.bet/sport-special/pricedup-pushes"
+],
+"consentSelectors": [
+"button:has-text(\"Accept\")",
+"button:has-text(\"Allow all\")"
+],
+"navigate": {
+"steps": [
+{ "action": "goto", "urlRef": 0 },
+{ "action": "consent" },
+{ "action": "waitForText", "any": ["Boost", "Enhanced"], "timeoutMs": 15000 },
+{ "action": "scrollToBottom", "untilNoChangeMs": 800 }
+]
+},
+"parser": {
+"offerItemSelector": "section *, div *, li *",
+"titleHeuristics": ["Boost", "Enhanced", "Win", "BTTS"],
+"oddsHeuristics": ["/", "EVS", "Evs", "\u2044"]
+},
+"textDrops": ["(90 mins)", "Was "]
+}
