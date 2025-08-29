@@ -1,0 +1,39 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Local artifacts
+snapshots/
+!snapshots/.keep
+logs/
+!logs/.keep
+
+# Caches / temp
+.cache/
+tmp/
+coverage/
+
+# Environment & secrets
+.env
+.env.*
+*.key
+*.crt
+*.pem
+*.p12
+*.pfx
+
+# If you ever store creds as JSON locally, keep them out:
+credentials/
+secrets/
+**/*service-account*.json
+**/*credentials*.json
+
+# IMPORTANT: allow project JSON (configs, recognisers, rules, bookmakers, etc.)
+# (We are **not** ignoring *.json globally.)
