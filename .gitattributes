@@ -1,9 +1,7 @@
-*        text=auto eol=lf
-*.json   text eol=lf
-*.js     text eol=lf
-*.ts     text eol=lf
-*.md     text eol=lf
-*.yml    text eol=lf
-*.yaml   text eol=lf
-*.ps1    text eol=crlf
-*.bat    text eol=crlf
+# Default: normalize text files to LF in the repo
+* text=auto
+* text eol=lf
+
+# Keep Windows scripts CRLF in working tree
+*.ps1 text eol=crlf
+*.bat text eol=crlf
