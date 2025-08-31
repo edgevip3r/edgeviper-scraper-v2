@@ -2,33 +2,27 @@
   "//": "Alias → Betfair canonical runner name (case-insensitive keys)",
   "copenhagen": "FC Copenhagen",
   "fc copenhagen": "FC Copenhagen",
-
   "real betis": "Betis",
   "betis": "Betis",
-
   "basel": "FC Basel",
   "fc basel": "FC Basel",
-
+  "Inter Milan": "Inter",
   "man utd": "Man Utd",
   "manchester utd": "Man Utd",
   "manchester united": "Man utd",
-
+  "Nottingham Forest": "Nottm Forest",
+  "Nottm Forest": "Nottm Forest",
   "psg": "Paris St-G",
+  "PSG": "Paris St-G",
   "paris sg": "Paris St-G",
   "paris saint-germain": "Paris St-G",
   "paris saint germain": "Paris St-G",
   "paris st g": "Paris St-G",
   "paris st-g": "Paris St-G",
-  
   "Omonia Nicosia": "Omonia",
-  
   "Istanbul Basaksehir": "Basaksehir",
-  
   "Shakhtar Donetsk": "Shakhtar",
-  
   "Utrecht": "FC Utrecht",
-  
   "Cremonese": "US Cremonese",
-  
   "St. Pauli": "St Pauli"
 }
