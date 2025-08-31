@@ -1,5 +1,5 @@
 // bettypes/WIN_AND_BTTS/mapper.js
-// Lean mapper: anchor via MO, then fetch the same event’s MO&BTTS and pick "<Team>/Yes".
+// Lean mapper: anchor via MO, then fetch the same event’s MO&BTTS and pick "/Yes".
 
 import { listMarketCatalogue } from '../../lib/betfair/client.js';
 import { mapAllToWinLegs } from '../../lib/map/betfair-football.js';
@@ -23,6 +23,7 @@ async function loadMoCat(marketId){
   return {
     eventId: c?.event?.id || null,
     eventName: c?.event?.name || null,
+    eventOpenDate: c?.event?.openDate || null,
     runners: (c?.runners || []).map(r => ({ selectionId: r.selectionId, runnerName: r.runnerName || '' }))
   };
 }
@@ -41,10 +42,9 @@ async function loadMoBttsForEvent(eventId){
     );
     cats = (all || []).filter(c => RX_MO_BTTS_NAME.test(String(c.marketName||'')));
   }
-  return Array.isArray(cats) && cats.length ? {
-    marketId: cats[0].marketId,
-    runners: (cats[0].runners || []).map(r => ({ selectionId: r.selectionId, runnerName: r.runnerName || '' }))
-  } : null;
+  return (Array.isArray(cats) && cats.length)
+    ? { marketId: cats[0].marketId, runners: (cats[0].runners || []).map(r => ({ selectionId: r.selectionId, runnerName: r.runnerName || '' })) }
+    : null;
 }
 
 export async function map(offer, ctx = {}) {
@@ -56,7 +56,7 @@ export async function map(offer, ctx = {}) {
   const mo = await mapAllToWinLegs(legs, { debug, bookie: ctx.bookie });
 
   for (let i = 0; i < legs.length; i++) {
-    const team  = legs[i].team;
+    const team = legs[i].team;
     const moMap = mo.mapped?.[i];
     if (!moMap?.marketId || !moMap?.selectionId) {
       out.unmatched.push({ team, reason: 'NO_MO_MAPPING' });
@@ -64,13 +64,14 @@ export async function map(offer, ctx = {}) {
       continue;
     }
 
-    // 2) Get MO catalogue → eventId + exact MO runnerName (team as Betfair spells it)
+    // 2) Get MO catalogue → eventId + exact MO runnerName (team as Betfair spells it) + KO
     const moCat = await loadMoCat(moMap.marketId);
     if (!moCat?.eventId) {
       out.unmatched.push({ team, reason: 'NO_EVENT_ID' });
       if (debug) console.log(`[wbtts] ${team} -> NO_EVENT_ID`);
       continue;
     }
+
     const moRunner = moCat.runners.find(r => r.selectionId === moMap.selectionId);
     const moTeamName = moRunner?.runnerName || null;
     if (!moTeamName) {
@@ -87,29 +88,32 @@ export async function map(offer, ctx = {}) {
       continue;
     }
 
-    // 4) Pick "<Team>/Yes" (fallback to Home/Yes or Away/Yes if needed)
+    // 4) Pick "/Yes" (fallback to Home/Yes or Away/Yes if needed)
     const rxTeamYes = new RegExp(`^${escRx(moTeamName)}\\s*/\\s*Yes$`, 'i');
     let runner = mb.runners.find(r => rxTeamYes.test(r.runnerName));
-
     if (!runner) {
-      const { home, away } = splitHomeAway(moCat.eventName);
+      const { home } = splitHomeAway(moCat.eventName);
       const isHome = home && moTeamName.toLowerCase() === home.toLowerCase();
       const rxHomeYes = /^Home\s*\/\s*Yes$/i;
       const rxAwayYes = /^Away\s*\/\s*Yes$/i;
-      runner = mb.runners.find(r => isHome ? rxHomeYes.test(r.runnerName) : rxAwayYes.test(r.runnerName));
+      runner = mb.runners.find(r => (isHome ? rxHomeYes : rxAwayYes).test(r.runnerName));
       if (!runner && debug) {
         console.log(`[wbtts] ${team} -> NO_YES_RUNNER | try="${moTeamName}/Yes" | runners=[ ${mb.runners.map(r=>r.runnerName).join(' | ')} ]`);
       }
     }
 
-    if (!runner) { out.unmatched.push({ team, reason: 'NO_YES_RUNNER', marketId: mb.marketId }); continue; }
+    if (!runner) {
+      out.unmatched.push({ team, reason: 'NO_YES_RUNNER', marketId: mb.marketId });
+      continue;
+    }
 
     out.mapped.push({
       team,
       marketId: mb.marketId,
       selectionId: runner.selectionId,
       eventId: moCat.eventId,
-      eventName: moCat.eventName
+      eventName: moCat.eventName,
+      koIso: moCat.eventOpenDate || null
     });
 
     if (debug) console.log(`[wbtts] ${team} -> OK | event="${moCat.eventName}" | btts="${runner.runnerName}"`);
