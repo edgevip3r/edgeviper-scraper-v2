@@ -1,27 +1,18 @@
 {
-  "bettypes": { "registry": ["ALL_TO_WIN", "WIN_AND_BTTS"] },
-  "filters": { "threshold": 1.05, "minLiquidity": 5, "maxSpreadPct": 30 },
-  "posting": {
-    "enabled": true,
-    "sheetTab": "Bet Tracker",
-    "prefillY": false,
-    "prefillP": true,
-    "spacingSeconds": 0,
-    "settleDatePolicy": "latestKO"
-  },
-  "dedupe": { "uidVersion": 1, "windowHours": 72 },
-  "snapshots": { "outputDir": "./snapshots", "saveHtml": true, "saveScreenshot": true },
-  "antibot": { "enabled": true, "timezone": "Europe/London" },
-  "normalize": { "teamAliasesPath": "./data/compiled/aliases.index.json" },
-  "logging": { "level": "info", "skipLogPath": "./logs/skip-YYYY-MM-DD.jsonl" },
-	"mapping": {
-	  "excludeCompetitionsTokens": [
-		"U21","U23","U20","U19","U18",
-		"Development","Premier League 2","Academy","Youth",
-		"Reserve","Reserves"
-	  ],
-	  "allowOpponentsExact": [
-		"Sociedad B"
-	  ]
-	}
+"bettypes": { "registry": ["ALL_TO_WIN", "WIN_AND_BTTS"] },
+"filters": { "threshold": 1.05, "minLiquidity": 5, "maxSpreadPct": 30 },
+"posting": { "enabled": true, "sheetTab": "Bet Tracker", "prefillY": false, "prefillP": true, "spacingSeconds": 0, "settleDatePolicy": "latestKO" },
+"dedupe": { "uidVersion": 1, "windowHours": 72 },
+"snapshots": { "outputDir": "./snapshots", "saveHtml": true, "saveScreenshot": true },
+"antibot": { "enabled": true, "timezone": "Europe/London" },
+"normalize": { "teamAliasesPath": "./data/compiled/aliases.index.json" },
+"logging": { "level": "info", "skipLogPath": "./logs/skip-YYYY-MM-DD.jsonl" },
+"mapping": {
+"excludeCompetitionsTokens": [
+"U21", "U23", "U20", "U19", "U18",
+"Development", "Premier League 2", "Academy", "Youth",
+"Reserve", "Reserves", "Primavera"
+],
+"allowOpponentsExact": [ "Sociedad B" ]
+}
 }
