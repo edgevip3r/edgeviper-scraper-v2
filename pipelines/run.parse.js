@@ -1,172 +1,74 @@
-// pipelines/run.parse.js — ESM (FINAL)
-// Runs a bookmaker parser against a snapshot HTML file.
-//
-// Usage:
-//   node pipelines/run.parse.js --book=<book> [--file="C:\\path\\to\\page.html"] [--debug]
-//
-// Behavior:
-// - If --file is omitted, resolve latest via snapshots/<book>/LATEST.json then fallback scan.
-// - Pass **file path** to parsers that expect a path (currently: paddypower JSON parser).
-// - Pass **HTML string** to parsers that expect HTML (e.g., williamhill, pricedup).
-// - Accept parser returns: string path, { outPath }, or offers array/object.
+// =============================================
+// FILE: pipelines/run.parse.js  (ESM, book‑agnostic, per‑book parserInput via data/bookmakers/<book>.json)
+// =============================================
+import fs2 from 'node:fs';
+import fsp2 from 'node:fs/promises';
+import path2 from 'node:path';
+import { fileURLToPath as f2 } from 'node:url';
+import { fracToDec } from '../lib/text/odds.parse.js';
 
-import fs from 'node:fs';
-import fsp from 'node:fs/promises';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-function parseArgs(argv) {
-  const out = {};
-  for (const a of argv.slice(2)) {
-    const m = a.match(/^--([^=]+)(?:=(.*))?$/);
-    if (!m) continue;
-    out[m[1]] = m[2] === undefined ? true : m[2];
-  }
-  return out;
-}
-
-const args = parseArgs(process.argv);
-const bookKey = String(args.book || '').trim().toLowerCase();
-const debug = !!args.debug;
-let htmlPath = args.file ? path.resolve(process.cwd(), String(args.file)) : null;
-
-if (!bookKey) {
+const __f2 = f2(import.meta.url);
+const __d2 = path2.dirname(__f2);
+function args2(argv){ const o={}; for(const a of argv.slice(2)){ const m=a.match(/^--([^=]+)(?:=(.*))?$/); if(m) o[m[1]] = m[2]===undefined?true:m[2]; } return o; }
+const ARGS = args2(process.argv);
+const BOOK = String(ARGS.book||'').trim().toLowerCase();
+const DBG = !!ARGS.debug;
+let HTML = ARGS.file ? path2.resolve(process.cwd(), String(ARGS.file)) : null;
+if(!BOOK){
+  let avail=[]; try{ avail = fs2.readdirSync(path2.resolve(__d2,'..','bookmakers'),{withFileTypes:true}).filter(d=>d.isDirectory()).map(d=>d.name).sort(); }catch{}
   console.error('Usage: node pipelines/run.parse.js --book=<book> [--file="path\\to\\page.html"] [--debug]');
+  if(avail.length) console.error('Available books:', avail.join(', '));
   process.exit(1);
 }
 
-// ------------ resolve latest snapshot ------------
-function resolveLatestFromPointer(book) {
-  try {
-    const p = path.resolve(__dirname, '..', 'snapshots', book, 'LATEST.json');
-    if (!fs.existsSync(p)) return null;
-    const j = JSON.parse(fs.readFileSync(p, 'utf8'));
-    const hp = j && typeof j.htmlPath === 'string' ? j.htmlPath : null;
-    if (hp && fs.existsSync(hp)) return path.resolve(hp);
-  } catch {}
-  return null;
-}
+function latestFromPtr(b){ try{ const p=path2.resolve(__d2,'..','snapshots',b,'LATEST.json'); if(!fs2.existsSync(p)) return null; const j=JSON.parse(fs2.readFileSync(p,'utf8')); const hp=j?.htmlPath; return hp && fs2.existsSync(hp) ? path2.resolve(hp):null; }catch{return null;} }
+function latestByScan(b){ const root=path2.resolve(__d2,'..','snapshots',b); if(!fs2.existsSync(root)) return null; let best=null; const stack=[root]; while(stack.length){ const d=stack.pop(); let ents=[]; try{ ents=fs2.readdirSync(d,{withFileTypes:true}); }catch{continue;} for(const e of ents){ const full=path2.join(d,e.name); if(e.isDirectory()) stack.push(full); else if(e.isFile() && e.name.toLowerCase()==='page.html'){ let t=0; try{ t=fs2.statSync(full).mtimeMs; }catch{} if(!best||t>best.t) best={file:full,t}; } } } return best?best.file:null; }
+if(!HTML){ HTML = latestFromPtr(BOOK) || latestByScan(BOOK); }
+if(!HTML){ console.error('[parse] no HTML found. Provide --file or run snapshot first.'); process.exit(1); }
 
-function resolveLatestByScan(book) {
-  const root = path.resolve(__dirname, '..', 'snapshots', book);
-  if (!fs.existsSync(root)) return null;
-  let latest = null;
-  const stack = [root];
-  while (stack.length) {
-    const dir = stack.pop();
-    let ents = [];
-    try { ents = fs.readdirSync(dir, { withFileTypes: true }); } catch { continue; }
-    for (const e of ents) {
-      const full = path.join(dir, e.name);
-      if (e.isDirectory()) {
-        stack.push(full);
-      } else if (e.isFile() && e.name.toLowerCase() === 'page.html') {
-        let t = 0; try { t = fs.statSync(full).mtimeMs; } catch {}
-        if (!latest || t > latest.t) latest = { file: full, t };
-      }
-    }
-  }
-  return latest ? latest.file : null;
-}
+function readCfg(b){ try{ const p=path2.resolve(__d2,'..','data','bookmakers',`${b}.json`); return JSON.parse(fs2.readFileSync(p,'utf8')); }catch{return {};} }
+function sourceUrlFromMeta(file){ const dir=path2.dirname(file); const meta=path2.join(dir,'meta.json'); if(fs2.existsSync(meta)){ try{ const j=JSON.parse(fs2.readFileSync(meta,'utf8')); return j?.url||null; }catch{} } return null; }
+function outPathFor(html){ const dir=path2.dirname(html); const base=path2.basename(html).replace(/\.html?$/i,''); return path2.join(dir,`${base}.rawoffers.json`); }
+function normTitle(t){ return String(t||'').replace(/\s+/g,' ').trim(); }
+function toDec(it){ if(it.boostedOddsDec!=null) return Number(it.boostedOddsDec); if(it.oddsDec!=null) return Number(it.oddsDec); const f=it.boostedOddsFrac??it.oddsRaw??it.oddsFrac??null; if(f){ const d=fracToDec(f); return d==null?null:Number(d);} return null; }
+function standardise(items, {bookKey, sourceUrlFallback, baseUrlFallback}){ const out=[]; for(const it of items){ const title=normTitle(it.text||it.title||it.name||''); const dec=toDec(it); if(!title||dec==null) continue; const url=it.url||it.sourceUrl||sourceUrlFallback||baseUrlFallback||null; out.push({ bookie:bookKey, sportHint: it.sportHint||'Football', text:title, textOriginal: it.textOriginal||it.title||title, boostedOddsFrac: it.boostedOddsFrac??it.oddsRaw??it.oddsFrac??null, boostedOddsDec: dec, url, sourceUrl:url }); } return out; }
+async function readJsonFile(p){ const t=await fsp2.readFile(p,'utf8'); try{ return JSON.parse(t);}catch{ throw new Error(`Malformed JSON: ${p}`);} }
+function unwrap(raw){ if(Array.isArray(raw)) return raw; if(Array.isArray(raw.rawOffers)) return raw.rawOffers; if(Array.isArray(raw.offers)) return raw.offers; if(Array.isArray(raw.raw)) return raw.raw; return []; }
 
-if (!htmlPath) {
-  htmlPath = resolveLatestFromPointer(bookKey) || resolveLatestByScan(bookKey);
-}
+async function loadParser(book){ const modPath=`../bookmakers/${book}/parser.js`; let mod; try{ mod=await import(modPath);}catch(e){ console.error(`[parse] cannot import parser at ${modPath}:`, e?.message||e); process.exit(1);} const names=['default','parser','parse',`parse${cap(book)}`]; for(const n of names){ const fn=mod?.[n]; if(typeof fn==='function') return fn; } console.error('[parse] parser export not found. Expected one of:', names.join(', ')); process.exit(1); }
+function cap(s){return s? s[0].toUpperCase()+s.slice(1):s}
 
-if (!htmlPath) {
-  console.error('[parse] no HTML found. Provide --file or run snapshot first.');
-  process.exit(1);
-}
+(async()=>{
+  try{
+    const parseFn = await loadParser(BOOK);
+    const cfg = readCfg(BOOK);
+    const parserInput = String(cfg?.parserInput||'html').toLowerCase(); // book-agnostic; no hard-coded names
+    const baseUrlFallback = (cfg?.baseUrls && cfg.baseUrls[0]) || null;
+    const sourceUrl = sourceUrlFromMeta(HTML);
 
-// ------------ helper: read meta for sourceUrl ------------
-function readSourceUrl(htmlPath) {
-  const dir = path.dirname(htmlPath);
-  const meta = path.join(dir, 'meta.json');
-  if (fs.existsSync(meta)) {
-    try {
-      const j = JSON.parse(fs.readFileSync(meta, 'utf8'));
-      if (j?.url) return j.url;
-    } catch {}
-  }
-  return null;
-}
+    if(DBG) console.log(`[parse:${BOOK}] using htmlPath=${HTML} | input=${parserInput}`);
 
-// ------------ dynamic import parser ------------
-function cap(s) { return s ? s[0].toUpperCase() + s.slice(1) : s; }
-
-async function loadParser(book) {
-  const modPath = `../bookmakers/${book}/parser.js`;
-  let mod;
-  try {
-    mod = await import(modPath);
-  } catch (e) {
-    console.error(`[parse] cannot import parser at ${modPath}:`, e?.message || e);
-    process.exit(1);
-  }
-  const candidates = ['default', 'parser', 'parse', `parse${cap(book)}`];
-  for (const key of candidates) {
-    const fn = mod?.[key];
-    if (typeof fn === 'function') return fn;
-  }
-  console.error('[parse] parser export not found. Expected one of:', candidates.join(', '));
-  process.exit(1);
-}
-
-// ------------ main ------------
-(async () => {
-  try {
-    const parseFn = await loadParser(bookKey);
-    if (debug) console.log(`[parse:${bookKey}] using htmlPath=${htmlPath}`);
-
-    // Decide invocation mode per bookmaker
-    // - 'paddypower' uses JSON captures in the folder => expects FILE PATH
-    // - others default to HTML string
     let result;
-    if (bookKey === 'paddypower') {
-      result = await parseFn(htmlPath, { debug, bookKey });
+    if(parserInput==='path'){
+      result = await parseFn(HTML, { debug:DBG, bookKey:BOOK, htmlPath:HTML, sourceUrl, seenAtIso:new Date().toISOString() });
     } else {
-      const html = await fsp.readFile(htmlPath, 'utf8');
-      const sourceUrl = readSourceUrl(htmlPath);
-      result = await parseFn(html, { debug, bookKey, htmlPath, sourceUrl, seenAtIso: new Date().toISOString() });
+      const html = await fsp2.readFile(HTML,'utf8');
+      result = await parseFn(html, { debug:DBG, bookKey:BOOK, htmlPath:HTML, sourceUrl, seenAtIso:new Date().toISOString() });
     }
 
-    // Handle return styles
-    const asString = typeof result === 'string' ? result : null;
-    const asObj = (result && typeof result === 'object' && !Array.isArray(result)) ? result : null;
-
-    if (asString) {
-      const p = path.resolve(asString);
-      if (fs.existsSync(p)) {
-        if (debug) console.log(`[parse:${bookKey}] parser wrote → ${p}`);
-        return;
-      }
+    let items;
+    if(typeof result==='string'){
+      const raw = await readJsonFile(result); items = unwrap(raw);
+    } else if(result && typeof result==='object' && !Array.isArray(result) && typeof result.outPath==='string'){
+      const raw = await readJsonFile(result.outPath); items = unwrap(raw);
+    } else {
+      items = unwrap(result);
     }
 
-    if (asObj && typeof asObj.outPath === 'string') {
-      const p = path.resolve(asObj.outPath);
-      if (fs.existsSync(p)) {
-        if (debug) console.log(`[parse:${bookKey}] parser wrote → ${p}`);
-        return;
-      }
-    }
-
-    // If parser returned offers, persist them next to the HTML
-    const offers = Array.isArray(result) ? result : (result?.rawOffers || result?.raw || []);
-    if (!Array.isArray(offers)) {
-      console.error('[parse] parser returned an unexpected value.');
-      process.exit(1);
-    }
-
-    const outDir = path.dirname(htmlPath);
-    const base = path.basename(htmlPath).replace(/\.html?$/i, '');
-    const outPath = path.join(outDir, `${base}.rawoffers.json`);
-    await fsp.writeFile(outPath, JSON.stringify({ rawOffers: offers }, null, 2), 'utf8');
-    console.log(`[parse:${bookKey}] wrote ${offers.length} raw offers → ${outPath}`);
-  } catch (e) {
-    console.error('[parse] failed:', e?.message || e);
-    process.exit(1);
-  }
+    const std = standardise(items, { bookKey:BOOK, sourceUrlFallback:sourceUrl, baseUrlFallback });
+    const outPath = outPathFor(HTML);
+    await fsp2.writeFile(outPath, JSON.stringify({ rawOffers: std }, null, 2), 'utf8');
+    console.log(`[parse:${BOOK}] wrote ${std.length} raw offers → ${outPath}`);
+    if(DBG) for(const r of std.slice(0,6)) console.log(' -', r.text, '|', r.boostedOddsFrac??'', '|', r.boostedOddsDec, '|', r.sourceUrl??'');
+  }catch(e){ console.error('[parse] failed:', e?.message||e); process.exit(1); }
 })();

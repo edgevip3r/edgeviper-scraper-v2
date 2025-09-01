@@ -1,37 +1,45 @@
-// bookmakers/paddypower/parser.js — ESM (no sibling fallback)
-// Reads captured JSON payloads in the same snapshot folder as the given page.html
-// and extracts ONLY DAILY_POWER_PRICES football boosts.
+// bookmakers/paddypower/parser.js — ESM (dedupe by marketId:selectionId; return array)
+// Reads captured JSON payloads in the SAME snapshot folder as the given page.html
+// and returns ONLY football 'DAILY_POWER_PRICES' runners. If multiple
+// content-managed-page.*.json files contain the same runners (very common on PP),
+// we de‑dupe by `${marketId}:${selectionId}` and let the LAST seen (latest by mtime)
+// win so odds/wording are the freshest.
 //
-// Input:  htmlFilePath (string) — e.g. snapshots/paddypower/YYYY-MM-DD/HHMMSS/page.html
-// Output: writes snapshots/paddypower/YYYY-MM-DD/HHMMSS/page.rawoffers.json and returns that path.
+// Signature (path-based parser):
+//   export default async function parser(htmlFilePath, ctx)
+//     - htmlFilePath: snapshots/paddypower/YYYY-MM-DD/HHMMSS/page.html
+//     - ctx: { debug?, bookKey?, htmlPath?, sourceUrl?, seenAtIso? }
+// Returns:
+//   Array<{ book?:string, sportHint?:string, title?:string, text?:string,
+//           boostedOddsFrac?:string, boostedOddsDec?:number, oddsRaw?:string, oddsDec?:number,
+//           url?:string, sourceUrl?:string }>
 
 import fs from 'node:fs';
 import path from 'node:path';
 
 function readJsonSafe(p) { try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; } }
 function listDir(dir) { try { return fs.readdirSync(dir, { withFileTypes: true }); } catch { return []; } }
-function listFiles(dir, rx) {
-  return listDir(dir).filter(e => e.isFile() && rx.test(e.name)).map(e => path.join(dir, e.name));
-}
+function listFiles(dir, rx) { return listDir(dir).filter(e => e.isFile() && rx.test(e.name)).map(e => path.join(dir, e.name)); }
 function statMs(p) { try { return fs.statSync(p).mtimeMs; } catch { return 0; } }
 
-export default async function parser(htmlFilePath, { debug = false } = {}) {
+export default async function parser(htmlFilePath, { debug = false, sourceUrl: sourceUrlFromMeta = null } = {}) {
   const dir = path.dirname(htmlFilePath);
 
-  // Resolve source URL from meta.json in THIS folder
-  let sourceUrl = 'https://www.paddypower.com/football?tab=specials';
+  // Source URL fallback from meta.json (same folder)
+  let sourceUrl = sourceUrlFromMeta || 'https://www.paddypower.com/football?tab=specials';
   const metaPath = path.join(dir, 'meta.json');
-  if (fs.existsSync(metaPath)) {
+  if (!sourceUrl && fs.existsSync(metaPath)) {
     const meta = readJsonSafe(metaPath);
     if (meta?.url) sourceUrl = meta.url;
   }
 
+  // Sort so later files (by mtime) overwrite earlier ones in our de‑dupe map
   const cmpFiles = listFiles(dir, /^content-managed-page\..*\.json$/i).sort((a,b) => statMs(a) - statMs(b));
-  const priceFiles = listFiles(dir, /^getMarketPrices\.\d+\.json$/i).sort((a,b) => statMs(a) - statMs(b));
+  const priceFiles = listFiles(dir, /^getMarketPrices\.[0-9]+\.json$/i).sort((a,b) => statMs(a) - statMs(b));
   if (debug) console.log(`[pp:parser] content-managed-page files=${cmpFiles.length}, prices=${priceFiles.length}`);
-  if (!cmpFiles.length) throw new Error('No content-managed-page.*.json found in snapshot folder');
+  if (!cmpFiles.length) return []; // nothing captured in this snapshot
 
-  // Build latest price map
+  // Build latest price map (selection-level)
   const latestPrice = new Map(); // key `${marketId}:${selectionId}` -> { dec, frac }
   const pickDec = o => (o?.trueOdds?.decimalOdds?.decimalOdds ?? o?.decimalDisplayOdds?.decimalOdds ?? null);
   const pickFrac = o => {
@@ -54,11 +62,13 @@ export default async function parser(htmlFilePath, { debug = false } = {}) {
     }
   }
 
-  // Walk CMP markets and collect DAILY_POWER_PRICES offers
-  const offers = [];
+  // De‑dupe across all CMP files using a map
+  const byKey = new Map(); // key `${marketId}:${selectionId}` -> offer
+
   for (const cf of cmpFiles) {
     const cmp = readJsonSafe(cf); if (!cmp) continue;
     const markets = cmp?.attachments?.markets || {};
+
     for (const m of Object.values(markets)) {
       if (!m) continue;
       if (m.marketType !== 'DAILY_POWER_PRICES') continue;          // whitelist only
@@ -68,37 +78,36 @@ export default async function parser(htmlFilePath, { debug = false } = {}) {
       for (const r of m.runners) {
         const title = (r?.runnerName || '').trim();
         if (!title) continue;
+
         let dec = r?.winRunnerOdds?.trueOdds?.decimalOdds?.decimalOdds ?? null;
         let frac = null;
         const fr = r?.winRunnerOdds?.trueOdds?.fractionalOdds;
         if (fr && typeof fr.numerator === 'number' && typeof fr.denominator === 'number') {
           frac = `${fr.numerator}/${fr.denominator}`;
         }
+
         const key = `${m.marketId}:${r.selectionId}`;
         const refresh = latestPrice.get(key);
         if (refresh) {
           if (typeof refresh.dec === 'number') dec = refresh.dec;
           if (typeof refresh.frac === 'string') frac = refresh.frac;
         }
-        offers.push({
+
+        // LAST file wins (because cmpFiles sorted ascending)
+        byKey.set(key, {
           book: 'paddypower',
-          sport: 'football',
-          title,
-          price: { dec, frac },
-          marketId: m.marketId,
-          selectionId: r.selectionId,
-          marketName: m.marketName,
-          marketTimeIso: m.marketTime || null,
+          sportHint: 'Football',
+          title,                 // exact bookmaker text
+          boostedOddsFrac: frac, // runner will coerce to dec if needed
+          boostedOddsDec: dec,
+          url: sourceUrl,
           sourceUrl
         });
       }
     }
   }
 
-  const outPath = path.join(dir, path.basename(htmlFilePath).replace(/\.html?$/i, '') + '.rawoffers.json');
-  fs.writeFileSync(outPath, JSON.stringify(offers, null, 2), 'utf8');
-  if (debug) console.log(`[pp:parser] wrote ${offers.length} offers → ${outPath}`);
-  return outPath;
+  return Array.from(byKey.values());
 }
 
 export { parser };

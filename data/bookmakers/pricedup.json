@@ -1,5 +1,6 @@
 {
 "name": "pricedup",
+"parserInput": "html",
 "baseUrls": [
 "https://pricedup.bet/sport-special/pricedup-pushes"
 ],

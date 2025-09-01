@@ -1,86 +1,78 @@
-// pipelines/run.snapshot.js
-// Orchestrates a single snapshot for a given book via convention-based dynamic loading.
-//
-// Usage:
-//   node pipelines/run.snapshot.js --book=<alias|canonical> [--debug]
-//
-// Expects a plugin at: bookmakers/<book>/snapshot.js exporting default/snapshot/snapshot<Book>().
+// =============================================
+// FILE: pipelines/run.snapshot.js  (ESM, book‑agnostic, writes LATEST.json)
+// =============================================
+import fs from 'node:fs';
+import fsp from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-import fs from 'fs/promises';
-import fss from 'fs';
-import path from 'path';
-import { fileURLToPath, pathToFileURL } from 'url';
-import cfg from '../config/global.json' with { type: 'json' };
-import { resolveBookKey } from '../lib/books/resolveBook.js';
-
-function args(argv) {
-  const out = {};
-  for (const a of argv.slice(2)) {
-    const m = a.match(/^--([^=]+?)(?:=(.*))?$/);
-    if (m) out[m[1]] = m[2] ?? true;
-  }
-  return out;
-}
 const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
-const a = args(process.argv);
-const debug = a.debug === '' || a.debug === 'true' || a.debug === true;
+const __dirname = path.dirname(__filename);
 
-const rawBook = String(a.book || '').trim();
-if (!rawBook) {
-  console.error('Usage: node pipelines/run.snapshot.js --book=<bookKey>');
+function parseArgs(argv){
+  const out = {}; for (const a of argv.slice(2)){ const m=a.match(/^--([^=]+)(?:=(.*))?$/); if(m) out[m[1]] = m[2]===undefined?true:m[2]; } return out;
+}
+const args = parseArgs(process.argv);
+const bookKey = String(args.book||'').trim().toLowerCase();
+const debug = !!args.debug;
+if(!bookKey){
+  console.error('Usage: node pipelines/run.snapshot.js --book=<book> [--debug]');
   process.exit(1);
 }
 
-(async () => {
-  try {
-    const { canonical } = await resolveBookKey(rawBook);
+function cap(s){return s? s[0].toUpperCase()+s.slice(1):s}
+async function loadSnapshot(book){
+  const modPath = `../bookmakers/${book}/snapshot.js`;
+  let mod; try{ mod = await import(modPath);}catch(e){
+    console.error(`[snapshot] cannot import ${modPath}:`, e?.message||e); process.exit(1);
+  }
+  const candidates = ['default','snapshot','run','plugin'];
+  for(const k of candidates){ const fn = mod?.[k]; if(typeof fn==='function') return fn; }
+  console.error('[snapshot] no callable export found in', modPath); process.exit(1);
+}
 
-    const plugin = await loadSnapshotPlugin(canonical);
-    if (!plugin) {
-      console.error(`[snapshot:${canonical}] no snapshot plugin found in bookmakers/${canonical}/snapshot.js`);
-      process.exit(1);
+function ensureDir(p){ fs.mkdirSync(p, {recursive:true}); }
+function writeLatestPointer(book, htmlPath){
+  if(!htmlPath) return null;
+  const dir = path.dirname(htmlPath);
+  const latestDir = path.resolve(__dirname, '..', 'snapshots', book);
+  ensureDir(latestDir);
+  const ptrPath = path.join(latestDir, 'LATEST.json');
+  const payload = { book, htmlPath, dir, at: new Date().toISOString() };
+  fs.writeFileSync(ptrPath, JSON.stringify(payload,null,2), 'utf8');
+  return ptrPath;
+}
+
+(async () => {
+  try{
+    const fn = await loadSnapshot(bookKey);
+    const res = await fn({ debug });
+
+    // Normalise result
+    let htmlPath=null, screenshotPath=null, metaPath=null, outDir=null, ok=true;
+    if(typeof res === 'string'){
+      htmlPath = path.resolve(res);
+    } else if (res && typeof res==='object'){
+      htmlPath = res.htmlPath ? path.resolve(res.htmlPath) : null;
+      screenshotPath = res.screenshotPath ? path.resolve(res.screenshotPath) : null;
+      metaPath = res.metaPath ? path.resolve(res.metaPath) : null;
+      outDir = res.outDir ? path.resolve(res.outDir) : (htmlPath?path.dirname(htmlPath):null);
+      ok = res.ok !== false;
     }
 
-    const bookCfgPath = path.resolve(__dirname, '..', 'data', 'bookmakers', `${canonical}.json`);
-    const bookCfg = fss.existsSync(bookCfgPath)
-      ? JSON.parse(await fs.readFile(bookCfgPath, 'utf8'))
-      : { name: canonical, baseUrls: [] };
+    if(!htmlPath || !fs.existsSync(htmlPath)){
+      console.error('[snapshot] failed: no htmlPath produced');
+      console.log(JSON.stringify({ ok:false, book:bookKey, htmlPath:null, screenshotPath:null, metaPath:null }));
+      process.exit(2);
+    }
 
-    const outRoot = path.resolve(__dirname, '..', cfg.snapshots?.outputDir || './snapshots');
-    await fs.mkdir(outRoot, { recursive: true });
+    const latestPtr = writeLatestPointer(bookKey, htmlPath);
+    if(debug) console.log(`[snapshot:${bookKey}] html=${htmlPath}` + (latestPtr?` | LATEST→ ${latestPtr}`:''));
 
-    const result = await plugin({
-      book: canonical,
-      config: cfg,
-      bookCfg,
-      outRoot,
-      debug
-    });
-
-    const { htmlPath, screenshotPath, metaPath } = result || {};
-    console.log(JSON.stringify({
-      ok: !!htmlPath,
-      book: canonical,
-      htmlPath: rel(htmlPath),
-      screenshotPath: rel(screenshotPath),
-      metaPath: rel(metaPath)
-    }, null, 2));
-  } catch (err) {
-    console.error('[snapshot] failed:', err?.message || err);
+    console.log(JSON.stringify({ ok:true, book:bookKey, htmlPath, screenshotPath, metaPath }));
+  }catch(e){
+    console.error('[snapshot] failed:', e?.message||e);
+    console.log(JSON.stringify({ ok:false, book:bookKey, htmlPath:null, screenshotPath:null, metaPath:null }));
     process.exit(1);
   }
 })();
-
-async function loadSnapshotPlugin(bookKey) {
-  const modPath = path.resolve(__dirname, '..', 'bookmakers', bookKey, 'snapshot.js');
-  if (!fss.existsSync(modPath)) return null;
-  const mod = await import(pathToFileURL(modPath).href);
-  const pascal = bookKey.split(/[^a-z0-9]+/i).filter(Boolean).map(w => w[0].toUpperCase()+w.slice(1)).join('');
-  return mod.default || mod.snapshot || mod[`snapshot${pascal}`] || null;
-}
-
-function rel(p) {
-  if (!p) return null;
-  try { return path.relative(path.resolve(__dirname, '..'), p); } catch { return p; }
-}
