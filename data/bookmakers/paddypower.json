@@ -1,0 +1,25 @@
+{
+  "name": "paddypower",
+  "parserInput": "path",
+  "baseUrls": ["https://www.paddypower.com/football?tab=specials"],
+  "consentSelectors": [
+    "#onetrust-accept-btn-handler",
+    "#accept-recommended-btn-handler",
+    "#onetrust-reject-all-handler",
+    ".ot-pc-refuse-all-handler"
+  ],
+  "navigate": {
+    "steps": [
+      { "action": "goto", "urlRef": 0 },
+      { "action": "consent" },
+      { "action": "scrollBy", "y": 600, "pauseMs": 350 },
+      { "action": "scrollBy", "y": 1200, "pauseMs": 1200 }
+    ]
+  },
+  "parser": {
+    "mode": "CMP_JSON",
+    "marketTypes": ["DAILY_POWER_PRICES"],
+    "eventTypeId": 1
+  },
+  "textDrops": []
+}
