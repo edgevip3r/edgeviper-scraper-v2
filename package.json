@@ -1,1 +1,26 @@
-{"name":"edgeviper-scraper-v2","version":"0.0.1","private":true,"type":"module","scripts":{"snap:wh":"node pipelines/run.snapshot.js --book=williamhill","snap:pu":"node pipelines/run.snapshot.js --book=pricedup","run:wh":"node pipelines/run.all.js --book=williamhill","run:pu":"node pipelines/run.all.js --book=pricedup"},"dependencies":{"cheerio":"^1.1.2","date-fns":"^4.1.0","googleapis":"^157.0.0","undici":"^7.15.0"},"devDependencies":{"playwright":"^1.55.0"}}
+{
+	"name":"edgeviper-scraper-v2",
+	"version":"0.0.1",
+	"private":true,
+	"type":"module",
+	"scripts":
+	{
+		"snap:wh":"node pipelines/run.snapshot.js --book=williamhill",
+		"aliases:build": "node scripts/tools/aliases_compile.js build",
+		"aliases:lint": "node scripts/tools/aliases_lint.js",
+		"snap:pu":"node pipelines/run.snapshot.js --book=pricedup",
+		"run:wh":"node pipelines/run.all.js --book=williamhill",
+		"run:pu":"node pipelines/run.all.js --book=pricedup"
+	},
+	"dependencies":
+	{
+		"cheerio":"^1.1.2",
+		"date-fns":"^4.1.0",
+		"googleapis":"^157.0.0",
+		"undici":"^7.15.0"
+	},
+	"devDependencies":
+	{
+		"playwright":"^1.55.0"
+	}
+}

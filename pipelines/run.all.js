@@ -1,9 +1,15 @@
-// pipelines/run.all.js
+// pipelines/run.all.js — ESM
 // Orchestrate: snapshot → parse → classify → value_publish
+//
 // Usage examples:
 //   node pipelines/run.all.js --book=williamhill --debug --dry-run
 //   node pipelines/run.all.js --book=pricedup --file="snapshots/pricedup/pu.html" --debug
 //   node pipelines/run.all.js --book=williamhill --type=WIN_AND_BTTS --threshold=1.08 --enforce --debug
+//
+// Notes:
+// - Book‑agnostic (no hard‑coded names). Snapshot writes snapshots/<book>/LATEST.json; we also fall back to a recursive scan.
+// - Preserves your existing CLI: --type, --debug, --dry-run, --enforce, --threshold, --file.
+// - Calls run.value_publish.js (NOT run.value.js).
 
 import { spawn } from 'child_process';
 import fs from 'fs/promises';
@@ -12,26 +18,27 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 // ---- args ----
 const args = Object.fromEntries(process.argv.slice(2).map(a => {
   const m = a.match(/^--([^=]+)(?:=(.*))?$/);
   if (!m) return [];
-  const k = m[1]; const v = (m[2] === undefined ? true : m[2]);
+  const k = m[1];
+  const v = (m[2] === undefined ? true : m[2]);
   return [k, v];
 }).filter(Boolean));
 
-const book       = args.book;
-const htmlFile   = args.file || null;                // provide .html to skip snapshot
-const typeFilter = args.type || null;                // e.g., ALL_TO_WIN | WIN_AND_BTTS
-const debug      = !!args.debug;
-const dryRun     = !!(args['dry-run'] || args.dryrun);
-const enforce    = !!args.enforce;
-const threshold  = args.threshold ? Number(args.threshold) : null;
+const book = args.book;
+const htmlFile = args.file || null;          // provide .html to skip snapshot
+const typeFilter = args.type || null;        // e.g., ALL_TO_WIN | WIN_AND_BTTS
+const debug = !!args.debug;
+const dryRun = !!(args['dry-run'] || args.dryrun);
+const enforce = !!args.enforce;
+const threshold = args.threshold ? Number(args.threshold) : null;
 
 if (!book) {
-  console.error('Usage: node pipelines/run.all.js --book=<williamhill|pricedup> [--file=<html>] [--type=ALL_TO_WIN|WIN_AND_BTTS] [--debug] [--dry-run] [--enforce] [--threshold=1.05]');
+  console.error('Usage: node pipelines/run.all.js --book= [--file=] [--type=ALL_TO_WIN|WIN_AND_BTTS] [--debug] [--dry-run] [--enforce] [--threshold=1.05]');
   process.exit(1);
 }
 
@@ -54,7 +61,8 @@ async function exists(p) { try { await fs.access(p); return true; } catch { retu
 
 async function findLatest(dir, rx) {
   let best = null; let bestTime = 0;
-  const items = await fs.readdir(dir, { withFileTypes: true });
+  let items = [];
+  try { items = await fs.readdir(dir, { withFileTypes: true }); } catch { return null; }
   for (const it of items) {
     const full = path.join(dir, it.name);
     if (it.isDirectory()) {
@@ -68,9 +76,16 @@ async function findLatest(dir, rx) {
   return best;
 }
 
-function pickFromStdout(regex, text) {
-  const m = text.match(regex);
-  return m ? m[1] : null;
+function pickFromStdout(regex, text) { const m = text.match(regex); return m ? m[1] : null; }
+
+function latestFromPointer(bookKey) {
+  try {
+    const p = path.resolve(__dirname, '..', 'snapshots', bookKey, 'LATEST.json');
+    if (!fss.existsSync(p)) return null;
+    const j = JSON.parse(fss.readFileSync(p, 'utf8'));
+    const hp = j?.htmlPath; if (hp && fss.existsSync(hp)) return path.resolve(hp);
+  } catch {}
+  return null;
 }
 
 // ---- step 1: snapshot (or use provided html) ----
@@ -84,11 +99,11 @@ async function stepSnapshot() {
   const pass = [`--book=${book}`];
   if (debug) pass.push('--debug');
   const { out } = await runNode('./run.snapshot.js', pass);
-
-  // try to parse an explicit path if your snapshot prints it; else, find newest .html under ./snapshots/<book>/
+  // try to parse an explicit path if your snapshot prints it; else, LATEST pointer; else, recursive scan
   const explicit = pickFromStdout(/wrote\s+html\s*->\s*(.+\.html)\s*$/mi, out);
   if (explicit && fss.existsSync(explicit)) return explicit;
-
+  const fromPtr = latestFromPointer(book);
+  if (fromPtr) return fromPtr;
   const root = path.resolve(process.cwd(), 'snapshots', book);
   const latest = await findLatest(root, /\.html$/i);
   if (!latest) throw new Error(`No HTML snapshot found under ${root}`);
@@ -101,11 +116,9 @@ async function stepParse(htmlPath) {
   const pass = [`--book=${book}`, `--file=${htmlPath}`];
   if (debug) pass.push('--debug');
   const { out } = await runNode('./run.parse.js', pass);
-
-  // parse "wrote -> <path.rawoffers.json>"
+  // parse "wrote -> "
   let rawoffers = pickFromStdout(/wrote\s*.+->\s*(.+\.rawoffers\.json)\s*$/mi, out);
   if (rawoffers && fss.existsSync(rawoffers)) return rawoffers;
-
   // fallback: look next to HTML for newest *.rawoffers.json
   const dir = path.dirname(htmlPath);
   const latest = await findLatest(dir, /\.rawoffers\.json$/i);
@@ -119,15 +132,12 @@ async function stepClassify(rawoffersPath) {
   if (typeFilter) pass.push(`--type=${typeFilter}`);
   if (debug) pass.push('--debug');
   const { out } = await runNode('./run.classify.js', pass);
-
-  // parse "wrote -> <path.offers.json>"
+  // parse "wrote -> "
   let offers = pickFromStdout(/wrote\s*->\s*(.+\.offers\.json)\s*$/mi, out);
   if (offers && fss.existsSync(offers)) return offers;
-
   // fallback: replace extension
   const guess = rawoffersPath.replace(/\.rawoffers\.json$/i, '.offers.json');
   if (fss.existsSync(guess)) return guess;
-
   // or newest *.offers.json near rawoffers
   const dir = path.dirname(rawoffersPath);
   const latest = await findLatest(dir, /\.offers\.json$/i);
@@ -135,7 +145,7 @@ async function stepClassify(rawoffersPath) {
   return latest.path;
 }
 
-// ---- step 4: value+publish ----
+// ---- step 4: value + publish ----
 async function stepValuePublish(offersPath) {
   const pass = [`--book=${book}`, `--in=${offersPath}`];
   if (debug) pass.push('--debug');
@@ -143,9 +153,7 @@ async function stepValuePublish(offersPath) {
   if (enforce) pass.push('--enforce');
   if (threshold != null && !Number.isNaN(threshold)) pass.push(`--threshold=${threshold}`);
   const { out } = await runNode('./run.value_publish.js', pass);
-
-  // try to parse a compact JSON summary if present
-  // (our run.publish prints {"ok":true,"written":N} in some modes; value_publish prints posted/skipped in text)
+  // Try to parse a compact JSON summary if present
   const m = out.match(/"written"\s*:\s*(\d+)/);
   const written = m ? Number(m[1]) : null;
   return { out, written };
@@ -155,12 +163,10 @@ async function stepValuePublish(offersPath) {
 (async () => {
   const t0 = Date.now();
   console.log(`[run-all] book=${book} ${typeFilter ? `type=${typeFilter}` : ''} ${dryRun ? '(dry-run)' : ''} ${debug ? '(debug)' : ''}`);
-
-  const htmlPath      = await stepSnapshot();
+  const htmlPath = await stepSnapshot();
   const rawoffersPath = await stepParse(htmlPath);
-  const offersPath    = await stepClassify(rawoffersPath);
-  const publishRes    = await stepValuePublish(offersPath);
-
+  const offersPath = await stepClassify(rawoffersPath);
+  const publishRes = await stepValuePublish(offersPath);
   const ms = Date.now() - t0;
   console.log(`[run-all] done in ${(ms/1000).toFixed(1)}s`);
   console.log(`[run-all] html=${htmlPath}`);
@@ -169,7 +175,7 @@ async function stepValuePublish(offersPath) {
   if (publishRes.written != null) console.log(`[run-all] written=${publishRes.written}`);
 })().catch(e => {
   console.error('[run-all] FAILED:', e.message);
-  if (e.out)  console.error('--- stdout ---\n' + e.out);
-  if (e.err)  console.error('--- stderr ---\n' + e.err);
+  if (e.out) console.error('--- stdout ---\n' + e.out);
+  if (e.err) console.error('--- stderr ---\n' + e.err);
   process.exit(1);
 });
