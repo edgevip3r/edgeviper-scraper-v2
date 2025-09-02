@@ -1,0 +1,4 @@
+[
+  { "id": "competition:football:eng-premier-league",   "name": "Premier League",           "country": "ENG", "sport": "football" },
+  { "id": "competition:football:uefa-champions-league","name": "UEFA Champions League",    "sport": "football" }
+]

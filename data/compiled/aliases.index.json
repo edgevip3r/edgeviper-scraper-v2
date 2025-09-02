@@ -1,1 +1,74 @@
-{}
+{
+  "fc copenhagen": [
+    "team:den:fc-copenhagen"
+  ],
+  "real betis": [
+    "team:esp:real-betis"
+  ],
+  "fc basel": [
+    "team:sui:fc-basel"
+  ],
+  "inter milan": [
+    "team:ita:inter-milan"
+  ],
+  "nottingham forest": [
+    "team:eng:nottingham-forest"
+  ],
+  "paris saint germain": [
+    "team:fra:paris-saint-germain"
+  ],
+  "shakhtar donetsk": [
+    "team:ukr:shakhtar-donetsk"
+  ],
+  "fc utrecht": [
+    "team:ned:fc-utrecht"
+  ],
+  "us cremonese": [
+    "team:ita:us-cremonese"
+  ],
+  "fc st pauli": [
+    "team:ger:fc-st-pauli"
+  ],
+  "gimnasia la plata": [
+    "team:arg:gimnasia-la-plata"
+  ],
+  "lincoln city": [
+    "team:eng:lincoln-city"
+  ],
+  "betis": [
+    "team:esp:real-betis"
+  ],
+  "inter": [
+    "team:ita:inter-milan"
+  ],
+  "nottm forest": [
+    "team:eng:nottingham-forest"
+  ],
+  "paris st g": [
+    "team:fra:paris-saint-germain"
+  ],
+  "lincoln": [
+    "team:eng:lincoln-city"
+  ],
+  "basel": [
+    "team:sui:fc-basel"
+  ],
+  "copenhagen": [
+    "team:den:fc-copenhagen"
+  ],
+  "psg": [
+    "team:fra:paris-saint-germain"
+  ],
+  "utrecht": [
+    "team:ned:fc-utrecht"
+  ],
+  "cremonese": [
+    "team:ita:us-cremonese"
+  ],
+  "st pauli": [
+    "team:ger:fc-st-pauli"
+  ],
+  "gimnasia lp": [
+    "team:arg:gimnasia-la-plata"
+  ]
+}

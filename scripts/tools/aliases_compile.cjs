@@ -1,6 +1,6 @@
 // =============================================
 // File: scripts/tools/aliases_compile.js
-// Purpose: Build alias indices for teams/players/horses/golf/etc. (ESM version)
+// Purpose: Build alias indices for teams/players/horses/golf/etc.
 //  - Outputs (by default):
 //      data/compiled/aliases.index.json            (teams-only; back-compat)
 //      data/compiled/aliases.extended.index.json   (everything; future-proof)
@@ -20,16 +20,14 @@
 //        [--kinds=team,player:football,competition,horse,course,tournament]
 //
 // Notes:
-//  - ES Module (because package.json has "type":"module").
-//  - Requires only Node core modules (fs, path, url). No external deps.
+//  - Requires only Node core modules (fs, path, crypto). No external deps.
 //  - Safe to run even if some folders/files are missing; it will just skip.
 //  - Normalisation removes diacritics, lowercases, collapses whitespace, and
 //    unifies punctuation. Women/B/Uxx are excluded by default.
 // =============================================
 
-import fs from 'fs';
-import path from 'path';
-import { pathToFileURL } from 'url';
+const fs = require('fs');
+const path = require('path');
 
 const DEFAULT_OUT_DIR = path.join('data', 'compiled');
 const DATA_DIR = 'data';
@@ -159,17 +157,19 @@ function loadMasters() {
 function inferKindFromId(id) {
   if (typeof id !== 'string') return undefined;
   const pref = id.split(':')[0];
-  return pref; // allow composite kinds to be refined by path where needed
+  // Accept composite kinds like player:football
+  return pref.includes('/') ? pref.split('/')[0] : pref; // but we preserve full id
 }
 
 function inferSportFromId(id) {
   if (typeof id !== 'string') return undefined;
   const parts = id.split(':');
-  if (parts.length >= 1) {
-    const kind = parts[0];
-    if (kind === 'team' || kind === 'player' || kind === 'competition') return 'football';
-    if (kind === 'horse' || kind === 'jockey' || kind === 'trainer' || kind === 'course') return 'racing';
-    if (kind === 'tournament' || kind === 'tour') return 'golf';
+  if (parts.length >= 2) {
+    const maybe = parts[0];
+    if (['team', 'player', 'competition', 'horse', 'jockey', 'trainer', 'course', 'tournament', 'tour'].includes(maybe)) {
+      const tail = parts[1] || '';
+      if (tail.startsWith('eng') || tail.startsWith('fra') || tail.startsWith('esp')) return 'football';
+    }
   }
   return undefined;
 }
@@ -247,7 +247,7 @@ function loadCollectedRawStrings(collectedDir) {
   const files = listJsonFilesRecursive(collectedDir);
   const pick = (v) => {
     if (typeof v === 'string') set.add(v);
-    else if (v && typeof v === 'object' && !Array.isArray(v)) {
+    else if (v && typeof v === 'object') {
       for (const k of Object.keys(v)) pick(v[k]);
     } else if (Array.isArray(v)) {
       for (const x of v) pick(x);
@@ -312,7 +312,18 @@ function deriveTeamsOnly(index) {
   const out = Object.create(null);
   for (const [k, arr] of Object.entries(index)) {
     const teams = arr.filter(e => e.kind === 'team');
-    if (teams.length) out[k] = teams.map(e => e.id);
+    if (teams.length) {
+      // de-duplicate IDs across sources (master, bookmaker, betfair)
+      const seen = new Set();
+      const uniq = [];
+      for (const e of teams) {
+        if (!seen.has(e.id)) {
+          seen.add(e.id);
+          uniq.push(e.id);
+        }
+      }
+      out[k] = uniq;
+    }
   }
   return out;
 }
@@ -351,6 +362,7 @@ function main() {
     for (const e of arr) {
       if (!byKind[e.kind]) byKind[e.kind] = {};
       if (!byKind[e.kind][k]) byKind[e.kind][k] = [];
+      // push shallow copy to avoid accidental mutation
       byKind[e.kind][k].push({ id: e.id, kind: e.kind, sport: e.sport, country: e.country, source: e.source, priority: e.priority });
     }
   }
@@ -374,7 +386,6 @@ function main() {
   console.log(`[aliases_compile] wrote: ${path.join(outDir, 'aliases.index.json')} (team-keys=${teamKeys})`);
 }
 
-// Run only when executed directly via `node .../aliases_compile.js`
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (require.main === module) {
   try { main(); } catch (e) { console.error(e); process.exit(1); }
 }

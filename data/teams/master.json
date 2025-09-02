@@ -1,1 +1,14 @@
-{"_comment": "Placeholder. Canonical teams live in your compiled aliases file."}
+[
+	{ "id": "team:den:fc-copenhagen", "name": "FC Copenhagen", "country": "DEN", "sport": "football" },
+	{ "id": "team:esp:real-betis", "name": "Real Betis", "country": "ESP", "sport": "football" },
+	{ "id": "team:sui:fc-basel", "name": "FC Basel", "country": "SUI", "sport": "football" },
+	{ "id": "team:ita:inter-milan", "name": "Inter Milan", "country": "ITA", "sport": "football" },
+	{ "id": "team:eng:nottingham-forest", "name": "Nottingham Forest", "country": "ENG", "sport": "football" },
+	{ "id": "team:fra:paris-saint-germain", "name": "Paris Saint-Germain", "country": "FRA", "sport": "football" },
+	{ "id": "team:ukr:shakhtar-donetsk", "name": "Shakhtar Donetsk", "country": "UKR", "sport": "football" },
+	{ "id": "team:ned:fc-utrecht", "name": "FC Utrecht", "country": "NED", "sport": "football" },
+	{ "id": "team:ita:us-cremonese", "name": "US Cremonese", "country": "ITA", "sport": "football" },
+	{ "id": "team:ger:fc-st-pauli", "name": "FC St. Pauli", "country": "GER", "sport": "football" },
+	{ "id": "team:arg:gimnasia-la-plata", "name": "Gimnasia La Plata", "country": "ARG", "sport": "football" },
+	{ "id": "team:eng:lincoln-city", "name": "Lincoln City", "country": "ENG", "sport": "football" }
+]

@@ -1,6 +1,6 @@
 // =============================================
 // File: scripts/tools/aliases_lint.js
-// Purpose: Lint alias sources and compiled indices for conflicts & bad patterns. (ESM version)
+// Purpose: Lint alias sources and compiled indices for conflicts & bad patterns.
 //  - Checks:
 //     * Conflicting mappings: same normalised key -> multiple IDs of SAME kind
 //     * Banned tokens in alias keys (Women/Ladies/U21/U23/B/II/III)
@@ -8,32 +8,31 @@
 //  - Exit non-zero on severe conflicts so CI can fail the build.
 // =============================================
 
-import fs from 'fs';
-import path from 'path';
-import { pathToFileURL } from 'url';
+const fs2 = require('fs');
+const path2 = require('path');
 
-const DATA_DIR = 'data';
-const COMPILED_EXT = path.join(DATA_DIR, 'compiled', 'aliases.extended.index.json');
-const COMPILED_TEAMS = path.join(DATA_DIR, 'compiled', 'aliases.index.json');
-const ALIASES_DIR = path.join(DATA_DIR, 'aliases');
-const MASTER_TEAM_FILE = path.join(DATA_DIR, 'teams', 'master.json');
-const MASTER_DIR = path.join(DATA_DIR, 'master');
+const DATA_DIR2 = 'data';
+const COMPILED_EXT = path2.join(DATA_DIR2, 'compiled', 'aliases.extended.index.json');
+const COMPILED_TEAMS = path2.join(DATA_DIR2, 'compiled', 'aliases.index.json');
+const ALIASES_DIR2 = path2.join(DATA_DIR2, 'aliases');
+const MASTER_TEAM_FILE2 = path2.join(DATA_DIR2, 'teams', 'master.json');
+const MASTER_DIR2 = path2.join(DATA_DIR2, 'master');
 
-function readJsonSafe(f) { try { if (!fs.existsSync(f)) return null; return JSON.parse(fs.readFileSync(f, 'utf8')); } catch { return null; } }
-function listJsonFilesRecursive(root) {
+function readJsonSafe2(f) { try { if (!fs2.existsSync(f)) return null; return JSON.parse(fs2.readFileSync(f, 'utf8')); } catch { return null; } }
+function listJsonFilesRecursive2(root) {
   const out = [];
   (function walk(dir) {
-    if (!fs.existsSync(dir)) return;
-    for (const entry of fs.readdirSync(dir)) {
-      const full = path.join(dir, entry);
-      const st = fs.statSync(full);
+    if (!fs2.existsSync(dir)) return;
+    for (const entry of fs2.readdirSync(dir)) {
+      const full = path2.join(dir, entry);
+      const st = fs2.statSync(full);
       if (st.isDirectory()) walk(full); else if (entry.toLowerCase().endsWith('.json')) out.push(full);
     }
   })(root);
   return out;
 }
 
-function normaliseKey(s) {
+function normaliseKey2(s) {
   return s
     ? s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
         .toLowerCase().replace(/&/g, ' and ').replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\s+/g, ' ').trim()
@@ -42,13 +41,13 @@ function normaliseKey(s) {
 
 const BANNED = [ /\bwomen\b/i, /\bladies\b/i, /\bu(?:-)?(?:18|19|20|21|23)\b/i, /\b(b|ii|iii)\s*team\b/i, /\(w\)/i ];
 
-function loadMasterIds() {
+function loadMasterIds2() {
   const ids = new Set();
-  const t = readJsonSafe(MASTER_TEAM_FILE);
+  const t = readJsonSafe2(MASTER_TEAM_FILE2);
   if (Array.isArray(t)) for (const r of t) if (r && r.id) ids.add(r.id);
-  if (fs.existsSync(MASTER_DIR)) {
-    for (const f of listJsonFilesRecursive(MASTER_DIR)) {
-      const arr = readJsonSafe(f);
+  if (fs2.existsSync(MASTER_DIR2)) {
+    for (const f of listJsonFilesRecursive2(MASTER_DIR2)) {
+      const arr = readJsonSafe2(f);
       if (Array.isArray(arr)) for (const r of arr) if (r && r.id) ids.add(r.id);
     }
   }
@@ -58,7 +57,7 @@ function loadMasterIds() {
 function lintCompiled() {
   const issues = { conflicts: [], banned: [], orphans: [] };
 
-  const extended = readJsonSafe(COMPILED_EXT);
+  const extended = readJsonSafe2(COMPILED_EXT);
   if (extended && extended.index) {
     for (const [key, entries] of Object.entries(extended.index)) {
       const byKind = new Map();
@@ -75,14 +74,14 @@ function lintCompiled() {
     }
   } else {
     // fall back to teams-only index (we can't detect multi-id conflicts by kind here)
-    const teamsOnly = readJsonSafe(COMPILED_TEAMS) || {};
+    const teamsOnly = readJsonSafe2(COMPILED_TEAMS) || {};
     for (const key of Object.keys(teamsOnly)) if (BANNED.some(rx => rx.test(key))) issues.banned.push({ key });
   }
 
   // Orphans in alias files
-  const masterIds = loadMasterIds();
-  for (const f of listJsonFilesRecursive(ALIASES_DIR)) {
-    const obj = readJsonSafe(f);
+  const masterIds = loadMasterIds2();
+  for (const f of listJsonFilesRecursive2(ALIASES_DIR2)) {
+    const obj = readJsonSafe2(f);
     if (!obj || typeof obj !== 'object') continue;
     for (const id of Object.values(obj)) {
       if (!masterIds.has(id)) issues.orphans.push({ file: f, id });
@@ -118,6 +117,6 @@ function lintCompiled() {
   console.log('[aliases_lint] OK');
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+if (require.main === module) {
   try { lintCompiled(); } catch (e) { console.error(e); process.exit(1); }
 }

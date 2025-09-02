@@ -1,6 +1,598 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-01T13:59:45.447Z",
-  "index": {},
-  "byKind": {}
+  "generatedAt": "2025-09-02T11:43:43.586Z",
+  "index": {
+    "fc copenhagen": [
+      {
+        "id": "team:den:fc-copenhagen",
+        "kind": "team",
+        "sport": "football",
+        "country": "DEN",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:den:fc-copenhagen",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "real betis": [
+      {
+        "id": "team:esp:real-betis",
+        "kind": "team",
+        "sport": "football",
+        "country": "ESP",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:esp:real-betis",
+        "kind": "team",
+        "sport": "football",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "fc basel": [
+      {
+        "id": "team:sui:fc-basel",
+        "kind": "team",
+        "sport": "football",
+        "country": "SUI",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "inter milan": [
+      {
+        "id": "team:ita:inter-milan",
+        "kind": "team",
+        "sport": "football",
+        "country": "ITA",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:ita:inter-milan",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "nottingham forest": [
+      {
+        "id": "team:eng:nottingham-forest",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:eng:nottingham-forest",
+        "kind": "team",
+        "sport": "football",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "paris saint germain": [
+      {
+        "id": "team:fra:paris-saint-germain",
+        "kind": "team",
+        "sport": "football",
+        "country": "FRA",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "shakhtar donetsk": [
+      {
+        "id": "team:ukr:shakhtar-donetsk",
+        "kind": "team",
+        "sport": "football",
+        "country": "UKR",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:ukr:shakhtar-donetsk",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "fc utrecht": [
+      {
+        "id": "team:ned:fc-utrecht",
+        "kind": "team",
+        "sport": "football",
+        "country": "NED",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "us cremonese": [
+      {
+        "id": "team:ita:us-cremonese",
+        "kind": "team",
+        "sport": "football",
+        "country": "ITA",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "fc st pauli": [
+      {
+        "id": "team:ger:fc-st-pauli",
+        "kind": "team",
+        "sport": "football",
+        "country": "GER",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "gimnasia la plata": [
+      {
+        "id": "team:arg:gimnasia-la-plata",
+        "kind": "team",
+        "sport": "football",
+        "country": "ARG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "lincoln city": [
+      {
+        "id": "team:eng:lincoln-city",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "premier league": [
+      {
+        "id": "competition:football:eng-premier-league",
+        "kind": "competition",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "uefa champions league": [
+      {
+        "id": "competition:football:uefa-champions-league",
+        "kind": "competition",
+        "sport": "football",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "newcastle aw": [
+      {
+        "id": "course:gb:newcastle-aw",
+        "kind": "course",
+        "sport": "racing",
+        "country": "GB",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "ascot": [
+      {
+        "id": "course:gb:ascot",
+        "kind": "course",
+        "sport": "racing",
+        "country": "GB",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "betis": [
+      {
+        "id": "team:esp:real-betis",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "inter": [
+      {
+        "id": "team:ita:inter-milan",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "nottm forest": [
+      {
+        "id": "team:eng:nottingham-forest",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "paris st g": [
+      {
+        "id": "team:fra:paris-saint-germain",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "lincoln": [
+      {
+        "id": "team:eng:lincoln-city",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "basel": [
+      {
+        "id": "team:sui:fc-basel",
+        "kind": "team",
+        "source": "bookmaker:pricedup",
+        "priority": 70
+      }
+    ],
+    "copenhagen": [
+      {
+        "id": "team:den:fc-copenhagen",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "psg": [
+      {
+        "id": "team:fra:paris-saint-germain",
+        "kind": "team",
+        "sport": "football",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "utrecht": [
+      {
+        "id": "team:ned:fc-utrecht",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "cremonese": [
+      {
+        "id": "team:ita:us-cremonese",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "st pauli": [
+      {
+        "id": "team:ger:fc-st-pauli",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "gimnasia lp": [
+      {
+        "id": "team:arg:gimnasia-la-plata",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ]
+  },
+  "byKind": {
+    "team": {
+      "fc copenhagen": [
+        {
+          "id": "team:den:fc-copenhagen",
+          "kind": "team",
+          "sport": "football",
+          "country": "DEN",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:den:fc-copenhagen",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "real betis": [
+        {
+          "id": "team:esp:real-betis",
+          "kind": "team",
+          "sport": "football",
+          "country": "ESP",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:esp:real-betis",
+          "kind": "team",
+          "sport": "football",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "fc basel": [
+        {
+          "id": "team:sui:fc-basel",
+          "kind": "team",
+          "sport": "football",
+          "country": "SUI",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "inter milan": [
+        {
+          "id": "team:ita:inter-milan",
+          "kind": "team",
+          "sport": "football",
+          "country": "ITA",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:ita:inter-milan",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "nottingham forest": [
+        {
+          "id": "team:eng:nottingham-forest",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:eng:nottingham-forest",
+          "kind": "team",
+          "sport": "football",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "paris saint germain": [
+        {
+          "id": "team:fra:paris-saint-germain",
+          "kind": "team",
+          "sport": "football",
+          "country": "FRA",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "shakhtar donetsk": [
+        {
+          "id": "team:ukr:shakhtar-donetsk",
+          "kind": "team",
+          "sport": "football",
+          "country": "UKR",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:ukr:shakhtar-donetsk",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "fc utrecht": [
+        {
+          "id": "team:ned:fc-utrecht",
+          "kind": "team",
+          "sport": "football",
+          "country": "NED",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "us cremonese": [
+        {
+          "id": "team:ita:us-cremonese",
+          "kind": "team",
+          "sport": "football",
+          "country": "ITA",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "fc st pauli": [
+        {
+          "id": "team:ger:fc-st-pauli",
+          "kind": "team",
+          "sport": "football",
+          "country": "GER",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "gimnasia la plata": [
+        {
+          "id": "team:arg:gimnasia-la-plata",
+          "kind": "team",
+          "sport": "football",
+          "country": "ARG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "lincoln city": [
+        {
+          "id": "team:eng:lincoln-city",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "betis": [
+        {
+          "id": "team:esp:real-betis",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "inter": [
+        {
+          "id": "team:ita:inter-milan",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "nottm forest": [
+        {
+          "id": "team:eng:nottingham-forest",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "paris st g": [
+        {
+          "id": "team:fra:paris-saint-germain",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "lincoln": [
+        {
+          "id": "team:eng:lincoln-city",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "basel": [
+        {
+          "id": "team:sui:fc-basel",
+          "kind": "team",
+          "source": "bookmaker:pricedup",
+          "priority": 70
+        }
+      ],
+      "copenhagen": [
+        {
+          "id": "team:den:fc-copenhagen",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "psg": [
+        {
+          "id": "team:fra:paris-saint-germain",
+          "kind": "team",
+          "sport": "football",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "utrecht": [
+        {
+          "id": "team:ned:fc-utrecht",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "cremonese": [
+        {
+          "id": "team:ita:us-cremonese",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "st pauli": [
+        {
+          "id": "team:ger:fc-st-pauli",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "gimnasia lp": [
+        {
+          "id": "team:arg:gimnasia-la-plata",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ]
+    },
+    "competition": {
+      "premier league": [
+        {
+          "id": "competition:football:eng-premier-league",
+          "kind": "competition",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "uefa champions league": [
+        {
+          "id": "competition:football:uefa-champions-league",
+          "kind": "competition",
+          "sport": "football",
+          "source": "master",
+          "priority": 100
+        }
+      ]
+    },
+    "course": {
+      "newcastle aw": [
+        {
+          "id": "course:gb:newcastle-aw",
+          "kind": "course",
+          "sport": "racing",
+          "country": "GB",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "ascot": [
+        {
+          "id": "course:gb:ascot",
+          "kind": "course",
+          "sport": "racing",
+          "country": "GB",
+          "source": "master",
+          "priority": 100
+        }
+      ]
+    }
+  }
 }

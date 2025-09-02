@@ -1,0 +1,7761 @@
+[
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Csikszereda",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Csikszereda v Otelul Galati"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Otelul Galati",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Csikszereda v Otelul Galati"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Romanian Liga I",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Csikszereda v Otelul Galati"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Csikszereda",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Csikszereda v Otelul Galati"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Otelul Galati",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Csikszereda v Otelul Galati"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "The Draw",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Csikszereda v Otelul Galati"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al Kharitiyath",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Kharitiyath v Lusail"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Lusail",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Kharitiyath v Lusail"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Qatari Stars Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Al Kharitiyath v Lusail"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Al Kharitiyath",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Kharitiyath v Lusail"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Lusail",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Kharitiyath v Lusail"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Afghanistan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Other Competitions Soccer",
+      "event": "Afghanistan v Tajikistan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Tajikistan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Other Competitions Soccer",
+      "event": "Afghanistan v Tajikistan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Other Competitions Soccer",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Afghanistan v Tajikistan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Afghanistan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Other Competitions Soccer",
+      "event": "Afghanistan v Tajikistan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Tajikistan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Other Competitions Soccer",
+      "event": "Afghanistan v Tajikistan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al Waab Sports Club",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Waab Sports Club v Al Mesaimeer"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al Mesaimeer",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Waab Sports Club v Al Mesaimeer"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Al Waab Sports Club",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Waab Sports Club v Al Mesaimeer"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "AL Mesaimeer",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Waab Sports Club v Al Mesaimeer"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Maccabi Kabilio Jaffa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Maccabi Kabilio Jaffa v Hapoel Ramat Gan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hapoel Ramat Gan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Maccabi Kabilio Jaffa v Hapoel Ramat Gan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Israeli National League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Maccabi Kabilio Jaffa v Hapoel Ramat Gan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Maccabi Kabilio Jaffa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Maccabi Kabilio Jaffa v Hapoel Ramat Gan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hapoel Ramat Gan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Maccabi Kabilio Jaffa v Hapoel Ramat Gan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Zrinjski",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Bosnian Premier League",
+      "event": "Zrinjski v Radnik Bijeljina"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Radnik Bijeljina",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Bosnian Premier League",
+      "event": "Zrinjski v Radnik Bijeljina"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Bosnian Premier League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Zrinjski v Radnik Bijeljina"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Zrinjski",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Bosnian Premier League",
+      "event": "Zrinjski v Radnik Bijeljina"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Radnik Bijeljina",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Bosnian Premier League",
+      "event": "Zrinjski v Radnik Bijeljina"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hapoel Afula",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Afula v Hapoel Rishon Lezion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hapoel Rishon Lezion",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Afula v Hapoel Rishon Lezion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hapoel Afula",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Afula v Hapoel Rishon Lezion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hapoel Rishon Lezion",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Afula v Hapoel Rishon Lezion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Lokomotiv Oslo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Lokomotiv Oslo v Fredrikstad II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Fredrikstad II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Lokomotiv Oslo v Fredrikstad II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Norwegian 3rd Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Lokomotiv Oslo v Fredrikstad II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Lokomotiv Oslo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Lokomotiv Oslo v Fredrikstad II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Fredrikstad II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Lokomotiv Oslo v Fredrikstad II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hapoel Nof HaGalil",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Nof HaGalil v SC Kiryat Yam"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "SC Kiryat Yam",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Nof HaGalil v SC Kiryat Yam"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hapoel Nof Hagalil",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Nof HaGalil v SC Kiryat Yam"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "SC Kiryat Yam",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli National League",
+      "event": "Hapoel Nof HaGalil v SC Kiryat Yam"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Rigas Futbola Skola II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Latvian 1 Liga",
+      "event": "Rigas Futbola Skola II v Marupes SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Marupes SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Latvian 1 Liga",
+      "event": "Rigas Futbola Skola II v Marupes SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Latvian 1 Liga",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Rigas Futbola Skola II v Marupes SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Rigas Futbola Skola II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Latvian 1 Liga",
+      "event": "Rigas Futbola Skola II v Marupes SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Marupes SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Latvian 1 Liga",
+      "event": "Rigas Futbola Skola II v Marupes SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Jonkopings Sodra",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Swedish Division 1",
+      "event": "Jonkopings Sodra v Skovde"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Skovde",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Swedish Division 1",
+      "event": "Jonkopings Sodra v Skovde"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Swedish Division 1",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Jonkopings Sodra v Skovde"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Jonkopings Sodra",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Swedish Division 1",
+      "event": "Jonkopings Sodra v Skovde"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Skovde",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Swedish Division 1",
+      "event": "Jonkopings Sodra v Skovde"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Sandefjord II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Sandefjord II v Valerenga II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Valerenga II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Sandefjord II v Valerenga II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Sandefjord II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Sandefjord II v Valerenga II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Valerenga II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Sandefjord II v Valerenga II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Oppsal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Oppsal v Odd II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Odd II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Oppsal v Odd II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Oppsal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Oppsal v Odd II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Odd II",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Norwegian 3rd Division",
+      "event": "Oppsal v Odd II"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Maccabi Ironi Kiryat Mal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli Cup",
+      "event": "Maccabi Ironi Kiryat Mal v Ironi Ashdod Sportclub"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ironi Ashdod Sportclub",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli Cup",
+      "event": "Maccabi Ironi Kiryat Mal v Ironi Ashdod Sportclub"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Israeli Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Maccabi Ironi Kiryat Mal v Ironi Ashdod Sportclub"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Maccabi Ironi Kiryat Mal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli Cup",
+      "event": "Maccabi Ironi Kiryat Mal v Ironi Ashdod Sportclub"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Ironi Ashdod Sportclub",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Israeli Cup",
+      "event": "Maccabi Ironi Kiryat Mal v Ironi Ashdod Sportclub"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Esbjerg",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish 1st Division",
+      "event": "Esbjerg v HB Koge"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "HB Koge",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish 1st Division",
+      "event": "Esbjerg v HB Koge"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Danish 1st Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Esbjerg v HB Koge"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Esbjerg",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish 1st Division",
+      "event": "Esbjerg v HB Koge"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "HB Koge",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish 1st Division",
+      "event": "Esbjerg v HB Koge"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Agropecuario",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Agropecuario v Almirante Brown"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Almirante Brown",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Agropecuario v Almirante Brown"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Argentinian Primera B Nacional",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Agropecuario v Almirante Brown"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Agropecuario",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Agropecuario v Almirante Brown"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Almirante Brown",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Agropecuario v Almirante Brown"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Macva Sabac",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "Macva Sabac v FK Borac Cacak"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FK Borac Cacak",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "Macva Sabac v FK Borac Cacak"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Serbian First League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Macva Sabac v FK Borac Cacak"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Macva Sabac",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "Macva Sabac v FK Borac Cacak"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FK Borac Cacak",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "Macva Sabac v FK Borac Cacak"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al Markhiya",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Markhiya v Al Mu Aidar SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al Mu Aidar SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Markhiya v Al Mu Aidar SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Al Markhiya",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Markhiya v Al Mu Aidar SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Al Mu Aidar SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Markhiya v Al Mu Aidar SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al Gharafa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Gharafa v Al-Sadd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Al-Sadd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Gharafa v Al-Sadd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Al Gharafa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Gharafa v Al-Sadd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Al-Sadd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Qatari Stars Cup",
+      "event": "Al Gharafa v Al-Sadd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Huesca",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Huesca v Eibar"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Eibar",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Huesca v Eibar"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Spanish Segunda Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Huesca v Eibar"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Huesca",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Huesca v Eibar"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Eibar",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Huesca v Eibar"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FK Dubocica",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Dubocica v FK FAP"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FK FAP",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Dubocica v FK FAP"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FK Dubocica",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Dubocica v FK FAP"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FK FAP",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Dubocica v FK FAP"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Farul Constanta",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Farul Constanta v ACS Petrolul 52"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "ACS Petrolul 52",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Farul Constanta v ACS Petrolul 52"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Farul Constanta",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Farul Constanta v ACS Petrolul 52"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "ACS Petrolul 52",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga I",
+      "event": "Farul Constanta v ACS Petrolul 52"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FK Trayal Krusevac",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Trayal Krusevac v SU Dinamo Jug"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "SU Dinamo Jug",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Trayal Krusevac v SU Dinamo Jug"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FK Trayal Krusevac",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Trayal Krusevac v SU Dinamo Jug"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "SU Dinamo Jug",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Serbian First League",
+      "event": "FK Trayal Krusevac v SU Dinamo Jug"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chelmsford",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Chelmsford v Farnborough FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Farnborough FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Chelmsford v Farnborough FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "English National League South",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Chelmsford v Farnborough FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chelmsford",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Chelmsford v Farnborough FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Farnborough FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Chelmsford v Farnborough FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "HFX Wanderers",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Canadian Premier League",
+      "event": "HFX Wanderers v York United"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "York United",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Canadian Premier League",
+      "event": "HFX Wanderers v York United"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Canadian Premier League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "HFX Wanderers v York United"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "HFX Wanderers",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Canadian Premier League",
+      "event": "HFX Wanderers v York United"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "York United",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Canadian Premier League",
+      "event": "HFX Wanderers v York United"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Leganes",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Leganes v Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Deportivo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Leganes v Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Leganes",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Leganes v Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Deportivo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Leganes v Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Tigres FC Zipaquira",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Tigres FC Zipaquira v Cucuta Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cucuta Deportivo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Tigres FC Zipaquira v Cucuta Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Colombian Primera B",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Tigres FC Zipaquira v Cucuta Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Tigres FC Zipaquira",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Tigres FC Zipaquira v Cucuta Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cucuta Deportivo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Tigres FC Zipaquira v Cucuta Deportivo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Gimnasia La Plata",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "Gimnasia La Plata v Atl Tucuman"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Atl Tucuman",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "Gimnasia La Plata v Atl Tucuman"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Argentinian Primera Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Gimnasia La Plata v Atl Tucuman"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Gimnasia La Plata",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "Gimnasia La Plata v Atl Tucuman"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Atl Tucuman",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "Gimnasia La Plata v Atl Tucuman"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Nueva Chicago",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Nueva Chicago v Gimnasia Mendoza"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Gimnasia Mendoza",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Nueva Chicago v Gimnasia Mendoza"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Nueva Chicago",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Nueva Chicago v Gimnasia Mendoza"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Gimnasia Mendoza",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Nueva Chicago v Gimnasia Mendoza"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Arnett Gardens FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Arnett Gardens FC v Cavalier"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cavalier",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Arnett Gardens FC v Cavalier"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Jamaican Premier League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Arnett Gardens FC v Cavalier"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Arnett Gardens FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Arnett Gardens FC v Cavalier"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cavalier",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Arnett Gardens FC v Cavalier"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Caracas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Venezuelan Primera Division",
+      "event": "Caracas v Yaracuyanos"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Yaracuyanos",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Venezuelan Primera Division",
+      "event": "Caracas v Yaracuyanos"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Venezuelan Primera Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Caracas v Yaracuyanos"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Caracas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Venezuelan Primera Division",
+      "event": "Caracas v Yaracuyanos"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Yaracuyanos",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Venezuelan Primera Division",
+      "event": "Caracas v Yaracuyanos"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chapecoense",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Chapecoense v Vila Nova"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Vila Nova",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Chapecoense v Vila Nova"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Brazilian Serie B",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Chapecoense v Vila Nova"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chapecoense",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Chapecoense v Vila Nova"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Vila Nova",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Chapecoense v Vila Nova"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cerro Largo FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Uruguayan Primera Division",
+      "event": "Cerro Largo FC v Wanderers (Uru)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Wanderers (Uru)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Uruguayan Primera Division",
+      "event": "Cerro Largo FC v Wanderers (Uru)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Uruguayan Primera Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Cerro Largo FC v Wanderers (Uru)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cerro Largo FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Uruguayan Primera Division",
+      "event": "Cerro Largo FC v Wanderers (Uru)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Wanderers (Uru)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Uruguayan Primera Division",
+      "event": "Cerro Largo FC v Wanderers (Uru)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Mount Pleasant FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Mount Pleasant FC v Molynes United FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Molynes United FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Mount Pleasant FC v Molynes United FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Mount Pleasant FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Mount Pleasant FC v Molynes United FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Molynes United FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Mount Pleasant FC v Molynes United FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Defensores de Belgrano",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Defensores de Belgrano v Colon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Colon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Defensores de Belgrano v Colon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Defensores de Belgrano",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Defensores de Belgrano v Colon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Colon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera B Nacional",
+      "event": "Defensores de Belgrano v Colon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "CA Platense",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "CA Platense v Godoy Cruz"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Godoy Cruz",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "CA Platense v Godoy Cruz"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "CA Platense",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "CA Platense v Godoy Cruz"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Godoy Cruz",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Primera Division",
+      "event": "CA Platense v Godoy Cruz"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Barranquilla",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Barranquilla v Internacional de Palmira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Internacional de Palmira",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Barranquilla v Internacional de Palmira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Barranquilla",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Barranquilla v Internacional de Palmira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Internacional de Palmira",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Barranquilla v Internacional de Palmira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Atletico Huila",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Atletico Huila v Real Cartagena"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Real Cartagena",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Atletico Huila v Real Cartagena"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Atletico Huila",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Atletico Huila v Real Cartagena"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Real Cartagena",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera B",
+      "event": "Atletico Huila v Real Cartagena"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Univ de Concepcion",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Chilean Primera B",
+      "event": "Univ de Concepcion v Deportes Recoleta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Deportes Recoleta",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Chilean Primera B",
+      "event": "Univ de Concepcion v Deportes Recoleta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Chilean Primera B",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Univ de Concepcion v Deportes Recoleta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Univ de Concepcion",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Chilean Primera B",
+      "event": "Univ de Concepcion v Deportes Recoleta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Deportes Recoleta",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Chilean Primera B",
+      "event": "Univ de Concepcion v Deportes Recoleta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Delfin",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Ecuadorian Serie A",
+      "event": "Delfin v Libertad FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Libertad FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Ecuadorian Serie A",
+      "event": "Delfin v Libertad FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Ecuadorian Serie A",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Delfin v Libertad FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Delfin",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Ecuadorian Serie A",
+      "event": "Delfin v Libertad FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Libertad FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Ecuadorian Serie A",
+      "event": "Delfin v Libertad FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FC Atlas (W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "FC Atlas (W) v Mazatlan FC(W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Mazatlan FC(W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "FC Atlas (W) v Mazatlan FC(W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Mexican Liga MX Femenil",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "FC Atlas (W) v Mazatlan FC(W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FC Atlas (W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "FC Atlas (W) v Mazatlan FC(W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Mazatlan FC(W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "FC Atlas (W) v Mazatlan FC(W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ferroviaria",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Ferroviaria v Cuiaba"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cuiaba",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Ferroviaria v Cuiaba"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Ferroviaria",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Ferroviaria v Cuiaba"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cuiaba",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "Ferroviaria v Cuiaba"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Montego Bay United",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Montego Bay United v Treasure Beach FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Treasure Beach FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Montego Bay United v Treasure Beach FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Montego Bay United",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Montego Bay United v Treasure Beach FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Treasure Beach FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Jamaican Premier League",
+      "event": "Montego Bay United v Treasure Beach FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Santa Fe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera A",
+      "event": "Santa Fe v Once Caldas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Once Caldas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera A",
+      "event": "Santa Fe v Once Caldas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Colombian Primera A",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Santa Fe v Once Caldas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Santa Fe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera A",
+      "event": "Santa Fe v Once Caldas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Once Caldas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Primera A",
+      "event": "Santa Fe v Once Caldas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ad San Carlos",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "Ad San Carlos v Municipal Perez Zeledon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Municipal Perez Zeledon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "Ad San Carlos v Municipal Perez Zeledon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Costa Rican Primera Division",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Ad San Carlos v Municipal Perez Zeledon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "AD San Carlos",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "Ad San Carlos v Municipal Perez Zeledon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Municipal Perez Zeledon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "Ad San Carlos v Municipal Perez Zeledon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Veraguas FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Panamanian Premier League",
+      "event": "Veraguas FC v Sporting San Miguelito"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Sporting San Miguelito",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Panamanian Premier League",
+      "event": "Veraguas FC v Sporting San Miguelito"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Panamanian Premier League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Veraguas FC v Sporting San Miguelito"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Veraguas FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Panamanian Premier League",
+      "event": "Veraguas FC v Sporting San Miguelito"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Sporting San Miguelito",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Panamanian Premier League",
+      "event": "Veraguas FC v Sporting San Miguelito"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Santos Laguna (W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "Santos Laguna (W) v Pumas UNAM (W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Pumas UNAM (W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "Santos Laguna (W) v Pumas UNAM (W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Santos Laguna (W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "Santos Laguna (W) v Pumas UNAM (W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Pumas UNAM (W)",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Mexican Liga MX Femenil",
+      "event": "Santos Laguna (W) v Pumas UNAM (W)"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Shillong Lajong FC Reserves",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Indian Shillong Premier League",
+      "event": "Shillong Lajong FC Reserves v Laitkor SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Laitkor SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Indian Shillong Premier League",
+      "event": "Shillong Lajong FC Reserves v Laitkor SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Indian Shillong Premier League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Shillong Lajong FC Reserves v Laitkor SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Shillong Lajong FC Reserves",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Indian Shillong Premier League",
+      "event": "Shillong Lajong FC Reserves v Laitkor SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Laitkor SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Indian Shillong Premier League",
+      "event": "Shillong Lajong FC Reserves v Laitkor SC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bursa Yildirim Spor",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Bursa Yildirim Spor v Altay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Altay",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Bursa Yildirim Spor v Altay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Turkish Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Bursa Yildirim Spor v Altay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bursa Yildirim Spor",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Bursa Yildirim Spor v Altay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Altay",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Bursa Yildirim Spor v Altay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Peterborough United U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Peterborough United U21 v Cardiff City U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cardiff City U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Peterborough United U21 v Cardiff City U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "English U21 Pro Development League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Peterborough United U21 v Cardiff City U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Peterborough United U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Peterborough United U21 v Cardiff City U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cardiff City U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Peterborough United U21 v Cardiff City U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Barnsley U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Barnsley U21 v Queens Park Rangers U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Queens Park Rangers U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Barnsley U21 v Queens Park Rangers U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Barnsley U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Barnsley U21 v Queens Park Rangers U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Queens Park Rangers U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English U21 Pro Development League",
+      "event": "Barnsley U21 v Queens Park Rangers U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ankaraspor",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Ankaraspor v Eskisehirspor"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Eskisehirspor",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Ankaraspor v Eskisehirspor"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Ankaraspor",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Ankaraspor v Eskisehirspor"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Eskisehirspor",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Turkish Cup",
+      "event": "Ankaraspor v Eskisehirspor"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "NK Sredisce",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Slovenian Cup",
+      "event": "NK Sredisce v NK Podvinci"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "NK Podvinci",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Slovenian Cup",
+      "event": "NK Sredisce v NK Podvinci"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Slovenian Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "NK Sredisce v NK Podvinci"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "NK Sredisce",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Slovenian Cup",
+      "event": "NK Sredisce v NK Podvinci"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "NK Podvinci",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Slovenian Cup",
+      "event": "NK Sredisce v NK Podvinci"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "GVI",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "GVI v Bronshoj"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bronshoj",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "GVI v Bronshoj"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Danish Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "GVI v Bronshoj"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "GVI",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "GVI v Bronshoj"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bronshoj",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "GVI v Bronshoj"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chindia Targoviste",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga II",
+      "event": "Chindia Targoviste v ACS Dumbravita"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "ACS Dumbravita",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga II",
+      "event": "Chindia Targoviste v ACS Dumbravita"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Romanian Liga II",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Chindia Targoviste v ACS Dumbravita"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chindia Targoviste",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga II",
+      "event": "Chindia Targoviste v ACS Dumbravita"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Acs Dumbravita",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Romanian Liga II",
+      "event": "Chindia Targoviste v ACS Dumbravita"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Skive",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "Skive v Kolding IF"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kolding IF",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "Skive v Kolding IF"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Skive",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "Skive v Kolding IF"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kolding IF",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Danish Cup",
+      "event": "Skive v Kolding IF"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Crewe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Crewe v Chesterfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chesterfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Crewe v Chesterfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "EFL Trophy",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Crewe v Chesterfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Crewe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Crewe v Chesterfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chesterfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Crewe v Chesterfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Shrewsbury",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Shrewsbury v Walsall"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Walsall",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Shrewsbury v Walsall"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Shrewsbury",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Shrewsbury v Walsall"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Walsall",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Shrewsbury v Walsall"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Rohda Raalte",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Rohda Raalte v Hollandia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hollandia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Rohda Raalte v Hollandia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Dutch Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Rohda Raalte v Hollandia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Rohda Raalte",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Rohda Raalte v Hollandia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hollandia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Rohda Raalte v Hollandia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Wycombe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Wycombe v Colchester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Colchester",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Wycombe v Colchester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Wycombe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Wycombe v Colchester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Colchester",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Wycombe v Colchester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bolton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bolton v Rotherham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Rotherham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bolton v Rotherham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bolton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bolton v Rotherham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Rotherham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bolton v Rotherham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Lincoln",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Lincoln v Notts Co"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Notts Co",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Lincoln v Notts Co"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Lincoln",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Lincoln v Notts Co"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Notts Co",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Lincoln v Notts Co"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Gillingham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Gillingham v Fulham U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Fulham U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Gillingham v Fulham U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Gillingham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Gillingham v Fulham U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Fulham U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Gillingham v Fulham U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Peterborough",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Peterborough v Leyton Orient"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Leyton Orient",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Peterborough v Leyton Orient"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Peterborough",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Peterborough v Leyton Orient"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Leyton Orient",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Peterborough v Leyton Orient"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Doncaster",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Doncaster v Everton U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Everton U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Doncaster v Everton U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Doncaster",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Doncaster v Everton U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Everton U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Doncaster v Everton U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Stockport",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Stockport v Wolves U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Wolves U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Stockport v Wolves U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Stockport",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Stockport v Wolves U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Wolves U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Stockport v Wolves U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Harkemase Boys",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Harkemase Boys v Sparta Nijkerk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Sparta Nijkerk",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Harkemase Boys v Sparta Nijkerk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Harkemase Boys",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Harkemase Boys v Sparta Nijkerk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Sparta Nijkerk",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Harkemase Boys v Sparta Nijkerk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Fleetwood Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Fleetwood Town v Accrington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Accrington",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Fleetwood Town v Accrington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Fleetwood Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Fleetwood Town v Accrington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Accrington",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Fleetwood Town v Accrington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Scheveningen",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Scheveningen v Staphorst"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Staphorst",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Scheveningen v Staphorst"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Scheveningen",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Scheveningen v Staphorst"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Staphorst",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Scheveningen v Staphorst"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Zwaluwen",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Zwaluwen v SV Urk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "SV Urk",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Zwaluwen v SV Urk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Zwaluwen",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Zwaluwen v SV Urk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "SV Urk",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "Zwaluwen v SV Urk"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Plymouth",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Plymouth v Cheltenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cheltenham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Plymouth v Cheltenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Plymouth",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Plymouth v Cheltenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cheltenham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Plymouth v Cheltenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "AFC Wimbledon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "AFC Wimbledon v Stevenage"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Stevenage",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "AFC Wimbledon v Stevenage"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "AFC Wimbledon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "AFC Wimbledon v Stevenage"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Stevenage",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "AFC Wimbledon v Stevenage"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "SV TEC Tiel",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "SV TEC Tiel v SV Poortugaal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "SV Poortugaal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "SV TEC Tiel v SV Poortugaal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "SV TEC Tiel",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "SV TEC Tiel v SV Poortugaal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "SV Poortugaal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Dutch Cup",
+      "event": "SV TEC Tiel v SV Poortugaal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Swindon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Swindon v Reading"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Reading",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Swindon v Reading"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Swindon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Swindon v Reading"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Reading",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Swindon v Reading"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bradford",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bradford v Grimsby"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Grimsby",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bradford v Grimsby"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bradford",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bradford v Grimsby"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Grimsby",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bradford v Grimsby"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Luton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Luton v Barnet"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Barnet",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Luton v Barnet"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Luton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Luton v Barnet"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Barnet",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Luton v Barnet"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Connahs Quay",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Welsh Premiership",
+      "event": "Connahs Quay v Bala Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bala Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Welsh Premiership",
+      "event": "Connahs Quay v Bala Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Welsh Premiership",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Connahs Quay v Bala Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Connahs Quay",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Welsh Premiership",
+      "event": "Connahs Quay v Bala Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bala Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Welsh Premiership",
+      "event": "Connahs Quay v Bala Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Morecambe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Morecambe v Forest Green"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Forest Green",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Morecambe v Forest Green"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "English National League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Morecambe v Forest Green"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Morecambe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Morecambe v Forest Green"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Forest Green",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Morecambe v Forest Green"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "AFC Fylde",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "AFC Fylde v Chester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chester",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "AFC Fylde v Chester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "English National League North",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "AFC Fylde v Chester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "AFC Fylde",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "AFC Fylde v Chester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chester",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "AFC Fylde v Chester"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hornchurch",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hornchurch v Dorking Wanderers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Dorking Wanderers",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hornchurch v Dorking Wanderers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hornchurch",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hornchurch v Dorking Wanderers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Dorking Wanderers",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hornchurch v Dorking Wanderers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Leamington",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Leamington v Southport"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Southport",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Leamington v Southport"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Leamington",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Leamington v Southport"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Southport",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Leamington v Southport"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Marine FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Marine FC v Darlington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Darlington",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Marine FC v Darlington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Marine FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Marine FC v Darlington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Darlington",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Marine FC v Darlington"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Eastleigh",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Eastleigh v Scunthorpe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Scunthorpe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Eastleigh v Scunthorpe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Eastleigh",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Eastleigh v Scunthorpe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Scunthorpe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Eastleigh v Scunthorpe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kings Lynn",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Kings Lynn v Kidderminster"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kidderminster",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Kings Lynn v Kidderminster"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kings Lynn",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Kings Lynn v Kidderminster"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kidderminster",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Kings Lynn v Kidderminster"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Curzon Ashton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Curzon Ashton v Chorley"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chorley",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Curzon Ashton v Chorley"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Curzon Ashton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Curzon Ashton v Chorley"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chorley",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Curzon Ashton v Chorley"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Dover",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Dover v Dag and Red"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Dag and Red",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Dover v Dag and Red"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Dover",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Dover v Dag and Red"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Dag and Red",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Dover v Dag and Red"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "York City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "York City v Rochdale"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Rochdale",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "York City v Rochdale"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "York City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "York City v Rochdale"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Rochdale",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "York City v Rochdale"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Macclesfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Macclesfield v Merthyr Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Merthyr Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Macclesfield v Merthyr Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Macclesfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Macclesfield v Merthyr Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Merthyr Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Macclesfield v Merthyr Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Wealdstone",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Wealdstone v Southend"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Southend",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Wealdstone v Southend"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Wealdstone",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Wealdstone v Southend"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Southend",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Wealdstone v Southend"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Slough Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Slough Town v Chippenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chippenham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Slough Town v Chippenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Slough Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Slough Town v Chippenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chippenham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Slough Town v Chippenham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bath City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Bath City v Maidenhead"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Maidenhead",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Bath City v Maidenhead"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bath City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Bath City v Maidenhead"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Maidenhead",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Bath City v Maidenhead"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Oxford City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Oxford City v Alfreton Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Alfreton Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Oxford City v Alfreton Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Oxford City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Oxford City v Alfreton Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Alfreton Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Oxford City v Alfreton Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Solihull Moors",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Solihull Moors v Yeovil"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Yeovil",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Solihull Moors v Yeovil"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Solihull Moors",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Solihull Moors v Yeovil"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Yeovil",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Solihull Moors v Yeovil"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hampton and Richmond",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hampton and Richmond v Torquay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Torquay",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hampton and Richmond v Torquay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hampton and Richmond",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hampton and Richmond v Torquay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Torquay",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hampton and Richmond v Torquay"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Weston-super-Mare",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Weston-super-Mare v Maidstone Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Maidstone Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Weston-super-Mare v Maidstone Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Weston-super-Mare",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Weston-super-Mare v Maidstone Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Maidstone Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Weston-super-Mare v Maidstone Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Worthing",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Worthing v Salisbury City"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Salisbury City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Worthing v Salisbury City"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Worthing",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Worthing v Salisbury City"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Salisbury City",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Worthing v Salisbury City"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Braintree",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Braintree v Tamworth FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Tamworth FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Braintree v Tamworth FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Braintree",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Braintree v Tamworth FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Tamworth FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Braintree v Tamworth FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bromley",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bromley v Crystal Palace U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Crystal Palace U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bromley v Crystal Palace U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bromley",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bromley v Crystal Palace U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Crystal Palace U21",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "EFL Trophy",
+      "event": "Bromley v Crystal Palace U21"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "South Shields",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "South Shields v Radcliffe Borough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Radcliffe Borough",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "South Shields v Radcliffe Borough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "South Shields",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "South Shields v Radcliffe Borough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Radcliffe Borough",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "South Shields v Radcliffe Borough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Scarborough Athletic",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Scarborough Athletic v Buxton"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Buxton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Scarborough Athletic v Buxton"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Scarborough Athletic",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Scarborough Athletic v Buxton"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Buxton",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League North",
+      "event": "Scarborough Athletic v Buxton"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hemel Hempstead",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hemel Hempstead v Ebbsfleet Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ebbsfleet Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hemel Hempstead v Ebbsfleet Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hemel Hempstead",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hemel Hempstead v Ebbsfleet Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Ebbsfleet Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Hemel Hempstead v Ebbsfleet Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Tonbridge Angels",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Tonbridge Angels v Enfield Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Enfield Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Tonbridge Angels v Enfield Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Tonbridge Angels",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Tonbridge Angels v Enfield Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Enfield Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League South",
+      "event": "Tonbridge Angels v Enfield Town"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "America MG",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "America MG v Avai"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Avai",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "America MG v Avai"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "America MG",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "America MG v Avai"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Avai",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Serie B",
+      "event": "America MG v Avai"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Real Soacha Cundinamarca FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Real Soacha Cundinamarca FC v Deportivo Pereira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Deportivo Pereira",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Real Soacha Cundinamarca FC v Deportivo Pereira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Colombian Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Real Soacha Cundinamarca FC v Deportivo Pereira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Real Soacha Cundinamarca FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Real Soacha Cundinamarca FC v Deportivo Pereira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Deportivo Pereira",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Real Soacha Cundinamarca FC v Deportivo Pereira"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Atletico FC Cali",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Atletico FC Cali v Junior FC Barranquilla"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Junior FC Barranquilla",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Atletico FC Cali v Junior FC Barranquilla"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Atletico FC Cali",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Atletico FC Cali v Junior FC Barranquilla"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Junior FC Barranquilla",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Atletico FC Cali v Junior FC Barranquilla"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Shonan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Shonan v Hiroshima"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hiroshima",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Shonan v Hiroshima"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Japanese J League Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Shonan v Hiroshima"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Shonan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Shonan v Hiroshima"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hiroshima",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Shonan v Hiroshima"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Yokohama FM",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FM v Kashiwa"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kashiwa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FM v Kashiwa"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Yokohama FM",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FM v Kashiwa"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kashiwa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FM v Kashiwa"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Yokohama FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FC v Kobe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kobe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FC v Kobe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Yokohama FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FC v Kobe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kobe",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Yokohama FC v Kobe"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Urawa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Urawa v Kawasaki"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kawasaki",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Urawa v Kawasaki"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Urawa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Urawa v Kawasaki"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kawasaki",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Japanese J League Cup",
+      "event": "Urawa v Kawasaki"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "KMC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "CECAFA Cup",
+      "event": "KMC v Mlandege FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Mlandege FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "CECAFA Cup",
+      "event": "KMC v Mlandege FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "CECAFA Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "KMC v Mlandege FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "KMC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "CECAFA Cup",
+      "event": "KMC v Mlandege FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Mlandege FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "CECAFA Cup",
+      "event": "KMC v Mlandege FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "GrIFK",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "GrIFK v VJS"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "VJS",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "GrIFK v VJS"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Finnish Kakkonen",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "GrIFK v VJS"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "GrIFK",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "GrIFK v VJS"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "VJS",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "GrIFK v VJS"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "MyPa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "MyPa v PEPO"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "PEPO",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "MyPa v PEPO"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "MyPa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "MyPa v PEPO"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "PEPO",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "MyPa v PEPO"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "JBK",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "JBK v GBK"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "GBK",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "JBK v GBK"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "JBK",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "JBK v GBK"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "GBK",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "JBK v GBK"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "OsPa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "OsPa v TP-47"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "TP-47",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "OsPa v TP-47"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "OsPa",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "OsPa v TP-47"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "TP-47",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Finnish Kakkonen",
+      "event": "OsPa v TP-47"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Sutton Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Sutton Utd v Boreham Wood"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Boreham Wood",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Sutton Utd v Boreham Wood"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Sutton Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Sutton Utd v Boreham Wood"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Boreham Wood",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Sutton Utd v Boreham Wood"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FC Halifax Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "FC Halifax Town v Woking"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Woking",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "FC Halifax Town v Woking"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FC Halifax Town",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "FC Halifax Town v Woking"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Woking",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "FC Halifax Town v Woking"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hartlepool",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Hartlepool v Boston Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Boston Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Hartlepool v Boston Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hartlepool",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Hartlepool v Boston Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Boston Utd",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Hartlepool v Boston Utd"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Gateshead",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Gateshead v Altrincham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Altrincham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Gateshead v Altrincham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Gateshead",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Gateshead v Altrincham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Altrincham",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English National League",
+      "event": "Gateshead v Altrincham"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Envigado",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Envigado v Millonarios"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Millonarios",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Envigado v Millonarios"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Envigado",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Envigado v Millonarios"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Millonarios",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Envigado v Millonarios"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "America de Cali S.A",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "America de Cali S.A v Atletico Bucaramanga"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Atletico Bucaramanga",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "America de Cali S.A v Atletico Bucaramanga"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "America de Cali S.A",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "America de Cali S.A v Atletico Bucaramanga"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Atletico Bucaramanga",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "America de Cali S.A v Atletico Bucaramanga"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Westchester SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Westchester SC v Richmond Kickers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Richmond Kickers",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Westchester SC v Richmond Kickers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "US USL League One",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Westchester SC v Richmond Kickers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Westchester SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Westchester SC v Richmond Kickers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Richmond Kickers",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Westchester SC v Richmond Kickers"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Greenville Triumph SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Greenville Triumph SC v Portland Hearts of Pine"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Portland Hearts of Pine",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Greenville Triumph SC v Portland Hearts of Pine"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Greenville Triumph SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Greenville Triumph SC v Portland Hearts of Pine"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Portland Hearts of Pine",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US USL League One",
+      "event": "Greenville Triumph SC v Portland Hearts of Pine"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hartford Athletic FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US United Soccer League",
+      "event": "Hartford Athletic FC v Indy Eleven"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Indy Eleven",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US United Soccer League",
+      "event": "Hartford Athletic FC v Indy Eleven"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "US United Soccer League",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Hartford Athletic FC v Indy Eleven"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hartford Athletic FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US United Soccer League",
+      "event": "Hartford Athletic FC v Indy Eleven"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Indy Eleven",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US United Soccer League",
+      "event": "Hartford Athletic FC v Indy Eleven"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ind Medellin",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Ind Medellin v Fortaleza FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Fortaleza FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Ind Medellin v Fortaleza FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Ind Medellin",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Ind Medellin v Fortaleza FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Fortaleza FC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Ind Medellin v Fortaleza FC"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Confianca",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Copa do Nordeste",
+      "event": "Confianca v Bahia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bahia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Copa do Nordeste",
+      "event": "Confianca v Bahia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Brazilian Copa do Nordeste",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Confianca v Bahia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Confianca",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Copa do Nordeste",
+      "event": "Confianca v Bahia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bahia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Brazilian Copa do Nordeste",
+      "event": "Confianca v Bahia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Quindio",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Quindio v Atletico Nacional Medellin"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Atletico Nacional Medellin",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Quindio v Atletico Nacional Medellin"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Quindio",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Quindio v Atletico Nacional Medellin"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Atletico Nacional Medellin",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Colombian Cup",
+      "event": "Quindio v Atletico Nacional Medellin"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "LD Alajuelense",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "LD Alajuelense v CS Cartagines"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "CS Cartagines",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "LD Alajuelense v CS Cartagines"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "LD Alajuelense",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "LD Alajuelense v CS Cartagines"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "CS Cartagines",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Costa Rican Primera Division",
+      "event": "LD Alajuelense v CS Cartagines"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kazakhstan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Kazakhstan v Wales"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Wales",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Kazakhstan v Wales"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "FIFA World Cup Qualifiers - Europe",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Kazakhstan v Wales"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kazakhstan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Kazakhstan v Wales"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Wales",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Kazakhstan v Wales"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Lithuania",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Lithuania v Malta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Malta",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Lithuania v Malta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Lithuania",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Lithuania v Malta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Malta",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Lithuania v Malta"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Georgia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Georgia v Türkiye"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Türkiye",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Georgia v Türkiye"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Georgia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Georgia v Türkiye"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Türkiye",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Georgia v Türkiye"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Slovakia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovakia v Germany"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Germany",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovakia v Germany"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Slovakia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovakia v Germany"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Germany",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovakia v Germany"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Luxembourg",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Luxembourg v Northern Ireland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Northern Ireland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Luxembourg v Northern Ireland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Luxembourg",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Luxembourg v Northern Ireland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Northern Ireland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Luxembourg v Northern Ireland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Netherlands",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Netherlands v Poland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Poland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Netherlands v Poland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Netherlands",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Netherlands v Poland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Poland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Netherlands v Poland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Bulgaria",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Bulgaria v Spain"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Spain",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Bulgaria v Spain"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Bulgaria",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Bulgaria v Spain"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Spain",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Bulgaria v Spain"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Australia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Friendlies International",
+      "event": "Australia v New Zealand"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "New Zealand",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Friendlies International",
+      "event": "Australia v New Zealand"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Friendlies International",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Australia v New Zealand"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Australia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Friendlies International",
+      "event": "Australia v New Zealand"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "New Zealand",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Friendlies International",
+      "event": "Australia v New Zealand"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Albacete",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Albacete v Mirandes"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Mirandes",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Albacete v Mirandes"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Albacete",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Albacete v Mirandes"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Mirandes",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Albacete v Mirandes"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Greece",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Greece v Belarus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Belarus",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Greece v Belarus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Greece",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Greece v Belarus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Belarus",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Greece v Belarus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Switzerland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Switzerland v Kosovo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Kosovo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Switzerland v Kosovo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Switzerland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Switzerland v Kosovo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Kosovo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Switzerland v Kosovo"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Denmark",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Denmark v Scotland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Scotland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Denmark v Scotland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Denmark",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Denmark v Scotland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Scotland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Denmark v Scotland"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Ukraine",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Ukraine v France"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "France",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Ukraine v France"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Ukraine",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Ukraine v France"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "France",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Ukraine v France"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Montenegro",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Montenegro v Czechia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Czechia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Montenegro v Czechia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Montenegro",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Montenegro v Czechia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Czechia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Montenegro v Czechia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Faroe Islands",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Faroe Islands v Croatia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Croatia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Faroe Islands v Croatia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Faroe Islands",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Faroe Islands v Croatia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Croatia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Faroe Islands v Croatia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Moldova",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Moldova v Israel"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Israel",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Moldova v Israel"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Moldova",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Moldova v Israel"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Israel",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Moldova v Israel"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Iceland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Iceland v Azerbaijan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Azerbaijan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Iceland v Azerbaijan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Iceland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Iceland v Azerbaijan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Azerbaijan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Iceland v Azerbaijan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Slovenia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovenia v Sweden"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Sweden",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovenia v Sweden"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Slovenia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovenia v Sweden"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Sweden",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Slovenia v Sweden"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Italy",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Italy v Estonia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Estonia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Italy v Estonia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Italy",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Italy v Estonia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Estonia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Italy v Estonia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cordoba",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Cordoba v CD Castellon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "CD Castellon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Cordoba v CD Castellon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cordoba",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Cordoba v CD Castellon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "CD Castellon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Cordoba v CD Castellon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Tigre",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Cup",
+      "event": "Tigre v Independiente Rivadavia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Independiente Rivadavia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Cup",
+      "event": "Tigre v Independiente Rivadavia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Argentinian Cup",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Tigre v Independiente Rivadavia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Tigre",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Cup",
+      "event": "Tigre v Independiente Rivadavia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Independiente Rivadavia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Argentinian Cup",
+      "event": "Tigre v Independiente Rivadavia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Latvia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Latvia v Serbia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Serbia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Latvia v Serbia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Latvia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Latvia v Serbia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Serbia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Latvia v Serbia"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Huddersfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Huddersfield v Peterborough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "English Sky Bet League 1",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Huddersfield v Peterborough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Huddersfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Huddersfield v Peterborough"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Port Vale",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Port Vale v Leyton Orient"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Port Vale",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Port Vale v Leyton Orient"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Blackpool",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Blackpool v Luton"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Blackpool",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Blackpool v Luton"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cardiff",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Cardiff v Burton Albion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Burton Albion",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Cardiff v Burton Albion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cardiff",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Cardiff v Burton Albion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Burton Albion",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Cardiff v Burton Albion"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Mansfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Wycombe v Mansfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Mansfield",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Wycombe v Mansfield"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Wigan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Lincoln v Wigan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Wigan",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Lincoln v Wigan"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Exeter",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Rotherham v Exeter"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Exeter",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "English Sky Bet League 1",
+      "event": "Rotherham v Exeter"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Sporting Gijon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Deportivo v Sporting Gijon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Sporting Gijon",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Deportivo v Sporting Gijon"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Armenia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Armenia v Portugal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Portugal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Armenia v Portugal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Armenia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Armenia v Portugal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Portugal",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Armenia v Portugal"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "England",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "England v Andorra"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Andorra",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "England v Andorra"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "England",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "England v Andorra"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Andorra",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "England v Andorra"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Zaragoza",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Zaragoza v Valladolid"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Valladolid",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Zaragoza v Valladolid"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Zaragoza",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Zaragoza v Valladolid"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Valladolid",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Zaragoza v Valladolid"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Austria",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Austria v Cyprus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Cyprus",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Austria v Cyprus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Austria",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Austria v Cyprus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Cyprus",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Austria v Cyprus"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Republic of Ireland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Republic of Ireland v Hungary"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Hungary",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Republic of Ireland v Hungary"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Republic of Ireland",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Republic of Ireland v Hungary"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Hungary",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "FIFA World Cup Qualifiers - Europe",
+      "event": "Republic of Ireland v Hungary"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Malaga",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Malaga v Granada"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Granada",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Malaga v Granada"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Malaga",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Malaga v Granada"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Granada",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Malaga v Granada"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Estoril Praia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Portuguese Primeira Liga",
+      "event": "Estoril Praia v Santa Clara"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Santa Clara",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Portuguese Primeira Liga",
+      "event": "Estoril Praia v Santa Clara"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "Portuguese Primeira Liga",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "Estoril Praia v Santa Clara"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Estoril Praia",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Portuguese Primeira Liga",
+      "event": "Estoril Praia v Santa Clara"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Santa Clara",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Portuguese Primeira Liga",
+      "event": "Estoril Praia v Santa Clara"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "St Louis City SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "St Louis City SC v FC Dallas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "FC Dallas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "St Louis City SC v FC Dallas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "competition",
+    "raw": "US MLS",
+    "context": {
+      "marketType": "Match Odds",
+      "event": "St Louis City SC v FC Dallas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "St Louis City SC",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "St Louis City SC v FC Dallas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "FC Dallas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "St Louis City SC v FC Dallas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Chicago Fire",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Chicago Fire v New England"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "New England",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Chicago Fire v New England"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Chicago Fire",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Chicago Fire v New England"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "New England",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Chicago Fire v New England"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Houston Dynamo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Houston Dynamo v LA Galaxy"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "LA Galaxy",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Houston Dynamo v LA Galaxy"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Houston Dynamo",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Houston Dynamo v LA Galaxy"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "LA Galaxy",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "US MLS",
+      "event": "Houston Dynamo v LA Galaxy"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Burgos",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Burgos v Las Palmas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "team",
+    "raw": "Las Palmas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Burgos v Las Palmas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Burgos",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Burgos v Las Palmas"
+    }
+  },
+  {
+    "source": "betfair",
+    "sport": "football",
+    "kind": "unknown",
+    "raw": "Las Palmas",
+    "context": {
+      "marketType": "Match Odds",
+      "competition": "Spanish Segunda Division",
+      "event": "Burgos v Las Palmas"
+    }
+  }
+]

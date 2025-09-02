@@ -1,0 +1,4 @@
+[
+  { "id": "course:gb:newcastle-aw", "name": "Newcastle (AW)", "country": "GB", "sport": "racing" },
+  { "id": "course:gb:ascot",        "name": "Ascot",          "country": "GB", "sport": "racing" }
+]
