@@ -1,6 +1,5 @@
-// bookmakers/pricedup/parser.js
+// bookmakers/starsports/parser.js
 // FOOTBALL ONLY — scope to EventRowWrapper whose EventRowHeader contains "Football".
-// Aligns with NRG/PSB structure; passes doubles/trebles; keeps textOriginal.
 
 import * as cheerio from 'cheerio';
 import { cleanText } from '../../lib/text/clean.js';
@@ -19,7 +18,7 @@ function pickFractional(text) {
   return m ? `${m[1]}/${m[2]}` : null;
 }
 
-export function parsePricedUp(html, ctx = {}) {
+export function parseStarSports(html, ctx = {}) {
   const debug = !!ctx.debug;
   const $ = cheerio.load(html);
 
@@ -52,22 +51,22 @@ export function parsePricedUp(html, ctx = {}) {
       if (!oddsFrac) { missingOdds++; return; }
 
       rawOffers.push({
-        bookie: 'pricedup',
-        book: 'PricedUp',
+        bookie: 'starsports',
+        book: 'StarSports',
         text: title,
         textOriginal: titleRaw,
         boostedOddsFrac: oddsFrac,
         oddsRaw: oddsFrac,
         sportHint: 'Football',
-        meta: { source: 'pricedup', header: headerText }
+        meta: { source: 'starsports', header: headerText }
       });
       emitted++;
     });
   });
 
   if (debug) {
-    console.log(`[parse:pricedup] wrappers total: ${wrappersTotal} | football: ${wrappersFootball}`);
-    console.log(`[parse:pricedup] cards seen: ${cardsSeen} | emitted: ${emitted} | missingOdds: ${missingOdds} | missingName: ${missingName}`);
+    console.log(`[parse:starsports] wrappers total: ${wrappersTotal} | football: ${wrappersFootball}`);
+    console.log(`[parse:starsports] cards seen: ${cardsSeen} | emitted: ${emitted} | missingOdds: ${missingOdds} | missingName: ${missingName}`);
     for (const r of rawOffers.slice(0, 5)) {
       console.log(' -', r.text, '| frac:', r.boostedOddsFrac);
     }
@@ -76,4 +75,4 @@ export function parsePricedUp(html, ctx = {}) {
   return { rawOffers, diagnostics: { wrappersTotal, wrappersFootball, cardsSeen, emitted, missingOdds, missingName } };
 }
 
-export default parsePricedUp;
+export default parseStarSports;

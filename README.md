@@ -79,13 +79,15 @@ Individual phases (useful while iterating)
 node pipelines/run.snapshot.js  --book=williamhill --debug
 
 # Parse (HTML → *.rawoffers.json)
-node pipelines/run.parse.js     --book=williamhill --file="snapshots/williamhill/<date>/<file>.html" --debug
+node pipelines/run.parse.js     --book=williamhill --file="snapshots/williamhill/2025-08-31/2025-08-31_12-26-39_price-boosts.html" --debug
 
 # Classify (rawoffers → offers with type + legs)
 node pipelines/run.classify.js  --book=williamhill --debug
 
 # Direct value+publish (uses latest *.offers.json)
+
 node pipelines/run.value_publish.js --book=williamhill --debug --enforce --threshold=1.05
+node pipelines/run.value_publish.js --book=nrg --debug --enforce --threshold=1.05
 
 # Common flags
 
@@ -113,6 +115,7 @@ node pipelines/run.all.js --book=williamhill --debug --dry-run --enforce --thres
 # Happy? Publish and keep audit files:
 
 node pipelines/run.all.js --book=williamhill --debug --enforce --threshold=1.05 --persist
+node pipelines/run.all.js --book=paddypower --debug --enforce --threshold=1.05 --persist
 
 
 # PricedUp ALL_TO_WIN:

@@ -41,6 +41,15 @@
   "independiente medellin": [
     "team:col:independiente-medellin"
   ],
+  "aldershot town": [
+    "team:eng:aldershot-town"
+  ],
+  "hartlepool united": [
+    "team:eng:hartlepool-united"
+  ],
+  "sutton united": [
+    "team:eng:sutton-united"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -58,6 +67,18 @@
   ],
   "ind medellin": [
     "team:col:independiente-medellin"
+  ],
+  "aldershot": [
+    "team:eng:aldershot-town"
+  ],
+  "hartlepool": [
+    "team:eng:hartlepool-united"
+  ],
+  "sutton utd": [
+    "team:eng:sutton-united"
+  ],
+  "hartlepool utd": [
+    "team:eng:hartlepool-united"
   ],
   "basel": [
     "team:sui:fc-basel"

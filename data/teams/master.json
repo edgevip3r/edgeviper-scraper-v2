@@ -12,5 +12,8 @@
 	{ "id": "team:arg:gimnasia-la-plata", "name": "Gimnasia La Plata", "country": "ARG", "sport": "football" },
 	{ "id": "team:eng:lincoln-city", "name": "Lincoln City", "country": "ENG", "sport": "football" },
 	{ "id": "team:eng:fc-halifax-town", "name": "FC Halifax Town", "country": "ENG", "sport": "football" },
-	{ "id": "team:col:independiente-medellin", "name": "Independiente Medellin", "country": "COL", "sport": "football" }
+	{ "id": "team:col:independiente-medellin", "name": "Independiente Medellin", "country": "COL", "sport": "football" },
+	{ "id": "team:eng:aldershot-town", "name": "Aldershot Town", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:hartlepool-united", "name": "Hartlepool United", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:sutton-united", "name": "Sutton United", "country": "ENG", "sport": "football" }
 ]

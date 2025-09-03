@@ -1,10 +1,4 @@
 {
-  "//": "CLI shorthand / human name → canonical folder under /bookmakers",
-  "wh": "williamhill",
-  "william hill": "williamhill",
-  "williamhill": "williamhill",
-
-  "pu": "pricedup",
-  "priced up": "pricedup",
-  "pricedup": "pricedup"
+  "bw": "betway",
+  "betway": "betway"
 }

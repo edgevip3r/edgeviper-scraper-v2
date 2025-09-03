@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-03T08:17:10.837Z",
+  "generatedAt": "2025-09-03T16:20:34.040Z",
   "index": {
     "fc copenhagen": [
       {
@@ -180,6 +180,36 @@
         "priority": 70
       }
     ],
+    "aldershot town": [
+      {
+        "id": "team:eng:aldershot-town",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "hartlepool united": [
+      {
+        "id": "team:eng:hartlepool-united",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "sutton united": [
+      {
+        "id": "team:eng:sutton-united",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -269,6 +299,42 @@
         "kind": "team",
         "source": "betfair",
         "priority": 60
+      }
+    ],
+    "aldershot": [
+      {
+        "id": "team:eng:aldershot-town",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "hartlepool": [
+      {
+        "id": "team:eng:hartlepool-united",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "sutton utd": [
+      {
+        "id": "team:eng:sutton-united",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "hartlepool utd": [
+      {
+        "id": "team:eng:hartlepool-united",
+        "kind": "team",
+        "sport": "football",
+        "source": "bookmaker:planetsportbet",
+        "priority": 70
       }
     ],
     "basel": [
@@ -518,6 +584,36 @@
           "priority": 70
         }
       ],
+      "aldershot town": [
+        {
+          "id": "team:eng:aldershot-town",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "hartlepool united": [
+        {
+          "id": "team:eng:hartlepool-united",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "sutton united": [
+        {
+          "id": "team:eng:sutton-united",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -568,6 +664,42 @@
           "kind": "team",
           "source": "betfair",
           "priority": 60
+        }
+      ],
+      "aldershot": [
+        {
+          "id": "team:eng:aldershot-town",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "hartlepool": [
+        {
+          "id": "team:eng:hartlepool-united",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "sutton utd": [
+        {
+          "id": "team:eng:sutton-united",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "hartlepool utd": [
+        {
+          "id": "team:eng:hartlepool-united",
+          "kind": "team",
+          "sport": "football",
+          "source": "bookmaker:planetsportbet",
+          "priority": 70
         }
       ],
       "basel": [

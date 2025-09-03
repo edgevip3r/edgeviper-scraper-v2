@@ -1,0 +1,57 @@
+{
+  "name": "starsports",
+  "parserInput": "html",
+  "baseUrls": [
+    "https://starsports.bet/sport-special/DailySpecials"
+  ],
+  "consentSelectors": [
+    "button:has-text(\"Accept\")",
+    "button:has-text(\"Allow all\")",
+    "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
+    "#CybotCookiebotDialogBodyButtonAccept"
+  ],
+  "navigate": {
+    "steps": [
+      {
+        "action": "goto",
+        "urlRef": 0
+      },
+      {
+        "action": "consent"
+      },
+      {
+        "action": "waitForText",
+        "any": [
+          "Boost",
+          "Special",
+          "Enhanced"
+        ],
+        "timeoutMs": 15000
+      },
+      {
+        "action": "scrollToBottom",
+        "untilNoChangeMs": 800
+      }
+    ]
+  },
+  "parser": {
+    "offerItemSelector": "section *, div *, li *",
+    "titleHeuristics": [
+      "Boost",
+      "Special",
+      "Enhanced",
+      "Win",
+      "BTTS"
+    ],
+    "oddsHeuristics": [
+      "/",
+      "EVS",
+      "Evs",
+      "\\u2044"
+    ]
+  },
+  "textDrops": [
+    "(90 mins)",
+    "Was "
+  ]
+}

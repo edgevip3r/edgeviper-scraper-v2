@@ -1,0 +1,55 @@
+{
+  "name": "betway",
+  "parserInput": "meta",
+  "baseUrls": [
+    "https://betway.com/gb/en/sports/cat/betway-boosts"
+  ],
+  "consentSelectors": [
+    "#onetrust-accept-btn-handler",
+    "#accept-recommended-btn-handler",
+    "button:has-text(\"Accept all\")",
+    "button:has-text(\"Allow All\")"
+  ],
+  "navigate": {
+    "steps": [
+      {
+        "action": "goto",
+        "urlRef": 0
+      },
+      {
+        "action": "consent"
+      },
+      {
+        "action": "waitForText",
+        "any": [
+          "Boost",
+          "Football"
+        ],
+        "timeoutMs": 20000
+      },
+      {
+        "action": "scrollToBottom",
+        "untilNoChangeMs": 800
+      }
+    ]
+  },
+  "parser": {
+    "offerItemSelector": "meta.body",
+    "titleHeuristics": [
+      "Boost",
+      "Win",
+      "BTTS",
+      "All To Win"
+    ],
+    "oddsHeuristics": [
+      "/",
+      "EVS",
+      "Evs",
+      "\\u2044"
+    ]
+  },
+  "textDrops": [
+    "(90 mins)",
+    "Was "
+  ]
+}

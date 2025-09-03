@@ -1,6 +1,5 @@
-// bookmakers/pricedup/parser.js
+// bookmakers/planetsportbet/parser.js
 // FOOTBALL ONLY — scope to EventRowWrapper whose EventRowHeader contains "Football".
-// Aligns with NRG/PSB structure; passes doubles/trebles; keeps textOriginal.
 
 import * as cheerio from 'cheerio';
 import { cleanText } from '../../lib/text/clean.js';
@@ -19,7 +18,7 @@ function pickFractional(text) {
   return m ? `${m[1]}/${m[2]}` : null;
 }
 
-export function parsePricedUp(html, ctx = {}) {
+export function parsePlanetSportBet(html, ctx = {}) {
   const debug = !!ctx.debug;
   const $ = cheerio.load(html);
 
@@ -38,6 +37,7 @@ export function parsePricedUp(html, ctx = {}) {
       cardsSeen++;
       const $name = $(li).find(NAME_SEL).first();
       const titleRaw = ($name.attr('title') || $name.text() || '').trim();
+      // PlanetSportBet typically lacks "Home advantage:" prefices; still drop generic noise like "Was ..."
       const title = cleanText(titleRaw, ['(was', 'Was ', 'Price Boost']).trim();
 
       let oddsFrac = null;
@@ -52,22 +52,22 @@ export function parsePricedUp(html, ctx = {}) {
       if (!oddsFrac) { missingOdds++; return; }
 
       rawOffers.push({
-        bookie: 'pricedup',
-        book: 'PricedUp',
+        bookie: 'planetsportbet',
+        book: 'PlanetSportBet',
         text: title,
         textOriginal: titleRaw,
         boostedOddsFrac: oddsFrac,
         oddsRaw: oddsFrac,
         sportHint: 'Football',
-        meta: { source: 'pricedup', header: headerText }
+        meta: { source: 'planetsportbet', header: headerText }
       });
       emitted++;
     });
   });
 
   if (debug) {
-    console.log(`[parse:pricedup] wrappers total: ${wrappersTotal} | football: ${wrappersFootball}`);
-    console.log(`[parse:pricedup] cards seen: ${cardsSeen} | emitted: ${emitted} | missingOdds: ${missingOdds} | missingName: ${missingName}`);
+    console.log(`[parse:planetsportbet] wrappers total: ${wrappersTotal} | football: ${wrappersFootball}`);
+    console.log(`[parse:planetsportbet] cards seen: ${cardsSeen} | emitted: ${emitted} | missingOdds: ${missingOdds} | missingName: ${missingName}`);
     for (const r of rawOffers.slice(0, 5)) {
       console.log(' -', r.text, '| frac:', r.boostedOddsFrac);
     }
@@ -76,4 +76,4 @@ export function parsePricedUp(html, ctx = {}) {
   return { rawOffers, diagnostics: { wrappersTotal, wrappersFootball, cardsSeen, emitted, missingOdds, missingName } };
 }
 
-export default parsePricedUp;
+export default parsePlanetSportBet;

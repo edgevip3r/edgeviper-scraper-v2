@@ -1,10 +1,12 @@
-// bookmakers/pricedup/parser.js
-// FOOTBALL ONLY — scope to EventRowWrapper whose EventRowHeader contains "Football".
-// Aligns with NRG/PSB structure; passes doubles/trebles; keeps textOriginal.
+// bookmakers/nrg/parser.js
+// Parse NRG boosts HTML into raw offers (title + fractional odds).
+// v1 scope: FOOTBALL ONLY — structurally scoped to EventRowWrapper whose
+// EventRowHeader contains the word "Football". Avoids Tennis/Horse Racing.
 
 import * as cheerio from 'cheerio';
 import { cleanText } from '../../lib/text/clean.js';
 
+// Structural selectors from the site
 const WRAPPER_SEL = 'div[class*="EventRowWrapper"]';
 const HEADER_SEL  = 'div[class*="EventRowHeader"]';
 const NAME_SEL    = 'div[class*="SelectionsGroupName"]';
@@ -19,7 +21,7 @@ function pickFractional(text) {
   return m ? `${m[1]}/${m[2]}` : null;
 }
 
-export function parsePricedUp(html, ctx = {}) {
+export function parseNRG(html, ctx = {}) {
   const debug = !!ctx.debug;
   const $ = cheerio.load(html);
 
@@ -29,17 +31,23 @@ export function parsePricedUp(html, ctx = {}) {
 
   $(WRAPPER_SEL).each((_, wrapper) => {
     wrappersTotal++;
+
     const headerText = ($(wrapper).find(HEADER_SEL).first().text() || '').trim();
     const isFootball = /football/i.test(headerText);
-    if (!isFootball) return;
+    if (!isFootball) return; // HARD FILTER: non-football dropped at source
     wrappersFootball++;
 
+    // Only parse cards within this Football wrapper
     $(wrapper).find(CARD_SEL).each((__, li) => {
       cardsSeen++;
+
+      // Name
       const $name = $(li).find(NAME_SEL).first();
       const titleRaw = ($name.attr('title') || $name.text() || '').trim();
+      // Remove noisy tokens for pricing/posting, but keep original separately
       const title = cleanText(titleRaw, ['(was', 'Was ', 'Price Boost']).trim();
 
+      // Odds (fractional/EVS)
       let oddsFrac = null;
       const $oddsNodes = $(li).find(ODDS_SEL);
       $oddsNodes.each((___, node) => {
@@ -52,22 +60,22 @@ export function parsePricedUp(html, ctx = {}) {
       if (!oddsFrac) { missingOdds++; return; }
 
       rawOffers.push({
-        bookie: 'pricedup',
-        book: 'PricedUp',
+        bookie: 'nrg',
+        book: 'NRG',
         text: title,
         textOriginal: titleRaw,
         boostedOddsFrac: oddsFrac,
         oddsRaw: oddsFrac,
         sportHint: 'Football',
-        meta: { source: 'pricedup', header: headerText }
+        meta: { source: 'nrg', header: headerText }
       });
       emitted++;
     });
   });
 
   if (debug) {
-    console.log(`[parse:pricedup] wrappers total: ${wrappersTotal} | football: ${wrappersFootball}`);
-    console.log(`[parse:pricedup] cards seen: ${cardsSeen} | emitted: ${emitted} | missingOdds: ${missingOdds} | missingName: ${missingName}`);
+    console.log(`[parse:nrg] wrappers total: ${wrappersTotal} | football: ${wrappersFootball}`);
+    console.log(`[parse:nrg] cards seen: ${cardsSeen} | emitted: ${emitted} | missingOdds: ${missingOdds} | missingName: ${missingName}`);
     for (const r of rawOffers.slice(0, 5)) {
       console.log(' -', r.text, '| frac:', r.boostedOddsFrac);
     }
@@ -76,4 +84,4 @@ export function parsePricedUp(html, ctx = {}) {
   return { rawOffers, diagnostics: { wrappersTotal, wrappersFootball, cardsSeen, emitted, missingOdds, missingName } };
 }
 
-export default parsePricedUp;
+export default parseNRG;

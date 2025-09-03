@@ -1,11 +1,12 @@
-// Snapshot PricedUp (Football boosts) using Playwright.
-// Standard snapshot contract: ({ book, config, bookCfg, outRoot, debug })
+// Snapshot PlanetSportBet RocketBoosts (Football) using Playwright.
+// Signature matches pipelines/run.snapshot.js expectations (book-agnostic).
 
 import fs from 'fs/promises';
 import fss from 'fs';
 import path from 'path';
 import { chromium } from 'playwright';
 
+/** timestamp parts + date folder */
 function tsParts(d = new Date()) {
   const pad = n => String(n).padStart(2, '0');
   const y = d.getFullYear();
@@ -17,8 +18,16 @@ function tsParts(d = new Date()) {
   return { dateDir: `${y}-${m}-${day}`, stamp: `${y}-${m}-${day}_${hh}-${mm}-${ss}` };
 }
 
-export default async function snapshotPricedUp({ book, config, bookCfg, outRoot, debug }) {
-  const url = (bookCfg?.baseUrls && bookCfg.baseUrls[0]) || 'https://pricedup.bet/sport-special/PricedUpPushes';
+/**
+ * @param {Object} opts
+ * @param {string} opts.book
+ * @param {object} opts.config
+ * @param {object} opts.bookCfg
+ * @param {string} opts.outRoot
+ * @param {boolean} opts.debug
+ */
+export default async function snapshotPlanetSportBet({ book, config, bookCfg, outRoot, debug }) {
+  const url = (bookCfg?.baseUrls && bookCfg.baseUrls[0]) || 'https://planetsportbet.com/sport-special/RocketBoosts';
 
   const { dateDir, stamp } = tsParts();
   const outDir = path.resolve(outRoot, book, dateDir);
@@ -37,10 +46,10 @@ export default async function snapshotPricedUp({ book, config, bookCfg, outRoot,
   const page = await context.newPage();
 
   try {
-    if (debug) console.log(`[snapshot:pricedup] goto ${url}`);
+    if (debug) console.log(`[snapshot:planetsportbet] goto ${url}`);
     await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
 
-    // Cookiebot consent (Allow all / Accept)
+    // Cookiebot consent (same as NRG/PU)
     const consentSelectors = [
       '#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll',
       'button:has-text("Allow all")',
@@ -52,7 +61,7 @@ export default async function snapshotPricedUp({ book, config, bookCfg, outRoot,
       const el = page.locator(sel);
       try {
         if (await el.first().isVisible()) {
-          if (debug) console.log(`[snapshot:pricedup] consent click ${sel}`);
+          if (debug) console.log(`[snapshot:planetsportbet] consent click ${sel}`);
           await el.first().click({ timeout: 2000 });
           break;
         }
@@ -63,7 +72,7 @@ export default async function snapshotPricedUp({ book, config, bookCfg, outRoot,
     await page.waitForTimeout(800);
     await page.waitForSelector('li[class*="SelectionsGroupLiItem"], [class*="SelectionsGroupName"]', { timeout: 15000 });
 
-    // Expand collapsed groups
+    // Expand collapsed sections
     const expanded = await page.evaluate(() => {
       const headers = Array.from(document.querySelectorAll('div[class*="MarketHeaderContent"], h4[class*="MarketHeaderContent"]'));
       let clicks = 0;
@@ -78,7 +87,7 @@ export default async function snapshotPricedUp({ book, config, bookCfg, outRoot,
       }
       return clicks;
     });
-    if (debug) console.log(`[snapshot:pricedup] expanded groups: ${expanded}`);
+    if (debug) console.log(`[snapshot:planetsportbet] expanded groups: ${expanded}`);
 
     // Scroll to hydrate lazy content
     let lastHeight = 0;
@@ -93,11 +102,10 @@ export default async function snapshotPricedUp({ book, config, bookCfg, outRoot,
     // Save HTML (+ optional screenshot)
     const html = await page.content();
     await fs.writeFile(htmlPath, html, 'utf8');
-
     if (config?.snapshots?.saveScreenshot) {
       try { await page.screenshot({ path: pngPath, fullPage: true }); } catch {}
     }
-    if (debug) console.log(`[snapshot:pricedup] wrote ${htmlPath}${config?.snapshots?.saveScreenshot ? ' & screenshot' : ''}`);
+    if (debug) console.log(`[snapshot:planetsportbet] wrote ${htmlPath}${config?.snapshots?.saveScreenshot ? ' & screenshot' : ''}`);
 
     return { htmlPath, screenshotPath: fss.existsSync(pngPath) ? pngPath : null, metaPath: null };
   } finally {
