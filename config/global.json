@@ -1,6 +1,6 @@
 {
 "bettypes": { "registry": ["ALL_TO_WIN", "WIN_AND_BTTS"] },
-"filters": { "threshold": 1.05, "minLiquidity": 5, "maxSpreadPct": 30 },
+"filters": { "threshold": 1.05, "minLiquidity": 1, "maxSpreadPct": 30 },
 "posting": { "enabled": true, "sheetTab": "Bet Tracker", "prefillY": false, "prefillP": true, "spacingSeconds": 0, "settleDatePolicy": "latestKO" },
 "dedupe": { "uidVersion": 1, "windowHours": 72 },
 "snapshots": { "outputDir": "./snapshots", "saveHtml": true, "saveScreenshot": true },
