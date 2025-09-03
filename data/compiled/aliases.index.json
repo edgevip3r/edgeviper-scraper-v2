@@ -35,6 +35,12 @@
   "lincoln city": [
     "team:eng:lincoln-city"
   ],
+  "fc halifax town": [
+    "team:eng:fc-halifax-town"
+  ],
+  "independiente medellin": [
+    "team:col:independiente-medellin"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -49,6 +55,9 @@
   ],
   "lincoln": [
     "team:eng:lincoln-city"
+  ],
+  "ind medellin": [
+    "team:col:independiente-medellin"
   ],
   "basel": [
     "team:sui:fc-basel"
@@ -70,5 +79,8 @@
   ],
   "gimnasia lp": [
     "team:arg:gimnasia-la-plata"
+  ],
+  "fc halifax": [
+    "team:eng:fc-halifax-town"
   ]
 }

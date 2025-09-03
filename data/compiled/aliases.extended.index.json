@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-02T12:39:17.625Z",
+  "generatedAt": "2025-09-03T08:17:10.837Z",
   "index": {
     "fc copenhagen": [
       {
@@ -154,6 +154,32 @@
         "priority": 100
       }
     ],
+    "fc halifax town": [
+      {
+        "id": "team:eng:fc-halifax-town",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "independiente medellin": [
+      {
+        "id": "team:col:independiente-medellin",
+        "kind": "team",
+        "sport": "football",
+        "country": "COL",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:col:independiente-medellin",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -237,6 +263,14 @@
         "priority": 60
       }
     ],
+    "ind medellin": [
+      {
+        "id": "team:col:independiente-medellin",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
     "basel": [
       {
         "id": "team:sui:fc-basel",
@@ -290,6 +324,15 @@
       {
         "id": "team:arg:gimnasia-la-plata",
         "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "fc halifax": [
+      {
+        "id": "team:eng:fc-halifax-town",
+        "kind": "team",
+        "sport": "football",
         "source": "bookmaker:williamhill",
         "priority": 70
       }
@@ -449,6 +492,32 @@
           "priority": 100
         }
       ],
+      "fc halifax town": [
+        {
+          "id": "team:eng:fc-halifax-town",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "independiente medellin": [
+        {
+          "id": "team:col:independiente-medellin",
+          "kind": "team",
+          "sport": "football",
+          "country": "COL",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:col:independiente-medellin",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -489,6 +558,14 @@
           "id": "team:eng:lincoln-city",
           "kind": "team",
           "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "ind medellin": [
+        {
+          "id": "team:col:independiente-medellin",
+          "kind": "team",
           "source": "betfair",
           "priority": 60
         }
@@ -546,6 +623,15 @@
         {
           "id": "team:arg:gimnasia-la-plata",
           "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "fc halifax": [
+        {
+          "id": "team:eng:fc-halifax-town",
+          "kind": "team",
+          "sport": "football",
           "source": "bookmaker:williamhill",
           "priority": 70
         }
