@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-03T16:20:34.040Z",
+  "generatedAt": "2025-09-04T08:31:48.226Z",
   "index": {
     "fc copenhagen": [
       {
@@ -210,6 +210,26 @@
         "priority": 100
       }
     ],
+    "turkey": [
+      {
+        "id": "team:tur:turkey",
+        "kind": "team",
+        "sport": "football",
+        "country": "TUR",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "northern ireland": [
+      {
+        "id": "team:nir:northern-ireland",
+        "kind": "team",
+        "sport": "football",
+        "country": "NIR",
+        "source": "master",
+        "priority": 100
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -326,6 +346,22 @@
         "sport": "football",
         "source": "betfair",
         "priority": 60
+      }
+    ],
+    "turkiye": [
+      {
+        "id": "team:tur:turkey",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "northern irealnd": [
+      {
+        "id": "team:nir:northern-ireland",
+        "kind": "team",
+        "source": "bookmaker:nrg",
+        "priority": 70
       }
     ],
     "hartlepool utd": [
@@ -614,6 +650,26 @@
           "priority": 100
         }
       ],
+      "turkey": [
+        {
+          "id": "team:tur:turkey",
+          "kind": "team",
+          "sport": "football",
+          "country": "TUR",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "northern ireland": [
+        {
+          "id": "team:nir:northern-ireland",
+          "kind": "team",
+          "sport": "football",
+          "country": "NIR",
+          "source": "master",
+          "priority": 100
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -691,6 +747,22 @@
           "sport": "football",
           "source": "betfair",
           "priority": 60
+        }
+      ],
+      "turkiye": [
+        {
+          "id": "team:tur:turkey",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "northern irealnd": [
+        {
+          "id": "team:nir:northern-ireland",
+          "kind": "team",
+          "source": "bookmaker:nrg",
+          "priority": 70
         }
       ],
       "hartlepool utd": [

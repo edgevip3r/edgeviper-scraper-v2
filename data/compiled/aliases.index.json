@@ -50,6 +50,12 @@
   "sutton united": [
     "team:eng:sutton-united"
   ],
+  "turkey": [
+    "team:tur:turkey"
+  ],
+  "northern ireland": [
+    "team:nir:northern-ireland"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -76,6 +82,12 @@
   ],
   "sutton utd": [
     "team:eng:sutton-united"
+  ],
+  "turkiye": [
+    "team:tur:turkey"
+  ],
+  "northern irealnd": [
+    "team:nir:northern-ireland"
   ],
   "hartlepool utd": [
     "team:eng:hartlepool-united"

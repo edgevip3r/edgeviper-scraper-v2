@@ -15,5 +15,7 @@
 	{ "id": "team:col:independiente-medellin", "name": "Independiente Medellin", "country": "COL", "sport": "football" },
 	{ "id": "team:eng:aldershot-town", "name": "Aldershot Town", "country": "ENG", "sport": "football" },
 	{ "id": "team:eng:hartlepool-united", "name": "Hartlepool United", "country": "ENG", "sport": "football" },
-	{ "id": "team:eng:sutton-united", "name": "Sutton United", "country": "ENG", "sport": "football" }
+	{ "id": "team:eng:sutton-united", "name": "Sutton United", "country": "ENG", "sport": "football" },
+	{ "id": "team:tur:turkey", "name": "Turkey", "country": "TUR", "sport": "football" },
+	{ "id": "team:nir:northern-ireland", "name": "Northern Ireland", "country": "NIR", "sport": "football" }
 ]
