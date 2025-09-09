@@ -80,11 +80,12 @@ node pipelines/run.snapshot.js  --book=williamhill --debug
 node pipelines/run.snapshot.js  --book=nrg --debug
 
 # Parse (HTML → *.rawoffers.json)
-node pipelines/run.parse.js     --book=betway --file="snapshots/williamhill/2025-08-31/2025-08-31_12-26-39_price-boosts.html" --debug
+node pipelines/run.parse.js     --book=pricedup --file="snapshots/williamhill/2025-08-31/2025-08-31_12-26-39_price-boosts.html" --debug
 
 # Classify (rawoffers → offers with type + legs)
 node pipelines/run.classify.js  --book=williamhill --debug
 node pipelines/run.classify.js  --book=betway --debug
+node pipelines/run.classify.js  --book=pricedup --debug
 
 # Direct value+publish (uses latest *.offers.json)
 
@@ -123,6 +124,7 @@ node pipelines/run.all.js --book=pricedup --debug --enforce --threshold=1.05 --p
 node pipelines/run.all.js --book=nrg --debug --enforce --threshold=1.05 --persist
 node pipelines/run.all.js --book=planetsportbet --debug --enforce --threshold=1.05 --persist
 node pipelines/run.all.js --book=betway --debug --enforce --threshold=1.05 --persist
+node pipelines/run.all.js --book=starsports --debug --enforce --threshold=1.05 --persist
 
 
 # PricedUp ALL_TO_WIN:

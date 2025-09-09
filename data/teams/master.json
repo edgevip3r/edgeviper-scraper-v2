@@ -17,5 +17,18 @@
 	{ "id": "team:eng:hartlepool-united", "name": "Hartlepool United", "country": "ENG", "sport": "football" },
 	{ "id": "team:eng:sutton-united", "name": "Sutton United", "country": "ENG", "sport": "football" },
 	{ "id": "team:tur:turkey", "name": "Turkey", "country": "TUR", "sport": "football" },
-	{ "id": "team:nir:northern-ireland", "name": "Northern Ireland", "country": "NIR", "sport": "football" }
+	{ "id": "team:nir:northern-ireland", "name": "Northern Ireland", "country": "NIR", "sport": "football" },
+	{ "id": "team:cze:czechia", "name": "Czechia", "country": "CZE", "sport": "football" },
+	{ "id": "team:isr:israel", "name": "Israel", "country": "ISR", "sport": "football" },	
+	{ "id": "team:fra:france", "name": "France", "country": "FRA", "sport": "football" },
+	{ "id": "team:eng:bolton-wanderers", "name": "Bolton Wanderers", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:huddersfield-town", "name": "Huddersfield Town", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:stockport-county", "name": "Stockport County", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:wigan-athletic", "name": "Wigan Athletic", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:notts-county", "name": "Notts County", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:liverpool-women", "name": "Liverpool Women", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:manchester-united-women", "name": "Manchester United Women", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:brighton-women", "name": "Brighton Women", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:tottenham-hotspur-women", "name": "Tottenham Hotspur Women", "country": "ENG", "sport": "football" },
+	{ "id": "team:irl:republic-of-ireland", "name": "Republic of Ireland", "country": "IRL", "sport": "football" }
 ]

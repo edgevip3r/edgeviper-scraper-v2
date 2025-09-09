@@ -56,6 +56,33 @@
   "northern ireland": [
     "team:nir:northern-ireland"
   ],
+  "czechia": [
+    "team:cze:czechia"
+  ],
+  "israel": [
+    "team:isr:israel"
+  ],
+  "france": [
+    "team:fra:france"
+  ],
+  "bolton wanderers": [
+    "team:eng:bolton-wanderers"
+  ],
+  "huddersfield town": [
+    "team:eng:huddersfield-town"
+  ],
+  "stockport county": [
+    "team:eng:stockport-county"
+  ],
+  "wigan athletic": [
+    "team:eng:wigan-athletic"
+  ],
+  "notts county": [
+    "team:eng:notts-county"
+  ],
+  "republic of ireland": [
+    "team:irl:republic-of-ireland"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -86,14 +113,38 @@
   "turkiye": [
     "team:tur:turkey"
   ],
+  "bolton": [
+    "team:eng:bolton-wanderers"
+  ],
+  "huddersfield": [
+    "team:eng:huddersfield-town"
+  ],
+  "stockport": [
+    "team:eng:stockport-county"
+  ],
+  "wigan": [
+    "team:eng:wigan-athletic"
+  ],
+  "notts co": [
+    "team:eng:notts-county"
+  ],
+  "rep of ireland": [
+    "team:irl:republic-of-ireland"
+  ],
   "northern irealnd": [
     "team:nir:northern-ireland"
+  ],
+  "road warriors france": [
+    "team:fra:france"
   ],
   "hartlepool utd": [
     "team:eng:hartlepool-united"
   ],
   "basel": [
     "team:sui:fc-basel"
+  ],
+  "isreal": [
+    "team:isr:israel"
   ],
   "copenhagen": [
     "team:den:fc-copenhagen"
@@ -115,5 +166,8 @@
   ],
   "fc halifax": [
     "team:eng:fc-halifax-town"
+  ],
+  "czech republic": [
+    "team:cze:czechia"
   ]
 }

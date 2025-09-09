@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-04T08:31:48.226Z",
+  "generatedAt": "2025-09-09T09:54:59.577Z",
   "index": {
     "fc copenhagen": [
       {
@@ -230,6 +230,96 @@
         "priority": 100
       }
     ],
+    "czechia": [
+      {
+        "id": "team:cze:czechia",
+        "kind": "team",
+        "sport": "football",
+        "country": "CZE",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "israel": [
+      {
+        "id": "team:isr:israel",
+        "kind": "team",
+        "sport": "football",
+        "country": "ISR",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "france": [
+      {
+        "id": "team:fra:france",
+        "kind": "team",
+        "sport": "football",
+        "country": "FRA",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "bolton wanderers": [
+      {
+        "id": "team:eng:bolton-wanderers",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "huddersfield town": [
+      {
+        "id": "team:eng:huddersfield-town",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "stockport county": [
+      {
+        "id": "team:eng:stockport-county",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "wigan athletic": [
+      {
+        "id": "team:eng:wigan-athletic",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "notts county": [
+      {
+        "id": "team:eng:notts-county",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "republic of ireland": [
+      {
+        "id": "team:irl:republic-of-ireland",
+        "kind": "team",
+        "sport": "football",
+        "country": "IRL",
+        "source": "master",
+        "priority": 100
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -356,10 +446,72 @@
         "priority": 60
       }
     ],
+    "bolton": [
+      {
+        "id": "team:eng:bolton-wanderers",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "huddersfield": [
+      {
+        "id": "team:eng:huddersfield-town",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "stockport": [
+      {
+        "id": "team:eng:stockport-county",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "wigan": [
+      {
+        "id": "team:eng:wigan-athletic",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "notts co": [
+      {
+        "id": "team:eng:notts-county",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "rep of ireland": [
+      {
+        "id": "team:irl:republic-of-ireland",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
     "northern irealnd": [
       {
         "id": "team:nir:northern-ireland",
         "kind": "team",
+        "source": "bookmaker:nrg",
+        "priority": 70
+      }
+    ],
+    "road warriors france": [
+      {
+        "id": "team:fra:france",
+        "kind": "team",
+        "sport": "football",
         "source": "bookmaker:nrg",
         "priority": 70
       }
@@ -378,6 +530,14 @@
         "id": "team:sui:fc-basel",
         "kind": "team",
         "source": "bookmaker:pricedup",
+        "priority": 70
+      }
+    ],
+    "isreal": [
+      {
+        "id": "team:isr:israel",
+        "kind": "team",
+        "source": "bookmaker:starsports",
         "priority": 70
       }
     ],
@@ -435,6 +595,14 @@
         "id": "team:eng:fc-halifax-town",
         "kind": "team",
         "sport": "football",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "czech republic": [
+      {
+        "id": "team:cze:czechia",
+        "kind": "team",
         "source": "bookmaker:williamhill",
         "priority": 70
       }
@@ -670,6 +838,96 @@
           "priority": 100
         }
       ],
+      "czechia": [
+        {
+          "id": "team:cze:czechia",
+          "kind": "team",
+          "sport": "football",
+          "country": "CZE",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "israel": [
+        {
+          "id": "team:isr:israel",
+          "kind": "team",
+          "sport": "football",
+          "country": "ISR",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "france": [
+        {
+          "id": "team:fra:france",
+          "kind": "team",
+          "sport": "football",
+          "country": "FRA",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "bolton wanderers": [
+        {
+          "id": "team:eng:bolton-wanderers",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "huddersfield town": [
+        {
+          "id": "team:eng:huddersfield-town",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "stockport county": [
+        {
+          "id": "team:eng:stockport-county",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "wigan athletic": [
+        {
+          "id": "team:eng:wigan-athletic",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "notts county": [
+        {
+          "id": "team:eng:notts-county",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "republic of ireland": [
+        {
+          "id": "team:irl:republic-of-ireland",
+          "kind": "team",
+          "sport": "football",
+          "country": "IRL",
+          "source": "master",
+          "priority": 100
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -757,10 +1015,72 @@
           "priority": 60
         }
       ],
+      "bolton": [
+        {
+          "id": "team:eng:bolton-wanderers",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "huddersfield": [
+        {
+          "id": "team:eng:huddersfield-town",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "stockport": [
+        {
+          "id": "team:eng:stockport-county",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "wigan": [
+        {
+          "id": "team:eng:wigan-athletic",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "notts co": [
+        {
+          "id": "team:eng:notts-county",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "rep of ireland": [
+        {
+          "id": "team:irl:republic-of-ireland",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
       "northern irealnd": [
         {
           "id": "team:nir:northern-ireland",
           "kind": "team",
+          "source": "bookmaker:nrg",
+          "priority": 70
+        }
+      ],
+      "road warriors france": [
+        {
+          "id": "team:fra:france",
+          "kind": "team",
+          "sport": "football",
           "source": "bookmaker:nrg",
           "priority": 70
         }
@@ -779,6 +1099,14 @@
           "id": "team:sui:fc-basel",
           "kind": "team",
           "source": "bookmaker:pricedup",
+          "priority": 70
+        }
+      ],
+      "isreal": [
+        {
+          "id": "team:isr:israel",
+          "kind": "team",
+          "source": "bookmaker:starsports",
           "priority": 70
         }
       ],
@@ -836,6 +1164,14 @@
           "id": "team:eng:fc-halifax-town",
           "kind": "team",
           "sport": "football",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "czech republic": [
+        {
+          "id": "team:cze:czechia",
+          "kind": "team",
           "source": "bookmaker:williamhill",
           "priority": 70
         }

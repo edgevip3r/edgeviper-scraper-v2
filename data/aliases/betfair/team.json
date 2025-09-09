@@ -9,5 +9,15 @@
 "aldershot": "team:eng:aldershot-town",
 "hartlepool": "team:eng:hartlepool-united",
 "sutton utd": "team:eng:sutton-united",
-"turkiye": "team:tur:turkey"
+"turkiye": "team:tur:turkey",
+"Bolton": "team:eng:bolton-wanderers",
+"huddersfield": "team:eng:huddersfield-town",
+"stockport": "team:eng:stockport-county",
+"wigan": "team:eng:wigan-athletic",
+"notts co": "team:eng:notts-county",
+"rep of ireland": "team:irl:republic-of-ireland",
+"tottenham (w)": "team:eng:liverpool-women",
+"man utd (w)": "team:eng:manchester-united-women",
+"brighton (w)": "team:eng:brighton-women",
+"tottenham (w)": "team:eng:tottenham-hotspur-women"
 }
