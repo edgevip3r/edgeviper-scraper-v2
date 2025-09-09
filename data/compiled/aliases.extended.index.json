@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-09T09:54:59.577Z",
+  "generatedAt": "2025-09-09T23:00:45.228Z",
   "index": {
     "fc copenhagen": [
       {
@@ -320,6 +320,26 @@
         "priority": 100
       }
     ],
+    "athletico paranaense": [
+      {
+        "id": "team:bra:athletico-paranaense",
+        "kind": "team",
+        "sport": "football",
+        "country": "BRA",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "fluminense": [
+      {
+        "id": "team:bra:fluminense",
+        "kind": "team",
+        "sport": "football",
+        "country": "BRA",
+        "source": "master",
+        "priority": 100
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -497,6 +517,22 @@
         "kind": "team",
         "source": "betfair",
         "priority": 60
+      }
+    ],
+    "athletico pr": [
+      {
+        "id": "team:bra:athletico-paranaense",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "fluminense rj": [
+      {
+        "id": "team:bra:fluminense",
+        "kind": "team",
+        "source": "bookmaker:betway",
+        "priority": 70
       }
     ],
     "northern irealnd": [
@@ -928,6 +964,26 @@
           "priority": 100
         }
       ],
+      "athletico paranaense": [
+        {
+          "id": "team:bra:athletico-paranaense",
+          "kind": "team",
+          "sport": "football",
+          "country": "BRA",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "fluminense": [
+        {
+          "id": "team:bra:fluminense",
+          "kind": "team",
+          "sport": "football",
+          "country": "BRA",
+          "source": "master",
+          "priority": 100
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -1066,6 +1122,22 @@
           "kind": "team",
           "source": "betfair",
           "priority": 60
+        }
+      ],
+      "athletico pr": [
+        {
+          "id": "team:bra:athletico-paranaense",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "fluminense rj": [
+        {
+          "id": "team:bra:fluminense",
+          "kind": "team",
+          "source": "bookmaker:betway",
+          "priority": 70
         }
       ],
       "northern irealnd": [

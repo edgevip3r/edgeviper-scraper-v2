@@ -30,5 +30,7 @@
 	{ "id": "team:eng:manchester-united-women", "name": "Manchester United Women", "country": "ENG", "sport": "football" },
 	{ "id": "team:eng:brighton-women", "name": "Brighton Women", "country": "ENG", "sport": "football" },
 	{ "id": "team:eng:tottenham-hotspur-women", "name": "Tottenham Hotspur Women", "country": "ENG", "sport": "football" },
-	{ "id": "team:irl:republic-of-ireland", "name": "Republic of Ireland", "country": "IRL", "sport": "football" }
+	{ "id": "team:irl:republic-of-ireland", "name": "Republic of Ireland", "country": "IRL", "sport": "football" },
+	{ "id": "team:bra:athletico-paranaense", "name": "Athletico Paranaense", "country": "BRA", "sport": "football" },
+	{ "id": "team:bra:fluminense", "name": "Fluminense", "country": "BRA", "sport": "football" }
 ]

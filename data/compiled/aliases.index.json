@@ -83,6 +83,12 @@
   "republic of ireland": [
     "team:irl:republic-of-ireland"
   ],
+  "athletico paranaense": [
+    "team:bra:athletico-paranaense"
+  ],
+  "fluminense": [
+    "team:bra:fluminense"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -130,6 +136,12 @@
   ],
   "rep of ireland": [
     "team:irl:republic-of-ireland"
+  ],
+  "athletico pr": [
+    "team:bra:athletico-paranaense"
+  ],
+  "fluminense rj": [
+    "team:bra:fluminense"
   ],
   "northern irealnd": [
     "team:nir:northern-ireland"
