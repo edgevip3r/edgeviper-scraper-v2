@@ -5,6 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+get_repos.py
+
 # OS cruft
 .DS_Store
 Thumbs.db
