@@ -80,7 +80,7 @@ node pipelines/run.snapshot.js  --book=williamhill --debug
 node pipelines/run.snapshot.js  --book=nrg --debug
 
 # Parse (HTML → *.rawoffers.json)
-node pipelines/run.parse.js     --book=pricedup --file="snapshots/williamhill/2025-08-31/2025-08-31_12-26-39_price-boosts.html" --debug
+node pipelines/run.parse.js     --book=williamhill --debug --file="snapshots/williamhill/2025-09-10/2025-09-10_15-42-35_price-boosts.html" --debug
 
 # Classify (rawoffers → offers with type + legs)
 node pipelines/run.classify.js  --book=williamhill --debug
