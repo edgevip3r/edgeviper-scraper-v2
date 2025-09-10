@@ -1,0 +1,21 @@
+{
+  "bookie": "williamhill",
+  "phrases": {
+    "draw": [
+      {
+        "rx": "\\bto\\s*draw\\b"
+      },
+      {
+        "rx": "\\bdraw\\b"
+      }
+    ]
+  },
+  "exclude": [
+    {
+      "rx": "\\bdraw\\s+no\\s+bet\\b"
+    },
+    {
+      "rx": "\\bdouble\\s+chance\\b"
+    }
+  ]
+}

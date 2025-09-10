@@ -1,63 +1,77 @@
+
 // bettypes/FOOTBALL_MULTI_AND/mapper.js
-import path from 'path'; import { pathToFileURL } from 'url'; import fs from 'fs';
-async function importIfExists(p){ try{ return await import(pathToFileURL(p).href) }catch { return null } }
+// Multi-leg orchestrator that delegates each leg to the appropriate mapper/resolver.
+// Now supports WIN_TO_NIL legs (Task 2), alongside MO_TEAM_WIN, MO_DRAW, and MO_BTTS_SGM.
+import { mapAllToWinLegs } from '../../lib/map/betfair-football.js';
+import { printMapperDebug } from '../../lib/map/shared/print.js';
 
-export async function map(offer, ctx = {}) {
+// Delegate to existing bettype mappers to avoid duplication.
+import { map as mapTeamToDraw } from '../FOOTBALL_TEAM_TO_DRAW/mapper.js';
+import { map as mapSgmMoBtts } from '../FOOTBALL_SGM_MO_BTTS/mapper.js';
+import { map as mapWinToNil } from '../FOOTBALL_WIN_TO_NIL/mapper.js';
+
+function normKind(x){
+  const k = String(x||'').toUpperCase();
+  if (k === 'FOOTBALL_TEAM_WIN') return 'MO_TEAM_WIN';
+  if (k === 'FOOTBALL_TEAM_TO_DRAW' || k === 'MO_DRAW') return 'MO_DRAW';
+  if (k === 'FOOTBALL_SGM_MO_BTTS' || k === 'WIN_AND_BTTS' || k === 'MO_BTTS_SGM') return 'MO_BTTS_SGM';
+  if (k === 'FOOTBALL_WIN_TO_NIL' || k === 'WIN_TO_NIL') return 'WIN_TO_NIL';
+  return k;
+}
+
+function teamOf(L){ return L.team || L.label || L.name || ''; }
+
+export async function map(offer, ctx = {}){
   const debug = !!ctx.debug;
+  const maxFutureHrs = Number(process.env.EV_MAX_FUTURE_HOURS || (ctx.maxFutureHours ?? 72));
+
+  const legsIn = (offer.legs || []).map(L => ({
+    team: teamOf(L),
+    kind: normKind(L.kind || L.betKind || L.type || L.typeId)
+  }));
+
   const out = { mapped: [], unmatched: [] };
-  const legs = Array.isArray(offer.legs) ? offer.legs : [];
 
-  for (let i = 0; i < legs.length; i++) {
-    const L = legs[i]; const kind = String(L?.kind || '').trim(); const params = L?.params || {};
-    if (!kind) continue;
+  for (const leg of legsIn){
+    const { team, kind } = leg;
+    if (!team) { out.unmatched.push({ team: '', reason: 'NO_TEAM' }); continue; }
 
-    // Normalise sub-offer legs
-    let subOffer;
-    if (kind === 'FOOTBALL_TEAM_WIN') {
-      const teams = Array.isArray(params.teams) ? params.teams : (params.team ? [params.team] : []);
-      subOffer = { legs: teams.map(t => ({ team: t })) };
-    } else if (kind === 'WIN_AND_BTTS' || kind === 'FOOTBALL_SGM_MO_BTTS' || kind === 'FOOTBALL_WIN_TO_NIL') {
-      const team = params.team || (Array.isArray(params.teams) ? params.teams[0] : '');
-      subOffer = { legs: [{ team }] };
-    } else if (kind === 'ALL_TO_WIN') {
-      const teams = Array.isArray(params.teams) ? params.teams : [];
-      subOffer = { legs: teams.map(t => ({ team: t })) };
-    } else {
-      const teams = Array.isArray(params.teams) ? params.teams : (params.team ? [params.team] : []);
-      subOffer = { legs: teams.map(t => ({ team: t })) };
-    }
-
-    // Resolve mapper path(s)
-    const tryKinds = [kind];
-    if (kind === 'FOOTBALL_TEAM_WIN') tryKinds.push('ALL_TO_WIN');
-    if (kind === 'FOOTBALL_SGM_MO_BTTS') tryKinds.push('WIN_AND_BTTS');
-    const tried = [];
-    let mod = null;
-    for (const k of tryKinds) {
-      const p = path.resolve('bettypes', k, 'mapper.js');
-      tried.push(p);
-      if (fs.existsSync(p)) { mod = await importIfExists(p); if (mod) break; }
-    }
-    if (!mod || !mod.map) {
-      out.unmatched.push({ kind, reason: 'MAPPER_NOT_FOUND', tried: tried.map(x=>x.replace(process.cwd()+'/','')) });
-      if (debug) console.log(`[multi_and] ${kind} -> MAPPER_NOT_FOUND`);
+    if (kind === 'MO_TEAM_WIN' || !kind){
+      // default to team win if kind missing (legacy multi-and)
+      const mo = await mapAllToWinLegs([{ team }], { debug:false, bookie: ctx.bookie, horizonHours: maxFutureHrs });
+      if (mo?.mapped?.length) out.mapped.push({ ...mo.mapped[0], _marketTag:'MO:WIN' });
+      else out.unmatched.push({ team, reason: (mo?.unmatched?.[0]?.reason || 'NO_MO_MAPPING') });
       continue;
     }
 
-    try {
-      const res = await mod.map(subOffer, ctx);
-      (res?.mapped || []).forEach(m => out.mapped.push({ ...m, _kind: kind }));
-      (res?.unmatched || []).forEach(u => out.unmatched.push({ ...u, _kind: kind }));
-    } catch (e) {
-      out.unmatched.push({ kind, reason: 'SUBMAP_ERROR', error: String(e?.message || e) });
-      if (debug) console.log(`[multi_and] ${kind} -> SUBMAP_ERROR:`, e?.message || e);
+    if (kind === 'MO_DRAW'){
+      const res = await mapTeamToDraw({ legs:[{ team }] }, { ...ctx, debug:false });
+      if (res?.mapped?.length) out.mapped.push(res.mapped[0]);
+      else out.unmatched.push({ team, reason: (res?.unmatched?.[0]?.reason || 'NO_DRAW_MAPPING') });
+      continue;
     }
+
+    if (kind === 'MO_BTTS_SGM'){
+      const res = await mapSgmMoBtts({ legs:[{ team }] }, { ...ctx, debug:false });
+      if (res?.mapped?.length) out.mapped.push(res.mapped[0]);
+      else out.unmatched.push({ team, reason: (res?.unmatched?.[0]?.reason || 'NO_SGM_MAPPING') });
+      continue;
+    }
+
+    if (kind === 'WIN_TO_NIL'){
+      const res = await mapWinToNil({ legs:[{ team }] }, { ...ctx, debug:false });
+      if (res?.mapped?.length) out.mapped.push(res.mapped[0]);
+      else out.unmatched.push({ team, reason: (res?.unmatched?.[0]?.reason || 'NO_WTN_MAPPING') });
+      continue;
+    }
+
+    out.unmatched.push({ team, reason: `UNKNOWN_LEG_KIND:${kind}` });
   }
 
-  if (debug) {
-    const unm = (out.unmatched||[]).map(u => `${u._kind||'?'}:${u.team||u.reason}`).join(' | ') || 'none';
-    console.log(`[map:FOOTBALL_MULTI_AND] done -> mapped=${out.mapped.length}/${offer.legs?.length||0}; unmatched: ${unm}`);
+  if (debug){
+    printMapperDebug('FOOTBALL_MULTI_AND', legsIn, out, { horizonHours: maxFutureHrs });
   }
   return out;
 }
+
 export default { map };

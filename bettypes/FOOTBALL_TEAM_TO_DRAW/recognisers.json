@@ -1,9 +1,31 @@
-[
-  {
-    "pattern": "^(?<team>[^()]+?)\\s+to\\s+draw\\b",
-    "flags": "i",
-    "groups": {
-      "team": "team"
-    }
+{
+  "sport": "football",
+  "hints": {
+    "must_contain_one": [
+      {
+        "rx": "\\bto\\s+draw\\b",
+        "weight": 1.0
+      },
+      {
+        "rx": "\\bdraw\\b",
+        "weight": 0.6
+      },
+      {
+        "rx": "\\bto\\s+tie\\b",
+        "weight": 0.4
+      }
+    ],
+    "negative": [
+      {
+        "rx": "\\bdraw\\s+no\\s+bet\\b"
+      },
+      {
+        "rx": "\\bdouble\\s+chance\\b"
+      }
+    ]
+  },
+  "legs": {
+    "kind": "MO_DRAW",
+    "team_from_context": true
   }
-]
+}
