@@ -1,245 +1,173 @@
-// pipelines/run.classify.js
-// Classify RawOffer[] -> typed offers using plugin-based bet types.
-//
-// Usage:
-//   node pipelines/run.classify.js --book=<alias|canonical> [--in=...rawoffers.json] [--debug]
-//
-// Output: writes alongside input: *.offers.json
-
-import fs from 'fs/promises';
-import fss from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// pipelines/run.classify.js — flatMap container legs + de-dupe legacy SGM vs V2
+import fs from 'fs/promises'; import fss from 'fs'; import path from 'path'; import { fileURLToPath } from 'url';
 import cfg from '../config/global.json' with { type: 'json' };
 import { resolveBookKey } from '../lib/books/resolveBook.js';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname  = path.dirname(__filename);
+const __dirname = path.dirname(__filename);
+const MODE = (process.env.EV_BETTYPES_V2 || (cfg?.features?.bettypesV2Default ?? 'off')).toLowerCase();
 
-function loadBookCfg(bookKey) {
-  try {
-    const p = path.resolve(__dirname, '..', 'data', 'bookmakers', `${bookKey}.json`);
-    return JSON.parse(fss.readFileSync(p, 'utf8'));
-  } catch {
-    return {};
+function args(argv){ const o={}; for(const a of argv.slice(2)){ const m=a.match(/^--([^=]+?)(?:=(.*))?$/); if(m) o[m[1]]=m[2]??true; } return o; }
+const a=args(process.argv);
+const debug = a.debug===''||a.debug===true||a.debug==='true';
+const fileArg=a.in?path.resolve(a.in):null;
+
+(async()=>{ try{
+  if(!a.book && !fileArg){ console.error('Usage: node pipelines/run.classify.js --book= [--in=...rawoffers.json] [--debug]'); process.exit(1); }
+  let bookKey;
+  if(a.book){ const r=await resolveBookKey(String(a.book)); bookKey=r.canonical; }
+  else { const m=fileArg.match(/[\\\/]snapshots[\\\/ ]([^\\\/ ]+)[\\\/]/i); if(!m) throw new Error('Cannot infer --book from --in path.'); bookKey=m[1]; }
+
+  const inPath=fileArg||await findLatestRawOffers(bookKey); if(!inPath){ console.error(`[classify:${bookKey}] no *.rawoffers.json found.`); process.exit(1); }
+  const raw = await readJson(inPath);
+  const items = Array.isArray(raw.rawOffers)?raw.rawOffers:Array.isArray(raw.offers)?raw.offers:Array.isArray(raw.raw)?raw.raw:[];
+
+  const regLegacy = Array.isArray(cfg?.bettypes?.registry)&&cfg.bettypes.registry.length? cfg.bettypes.registry : await loadRegistryFallback();
+  const regV2 = Array.isArray(cfg?.bettypes?.registryV2)? cfg.bettypes.registryV2 : [];
+  const ordered = (MODE==='off') ? regLegacy : [...regV2, ...regLegacy]; // V2 first
+  const allIds = Array.from(new Set([...regV2, ...regLegacy]));
+
+  if (debug) {
+    console.log(`[classify] V2 MODE=${MODE} | regLegacy=${regLegacy.join(',')} | regV2=${regV2.join(',')}`);
   }
-}
 
-function args(argv){const o={};for(const a of argv.slice(2)){const m=a.match(/^--([^=]+?)(?:=(.*))?$/);if(m)o[m[1]]=m[2]??true}return o}
-const a = args(process.argv);
-const debug = a.debug === '' || a.debug === true || a.debug === 'true';
-const fileArg = a.in ? path.resolve(a.in) : null;
-
-(async () => {
-  try {
-    if (!a.book && !fileArg) {
-      // dynamic hint (no hard-coded book names)
-      let detected = [];
-      try {
-        const dir = path.resolve(__dirname, '..', 'bookmakers');
-        detected = fss.readdirSync(dir, { withFileTypes: true }).filter(d => d.isDirectory()).map(d => d.name).sort();
-      } catch {}
-      const hint = detected.length ? `  Available: ${detected.join(', ')}` : '';
-      console.error('Usage: node pipelines/run.classify.js --book=<bookKey> [--in=...rawoffers.json] [--debug]');
-      if (hint) console.error(hint);
-      process.exit(1);
+  const preloaded = await Promise.all(allIds.map(async(typeId)=>({ typeId, rec: await loadRecognisers(typeId, bookKey), extractor: await loadExtractor(typeId) })));
+  const byId = new Map(preloaded.map(t=>[t.typeId, t]));
+  if (debug) {
+    for (const t of preloaded) {
+      const posN = Array.isArray(t.rec?.positive) ? t.rec.positive.length : 0;
+      const negN = Array.isArray(t.rec?.negative) ? t.rec.negative.length : 0;
+      const hasEx = !!t.extractor;
+      console.log(`[rec:${t.typeId}] pos=${posN} neg=${negN} extractor=${hasEx?'yes':'no'}`);
     }
+  }
 
-    // Resolve book key (or infer from --in path)
-    let bookKey;
-    if (a.book) {
-      const { canonical } = await resolveBookKey(String(a.book));
-      bookKey = canonical;
-    } else {
-      const m = fileArg.match(/[\\\/]snapshots[\\\/]([^\\\/]+)[\\\/]/i);
-      if (!m) throw new Error('Cannot infer --book from --in path.');
-      bookKey = m[1];
-    }
+  const outputs=[]; let inCount=0,outCount=0;
+  for(const it of items){
+    const titleOriginal=String(it.text||it.title||'').trim();
+    const boostedOddsFrac = it.boostedOddsFrac ?? it.oddsRaw ?? null;
+    const boostedOddsDec  = it.boostedOddsDec  ?? it.oddsDec ?? null;
+    if(!titleOriginal || boostedOddsDec==null){ if(debug) console.log('[skip:pre]', titleOriginal?'no-odds':'no-text'); continue; }
+    inCount++;
 
-    const _bookCfg = loadBookCfg(bookKey);
-    const _baseUrlFallback = (_bookCfg?.baseUrls && _bookCfg.baseUrls[0]) || null;
-
-    // Locate input
-    const inPath = fileArg || await findLatestRawOffers(bookKey);
-    if (!inPath) {
-      console.error(`[classify:${bookKey}] no *.rawoffers.json found. Provide --in or run parse first.`);
-      process.exit(1);
-    }
-
-    // Load raw items (accept several shapes)
-    const raw = await readJson(inPath);
-    const items =
-      Array.isArray(raw.rawOffers) ? raw.rawOffers :
-      Array.isArray(raw.offers)    ? raw.offers :
-      Array.isArray(raw.raw)       ? raw.raw :
-      [];
-
-    // Load registry (from config or file)
-    const registry = Array.isArray(cfg?.bettypes?.registry) && cfg.bettypes.registry.length
-      ? cfg.bettypes.registry
-      : await loadRegistryFallback();
-
-    // Pre-load recognisers + extractors per type
-    const types = await Promise.all(registry.map(async (typeId) => {
-      const rec = await loadRecognisers(typeId, bookKey);
-      const extractor = await loadExtractor(typeId);
-      return { typeId, rec, extractor };
-    }));
-
-    let inCount = 0, outCount = 0;
-    const typed = [];
-
-    for (const it of items) {
-      const title = String(it.text || it.title || '').trim();
-      const { frac, dec } = getOdds(it);
-      if (!title || dec == null) { if (debug) console.log('[skip:pre]', !title?'no-text':'no-odds', '|', preview(title)); continue; }
-      inCount++;
-
-      let matched = null;
-      for (const T of types) {
-        if (!T.rec) continue;
-        if (!passesRecognisers(title, T.rec)) continue;
-
-        // Extract legs via type extractor (or fallback)
-        const extractor = T.extractor || fallbackExtractor(T.typeId);
-        const ex = await extractor.classify(title, { bookKey, typeId: T.typeId, debug });
-        if (ex && (ex.match === true || (typeof ex.match === 'number' && ex.match > 0))) {
-          const legs = Array.isArray(ex.legs) ? ex.legs : [];
-          if (legs.length === 0 && debug) console.log('[skip:legs=0]', T.typeId, '|', preview(title));
-          else {
-            const srcUrl =
-              it.sourceUrl ||
-              it.url ||
-              _baseUrlFallback ||
-              null;
-
-            matched = {
-              typeId: T.typeId,
-              legs,
-              text: title,
-              textOriginal: it.textOriginal || title,
-              boostedOddsFrac: it.boostedOddsFrac ?? it.oddsRaw ?? null,
-              boostedOddsDec:  it.boostedOddsDec  ?? it.oddsDec ?? null,
-              sourceUrl: srcUrl,
-              sport: it.sportHint || 'Football',
-              bookie: (it.bookie || bookKey || '').toLowerCase()
-            };
-          }
+    const hits=[];
+    for(const typeId of ordered){
+      const T=byId.get(typeId); if(!T?.rec) continue;
+      const { text: titleForMatch, marketingPrefix } = stripPrefix(titleOriginal, T.rec?.marketingPrefixPattern);
+      if(!passesRecognisers(titleForMatch, T.rec)) continue;
+      const ex = await classifySafe(T.extractor, titleForMatch, { bookKey, typeId });
+      if(ex && (ex.match===true || (typeof ex.match==='number' && ex.match>0))){
+        const legs = Array.isArray(ex.legs)? ex.legs : [];
+        if(legs.length){
+          hits.push({ typeId, legs, marketingPrefix: marketingPrefix||'' });
+          if (debug) console.log(`[hit:${typeId}] legs=${legs.length} |`, preview(titleOriginal));
         }
-        if (matched) break; // first hit wins
       }
+    }
 
-      if (!matched) { if (debug) console.log('[skip:type]', preview(title)); continue; }
+    // De-dupe equivalences:
+    if (hits.some(h => h.typeId === 'FOOTBALL_TEAM_WIN')) {
+      for (let i = hits.length - 1; i >= 0; i--) if (hits[i].typeId === 'ALL_TO_WIN') hits.splice(i, 1);
+    }
+    if (hits.some(h => h.typeId === 'FOOTBALL_SGM_MO_BTTS')) {
+      for (let i = hits.length - 1; i >= 0; i--) if (hits[i].typeId === 'WIN_AND_BTTS') hits.splice(i, 1);
+    }
 
-      typed.push({
-        typeId: matched.typeId,
-        bookie: matched.bookie,
-        sport: matched.sport,
-        text: matched.text,
-        textOriginal: matched.textOriginal,
-        boostedOddsFrac: matched.boostedOddsFrac,
-        boostedOddsDec: matched.boostedOddsDec,
-        sourceUrl: matched.sourceUrl,
-        legs: matched.legs.map(t => ({ team: t }))
+    if(hits.length===0) { if(debug) console.log('[skip:type]', preview(titleOriginal)); continue; }
+
+    if (MODE==='on' && hits.length>1){
+      const prefix = hits.find(h=>h.marketingPrefix)?.marketingPrefix || '';
+      const legs = deDupeLegs(flattenToContainerLegs(hits));
+      outputs.push({
+        typeId: 'FOOTBALL_MULTI_AND',
+        bookie:(it.bookie||bookKey||'').toLowerCase(),
+        sport: it.sportHint || 'Football',
+        text: titleOriginal, textOriginal: titleOriginal,
+        marketingPrefix: prefix,
+        boostedOddsFrac, boostedOddsDec, sourceUrl: it.sourceUrl || it.url || null,
+        legs
       });
       outCount++;
-      if (debug) console.log(`[ok:${matched.typeId}] legs=${matched.legs.length} | odds=${matched.boostedOddsFrac}(${matched.boostedOddsDec}) |`, preview(matched.text));
+      if (debug) console.log('[emit:FOOTBALL_MULTI_AND]', JSON.stringify({legs: legs.length}));
+      continue;
     }
 
-    const outPath = inPath.replace(/\.rawoffers\.json$/i, '.offers.json');
-    await fs.writeFile(outPath, JSON.stringify({ offers: typed }, null, 2), 'utf8');
-
-    console.log(`[classify:${bookKey}] in=${inCount} out=${outCount}`);
-    console.log(`[classify:${bookKey}] wrote -> ${outPath}`);
-  } catch (err) {
-    console.error('[classify] failed:', err?.message || err);
-    process.exit(1);
+    const first = hits[0];
+    outputs.push({
+      typeId: first.typeId, bookie:(it.bookie||bookKey||'').toLowerCase(), sport: it.sportHint || 'Football',
+      text: titleOriginal, textOriginal: titleOriginal, marketingPrefix: first.marketingPrefix,
+      boostedOddsFrac, boostedOddsDec, sourceUrl: it.sourceUrl || it.url || null,
+      legs: first.legs.map(t=>({ team:t }))
+    });
+    outCount++;
+    if (debug) console.log(`[emit:${first.typeId}] legs=${first.legs.length}`);
   }
-})();
 
-// ---------- helpers ----------
+  const outPath = inPath.replace(/\.rawoffers\.json$/i, '.offers.json');
+  await fs.writeFile(outPath, JSON.stringify({ offers: outputs }, null, 2), 'utf8');
+  console.log(`[classify:${bookKey}] in=${inCount} out=${outCount}`);
+  console.log(`[classify:${bookKey}] wrote -> ${outPath}`);
 
-async function readJson(p){const t=await fs.readFile(p,'utf8');try{return JSON.parse(t)}catch{throw new Error(`Malformed JSON: ${p}`)}}
+} catch (e) {
+  console.error('[classify] failed:', e?.message || e);
+  process.exit(1);
+}})();
 
-async function findLatestRawOffers(bookKey){
-  const root = path.resolve(__dirname,'..','snapshots',bookKey);
-  let latest=null;
-  async function walk(d){let ents;try{ents=await fs.readdir(d,{withFileTypes:true})}catch{return}
-    for(const e of ents){const p=path.join(d,e.name);
-      if(e.isDirectory()) await walk(p);
-      else if(e.isFile() && /\.rawoffers\.json$/i.test(e.name)){const st=await fs.stat(p); if(!latest||st.mtimeMs>latest.mtimeMs) latest={path:p,mtimeMs:st.mtimeMs}}
-    }}
-  await walk(root);
-  return latest?.path||null;
-}
-
-async function loadRegistryFallback(){
-  const p = path.resolve(__dirname,'..','bettypes','registry.json');
-  if (!fss.existsSync(p)) return ['ALL_TO_WIN'];
-  try { const j = JSON.parse(await fs.readFile(p,'utf8')); return Array.isArray(j)&&j.length? j : ['ALL_TO_WIN']; }
-  catch { return ['ALL_TO_WIN']; }
-}
-
+// ---- helpers ----
+async function readJson(p){ const t=await fs.readFile(p,'utf8'); try{ return JSON.parse(t) }catch{ throw new Error(`Malformed JSON: ${p}`) } }
+async function findLatestRawOffers(bookKey){ const root=path.resolve(__dirname,'..','snapshots',bookKey);
+  let latest=null; async function walk(d){ let ents; try{ ents=await fs.readdir(d,{withFileTypes:true}) }catch{ return }
+  for(const e of ents){ const p=path.join(d,e.name); if(e.isDirectory()) await walk(p); else if(/\.rawoffers\.json$/i.test(e.name)){ const st=await fs.stat(p); if(!latest||st.mtimeMs>latest.mtimeMs) latest={path:p,mtimeMs:st.mtimeMs}; } } }
+  await walk(root); return latest?.path||null; }
+async function loadRegistryFallback(){ const p=path.resolve(__dirname,'..','bettypes','registry.json'); try{ const j=JSON.parse(await fs.readFile(p,'utf8')); return Array.isArray(j)&&j.length? j : ['ALL_TO_WIN']; }catch{ return ['ALL_TO_WIN']; } }
 async function loadRecognisers(typeId, bookKey){
-  // central recognisers
-  const baseDir = path.resolve(__dirname,'..','bettypes',typeId);
-  const recPath = path.join(baseDir,'recognisers.json');
-  let pos=[],neg=[];
-  if (fss.existsSync(recPath)) {
-    try {
-      const j = JSON.parse(await fs.readFile(recPath,'utf8'));
-      pos = Array.isArray(j.positive)? j.positive: [];
-      neg = Array.isArray(j.negative)? j.negative: [];
-    } catch {}
-  } else if (typeId==='ALL_TO_WIN') {
-    // default safety net
-    pos=['all to win','both to win','double','treble','fourfold','to win$','wins$'];
-    neg=['both teams to score','btts','over \\d+\\.5'];
+  const baseDir=path.resolve(__dirname,'..','bettypes',typeId);
+  const recPath=path.join(baseDir,'recognisers.json');
+  let pos=[],neg=[],marketingPrefixPattern=null;
+  if(fss.existsSync(recPath)){ try{ const j=JSON.parse(await fs.readFile(recPath,'utf8')); pos=Array.isArray(j.positive)?j.positive:[]; neg=Array.isArray(j.negative)?j.negative:[]; if(typeof j.marketingPrefixPattern==='string') marketingPrefixPattern=j.marketingPrefixPattern; }catch{} }
+  const overlayDir=path.join(baseDir,'overlays');
+  const overlayPaths=[ path.join(overlayDir, `${bookKey}.json`), path.join(overlayDir, `${bookKey}.recognisers.json`) ];
+  for(const op of overlayPaths){ if(!fss.existsSync(op)) continue; try{ const j=JSON.parse(await fs.readFile(op,'utf8'));
+    if(Array.isArray(j.positive)) pos.push(...j.positive); if(Array.isArray(j.negative)) neg.push(...j.negative);
+    if(typeof j.marketingPrefixPattern==='string' && !marketingPrefixPattern) marketingPrefixPattern=j.marketingPrefixPattern;
+  }catch{} }
+  return { positive: pos.map(toI), negative: neg.map(toI), marketingPrefixPattern };
+}
+async function loadExtractor(typeId){ const p=path.resolve(__dirname,'..','bettypes',typeId,'extractor.js'); if(!fss.existsSync(p)) return null; const mod=await import(pathToFileURL(p).href); return mod.default||mod; }
+function pathToFileURL(p){ return new URL('file://'+p.replace(/\\/g,'/')); }
+function toI(s){ try{ return new RegExp(s,'i') } catch { return new RegExp(String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i') } }
+function passesRecognisers(text, rec){ const t=String(text||'').replace(/\s+/g,' ').trim(); const pos=rec.positive?.some(rx=>rx.test(t)); if(!pos) return false; const neg=rec.negative?.some(rx=>rx.test(t)); return !neg; }
+function stripPrefix(s, pattern){ if(!pattern) return { text:s, marketingPrefix:'' }; try{ const rx=new RegExp(pattern,'i'); const m=String(s||'').match(rx); if(!m) return { text:s, marketingPrefix:'' }; const full=m[0]||''; return { text: String(s||'').slice(full.length), marketingPrefix:full }; }catch{ return { text:s, marketingPrefix:'' }; } }
+function classifySafe(extractor, title, ctx){ try{ return extractor?.classify? extractor.classify(title, ctx) : null } catch { return null } }
+function preview(t){ const s=String(t||'').trim(); return s.length>100? s.slice(0,97)+'…':s; }
+
+function flattenToContainerLegs(hits){
+  const out = [];
+  for (const h of hits){
+    const typeId = h.typeId;
+    const legs = Array.isArray(h.legs) ? h.legs : [];
+    if (typeId === 'ALL_TO_WIN' || typeId === 'FOOTBALL_TEAM_WIN'){
+      for (const team of legs) out.push({ kind:'FOOTBALL_TEAM_WIN', params:{ team } });
+    } else if (typeId === 'WIN_AND_BTTS' || typeId === 'FOOTBALL_SGM_MO_BTTS'){
+      for (const team of legs) out.push({ kind:'FOOTBALL_SGM_MO_BTTS', params:{ team } });
+    } else if (typeId === 'FOOTBALL_WIN_TO_NIL'){
+      for (const team of legs) out.push({ kind:'FOOTBALL_WIN_TO_NIL', params:{ team } });
+    } else {
+      if (legs.length) for (const team of legs) out.push({ kind:typeId, params:{ team } });
+      else out.push({ kind:typeId, params:{ team:'' } });
+    }
   }
-  // per-book overlay
-  const overlayPath = path.join(baseDir,'overlays',`${bookKey}.json`);
-  if (fss.existsSync(overlayPath)) {
-    try {
-      const j = JSON.parse(await fs.readFile(overlayPath,'utf8'));
-      if (Array.isArray(j.positive)) pos.push(...j.positive);
-      if (Array.isArray(j.negative)) neg.push(...j.negative);
-    } catch {}
+  return out;
+}
+
+function deDupeLegs(legs){
+  const seen = new Set();
+  const out = [];
+  for (const L of legs){
+    const key = `${L.kind}|${(L.params?.team||'').toLowerCase()}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(L);
   }
-  return {
-    positive: pos.map(toRegexI),
-    negative: neg.map(toRegexI)
-  };
+  return out;
 }
-
-async function loadExtractor(typeId){
-  const modPath = path.resolve(__dirname,'..','bettypes',typeId,'extractor.js');
-  if (!fss.existsSync(modPath)) return null;
-  const mod = await import(pathToFileURL(modPath).href);
-  return mod.default || mod;
-  function pathToFileURL(p){ return new URL('file://'+p.replace(/\\/g,'/')); }
-}
-
-function toRegexI(s){try{return new RegExp(s,'i')}catch{return new RegExp(escapeRegExp(String(s)),'i')}}
-function escapeRegExp(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
-
-function passesRecognisers(text, rec){
-  const t = norm(text);
-  const pos = rec.positive?.some(rx=>rx.test(t));
-  if (!pos) return false;
-  const neg = rec.negative?.some(rx=>rx.test(t));
-  return !neg;
-}
-
-function norm(s){
-  // keep '&' as-is so recognisers can match either '&' or 'and' explicitly
-  return String(s || '').replace(/\s+/g, ' ').trim();
-}
-
-function getOdds(it){
-  const frac = it.boostedOddsFrac ?? it.oddsRaw ?? it.odds ?? null;
-  let dec = it.boostedOddsDec ?? it.oddsDec ?? null;
-  if (dec != null && !Number.isFinite(dec)) dec = null;
-  return { frac, dec };
-}
-
-function preview(t){const s=String(t||'').trim();return s.length>100? s.slice(0,97)+'…' : s}

@@ -1,6 +1,5 @@
 {
   "positive": [
-    "\\bto\\s+win\\s*&\\s*(?:both\\s+teams\\s+to\\s+score|btts)\\b",
     "\\bto\\s+win\\s+and\\s+(?:both\\s+teams\\s+to\\s+score|btts)\\b"
   ],
   "negative": []

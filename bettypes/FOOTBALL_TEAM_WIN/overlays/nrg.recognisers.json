@@ -1,0 +1,22 @@
+{
+  "positive": [
+    "\\b(?:both|all)\\s+to\\s+win\\b",
+    "\\bto\\s+win\\b",
+    "\\b(?:double|treble|fourfold|acca)\\b"
+  ],
+  "negative": [
+    "\\bwin\\s+to\\s+nil\\b",
+    "\\bto\\s+win\\s+to\\s+nil\\b",
+    "\\b(btts|both\\s+teams\\s+to\\s+score)\\b",
+    "\\bdouble\\s+chance\\b",
+    "\\bdraw\\s+no\\s+bet\\b",
+    "\\bover\\s+\\d+(?:\\.5)?\\b",
+    "\\bunder\\s+\\d+(?:\\.5)?\\b",
+    "\\bhandicap\\b",
+    "\\bto\\s+win\\s+both\\s+halves\\b",
+    "\\bto\\s+score\\b",
+    "\\bassist\\b",
+    "\\bshots?\\s+on\\s+target\\b"
+  ],
+  "marketingPrefixPattern": "^[^:]{3,40}:\\s*"
+}

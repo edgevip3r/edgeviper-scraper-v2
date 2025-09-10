@@ -1,6 +1,6 @@
 {
   "positive": [
-    "\\bto\\s+win\\s+to\\s+nil\\b"
+    "\\bwin\\s+to\\s+nil\\b"
   ],
   "negative": []
 }

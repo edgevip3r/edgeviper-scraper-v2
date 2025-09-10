@@ -1,14 +1,8 @@
 {
-  "extends": true,
-  "patterns": [
-    {
-      "pattern": "^(?<teams>.+?)\\s+(?:both|all)\\s+to\\s+win\\s+to\\s+nil\\b",
-      "flags": "i",
-      "groups": {
-        "teams": "teams"
-      },
-      "splitTeamsOn": "(?:,|&|and)\\s*"
-    }
+  "positive": [
+    "\\b(?:both|all)\\s+to\\s+win\\s+to\\s+nil\\b",
+    "\\bto\\s+win\\s+to\\s+nil\\b"
   ],
-  "marketingPrefixPattern": "^(?<prefix>[^:]+:\\s*)"
+  "negative": [],
+  "marketingPrefixPattern": "^[^:]{3,40}:\\s*"
 }

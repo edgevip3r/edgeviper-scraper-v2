@@ -1,13 +1,9 @@
 {
-  "extends": true,
-  "patterns": [
-    {
-      "pattern": "^(?<teams>[^()]+?)\\s+both\\s+to\\s+win\\s*&\\s+all\\s+\\d+\\s+teams\\s+to\\s+score\\b",
-      "flags": "i",
-      "groups": {
-        "teams": "teams"
-      },
-      "splitTeamsOn": "(?:,|&|and)\\s*"
-    }
-  ]
+  "positive": [
+    "\\bboth\\s+to\\s+win\\s*&\\s*all\\s+\\d+\\s+teams\\s+to\\s+score\\b",
+    "\\bboth\\s+to\\s+win\\s*(?:,|&|and)\\s*(?:both\\s+teams\\s+to\\s+score|btts)\\b",
+    "\\bto\\s+win\\s*(?:,|&|and)\\s*(?:both\\s+teams\\s+to\\s+score|btts)\\b",
+    "\\bwin\\s*(?:,|&|and)\\s*(?:btts|both\\s+teams\\s+to\\s+score)\\b"
+  ],
+  "negative": []
 }
