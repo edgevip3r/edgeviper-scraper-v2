@@ -1,0 +1,9 @@
+[
+  {
+    "pattern": "^(?<team>[^,()]+?)\\s+to\\s+win\\s*&\\s*(?:both\\s+teams\\s+to\\s+score|all\\s+\\d+\\s+teams\\s+to\\s+score)\\b",
+    "flags": "i",
+    "groups": {
+      "team": "team"
+    }
+  }
+]

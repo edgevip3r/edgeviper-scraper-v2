@@ -1,0 +1,14 @@
+{
+  "extends": true,
+  "patterns": [
+    {
+      "pattern": "^(?<teams>.+?)\\s+(?:both|all)\\s+to\\s+win\\s+to\\s+nil\\b",
+      "flags": "i",
+      "groups": {
+        "teams": "teams"
+      },
+      "splitTeamsOn": "(?:,|&|and)\\s*"
+    }
+  ],
+  "marketingPrefixPattern": "^(?<prefix>[^:]+:\\s*)"
+}

@@ -1,0 +1,5 @@
+{
+  "composeAllowed": false,
+  "requireCompositeMarket": true,
+  "disallowWhenContainsPlayerProp": true
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "pattern": "^(?<team>[^()]+?)\\s+to\\s+draw\\b",
+    "flags": "i",
+    "groups": {
+      "team": "team"
+    }
+  }
+]

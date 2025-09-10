@@ -1,0 +1,8 @@
+{
+  "resolver": "football/MO",
+  "mode": "DRAW",
+  "selectionTemplate": "The Draw",
+  "preferences": {
+    "timeWindowHours": 72
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "relations": [
+    {
+      "equivalentTo": "OPPONENT_TEAM_GOALS_UNDER_0_5",
+      "when": "WIN_AND_CLEAN_SHEET"
+    }
+  ]
+}

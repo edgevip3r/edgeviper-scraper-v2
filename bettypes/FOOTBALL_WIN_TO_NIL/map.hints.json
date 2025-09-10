@@ -1,0 +1,9 @@
+{
+  "resolver": "football/WinToNil",
+  "selectionTemplate": "{{TEAM}}",
+  "preferences": {
+    "timeWindowHours": 72,
+    "requireCompositeMarket": true,
+    "allowComposedFallback": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": true,
+  "patterns": [
+    {
+      "pattern": "^(?<left>[^,()]+?)\\s+win\\s*&\\s+btts\\s*&\\s+(?<right>[^,()]+?)\\s+win\\s*&\\s+btts\\b",
+      "flags": "i",
+      "groups": {
+        "left": "team1",
+        "right": "team2"
+      }
+    }
+  ]
+}

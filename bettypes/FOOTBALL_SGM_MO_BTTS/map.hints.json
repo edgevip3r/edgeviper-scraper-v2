@@ -1,0 +1,8 @@
+{
+  "resolver": "football/MOplusBTTS",
+  "selectionTemplate": "{{TEAM}}/Yes",
+  "preferences": {
+    "timeWindowHours": 72,
+    "requireCompositeMarket": true
+  }
+}

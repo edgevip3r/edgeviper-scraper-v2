@@ -1,0 +1,12 @@
+{
+  "extends": true,
+  "patterns": [
+    {
+      "pattern": "^(?<team>[^()]+?)\\s+to\\s+win\\s+to\\s+nil\\s*(?:\\([^)]*\\))?\\b",
+      "flags": "i",
+      "groups": {
+        "team": "team"
+      }
+    }
+  ]
+}
