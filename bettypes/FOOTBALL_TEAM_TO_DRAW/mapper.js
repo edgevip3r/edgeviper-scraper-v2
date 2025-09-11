@@ -1,6 +1,5 @@
 
-// bettypes/FOOTBALL_TEAM_TO_DRAW/mapper.js — MO-anchored draw leg
-// Approach: anchor event via MO (using team name), then pick the Draw runner in that MO market.
+// bettypes/FOOTBALL_TEAM_TO_DRAW/mapper.js — MO-anchored draw leg (accepts "The Draw")
 import { mapAllToWinLegs } from '../../lib/map/betfair-football.js';
 import { listMarketCatalogue } from '../../lib/betfair/client.js';
 import { printMapperDebug } from '../../lib/map/shared/print.js';
@@ -34,7 +33,7 @@ export async function map(offer, ctx = {}){
       out.unmatched.push({ team, reason: 'NO_MO_CATALOGUE' });
       continue;
     }
-    const drawRunner = cat.runners.find(r => /^draw$/i.test(String(r.runnerName||'')));
+    const drawRunner = cat.runners.find(r => /^(?:the\s+)?draw$/i.test(String(r.runnerName||'')));
     if (!drawRunner){
       out.unmatched.push({ team, reason: 'NO_DRAW_RUNNER' });
       continue;
