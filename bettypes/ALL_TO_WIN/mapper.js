@@ -1,17 +1,6 @@
-// bettypes/ALL_TO_WIN/mapper.js
-// Wraps the central Betfair football mapper for MO legs.
+// AUTO-GENERATED: Legacy bettype delegated to V2. Safe to remove once callers switch.
 
-import { mapAllToWinLegs } from '../../lib/map/betfair-football.js';
-
-/**
- * @param {object} offer - { legs:[{team}], ... }
- * @param {object} ctx   - { debug, bookie }
- * @returns {Promise<{ mapped: Array, unmatched: Array }>}
- */
-async function map(offer, ctx = {}) {
-  const legs = (offer.legs || []).map(L => ({ team: L.team || L.label || L.name || '' }));
-  return await mapAllToWinLegs(legs, { debug: !!ctx.debug, bookie: ctx.bookie });
-}
-
-export { map };
-export default { map };
+// bettypes/ALL_TO_WIN/mapper.js → delegates to FOOTBALL_TEAM_WIN/mapper.js
+export * from '../FOOTBALL_TEAM_WIN/mapper.js';
+import def from '../FOOTBALL_TEAM_WIN/mapper.js';
+export default def;
