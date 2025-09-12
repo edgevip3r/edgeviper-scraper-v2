@@ -32,5 +32,8 @@
 	{ "id": "team:eng:tottenham-hotspur-women", "name": "Tottenham Hotspur Women", "country": "ENG", "sport": "football" },
 	{ "id": "team:irl:republic-of-ireland", "name": "Republic of Ireland", "country": "IRL", "sport": "football" },
 	{ "id": "team:bra:athletico-paranaense", "name": "Athletico Paranaense", "country": "BRA", "sport": "football" },
-	{ "id": "team:bra:fluminense", "name": "Fluminense", "country": "BRA", "sport": "football" }
+	{ "id": "team:bra:fluminense", "name": "Fluminense", "country": "BRA", "sport": "football" },
+	{ "id": "team:ger:bayer-leverkusen", "name": "Bayer Leverkusen", "country": "GER", "sport": "football" },
+	{ "id": "team:sco:partick-thistle", "name": "Partick Thistle", "country": "SCO", "sport": "football" },
+	{ "id": "team:eng:ipswich", "name": "Ipswich", "country": "ENG", "sport": "football" }
 ]

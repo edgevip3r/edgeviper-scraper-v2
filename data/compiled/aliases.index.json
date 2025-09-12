@@ -89,6 +89,15 @@
   "fluminense": [
     "team:bra:fluminense"
   ],
+  "bayer leverkusen": [
+    "team:ger:bayer-leverkusen"
+  ],
+  "partick thistle": [
+    "team:sco:partick-thistle"
+  ],
+  "ipswich": [
+    "team:eng:ipswich"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -140,8 +149,17 @@
   "athletico pr": [
     "team:bra:athletico-paranaense"
   ],
+  "leverkusen": [
+    "team:ger:bayer-leverkusen"
+  ],
+  "partick": [
+    "team:sco:partick-thistle"
+  ],
   "fluminense rj": [
     "team:bra:fluminense"
+  ],
+  "ipswich town": [
+    "team:eng:ipswich"
   ],
   "northern irealnd": [
     "team:nir:northern-ireland"
