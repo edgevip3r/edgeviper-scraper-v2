@@ -1,0 +1,15 @@
+{
+  "features": {
+    "bettypesV2Default": "on"
+  },
+  "bettypes": {
+    "registryV2": [
+      "FOOTBALL_MULTI_AND",
+      "FOOTBALL_TEAM_WIN",
+      "FOOTBALL_TEAM_TO_DRAW",
+      "FOOTBALL_SGM_MO_BTTS",
+      "FOOTBALL_WIN_TO_NIL"
+    ],
+    "registry": []
+  }
+}

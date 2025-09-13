@@ -91,7 +91,7 @@ node pipelines/run.classify.js  --book=pricedup --debug
 
 node pipelines/run.value_publish.js --book=williamhill --debug --enforce --threshold=1.05
 node pipelines/run.value_publish.js --book=nrg --debug --enforce --threshold=1.05
-node pipelines/run.value_publish.js --book=betway --debug --enforce --threshold=1.05
+node pipelines/run.value_publish.js --book=starsports --debug --enforce --threshold=1.05
 
 # Common flags
 

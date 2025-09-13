@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-12T09:20:21.640Z",
+  "generatedAt": "2025-09-13T02:25:04.590Z",
   "index": {
     "fc copenhagen": [
       {
@@ -390,6 +390,48 @@
         "priority": 100
       }
     ],
+    "elche": [
+      {
+        "id": "team:spa:elche",
+        "kind": "team",
+        "sport": "football",
+        "country": "SPA",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "atletico madrid": [
+      {
+        "id": "team:spa:atletico-madrid",
+        "kind": "team",
+        "sport": "football",
+        "country": "SPA",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:spa:atletico-madrid",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "sporting lisbon": [
+      {
+        "id": "team:por:sporting-lisbon",
+        "kind": "team",
+        "sport": "football",
+        "country": "POR",
+        "source": "master",
+        "priority": 100
+      },
+      {
+        "id": "team:por:sporting-lisbon",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -611,6 +653,22 @@
         "priority": 60
       }
     ],
+    "atleti madrid": [
+      {
+        "id": "team:spa:atletico-madrid",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "sport lisbon": [
+      {
+        "id": "team:por:sporting-lisbon",
+        "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
     "fluminense rj": [
       {
         "id": "team:bra:fluminense",
@@ -665,6 +723,14 @@
     "isreal": [
       {
         "id": "team:isr:israel",
+        "kind": "team",
+        "source": "bookmaker:starsports",
+        "priority": 70
+      }
+    ],
+    "elche cf": [
+      {
+        "id": "team:spa:elche",
         "kind": "team",
         "source": "bookmaker:starsports",
         "priority": 70
@@ -731,6 +797,14 @@
     "czech republic": [
       {
         "id": "team:cze:czechia",
+        "kind": "team",
+        "source": "bookmaker:williamhill",
+        "priority": 70
+      }
+    ],
+    "sporting cp": [
+      {
+        "id": "team:por:sporting-lisbon",
         "kind": "team",
         "source": "bookmaker:williamhill",
         "priority": 70
@@ -1127,6 +1201,48 @@
           "priority": 100
         }
       ],
+      "elche": [
+        {
+          "id": "team:spa:elche",
+          "kind": "team",
+          "sport": "football",
+          "country": "SPA",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "atletico madrid": [
+        {
+          "id": "team:spa:atletico-madrid",
+          "kind": "team",
+          "sport": "football",
+          "country": "SPA",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:spa:atletico-madrid",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "sporting lisbon": [
+        {
+          "id": "team:por:sporting-lisbon",
+          "kind": "team",
+          "sport": "football",
+          "country": "POR",
+          "source": "master",
+          "priority": 100
+        },
+        {
+          "id": "team:por:sporting-lisbon",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -1309,6 +1425,22 @@
           "priority": 60
         }
       ],
+      "atleti madrid": [
+        {
+          "id": "team:spa:atletico-madrid",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "sport lisbon": [
+        {
+          "id": "team:por:sporting-lisbon",
+          "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
       "fluminense rj": [
         {
           "id": "team:bra:fluminense",
@@ -1363,6 +1495,14 @@
       "isreal": [
         {
           "id": "team:isr:israel",
+          "kind": "team",
+          "source": "bookmaker:starsports",
+          "priority": 70
+        }
+      ],
+      "elche cf": [
+        {
+          "id": "team:spa:elche",
           "kind": "team",
           "source": "bookmaker:starsports",
           "priority": 70
@@ -1429,6 +1569,14 @@
       "czech republic": [
         {
           "id": "team:cze:czechia",
+          "kind": "team",
+          "source": "bookmaker:williamhill",
+          "priority": 70
+        }
+      ],
+      "sporting cp": [
+        {
+          "id": "team:por:sporting-lisbon",
           "kind": "team",
           "source": "bookmaker:williamhill",
           "priority": 70

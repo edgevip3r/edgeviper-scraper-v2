@@ -24,5 +24,9 @@
 "leverkusen": "team:ger:bayer-leverkusen",
 "partick": "team:sco:partick-thistle",
 "sheff utd": "team:eng:sheffield-united",
-"maidstone utd": "team:eng:maidstone-united"
+"maidstone utd": "team:eng:maidstone-united",
+"atleti madrid": "team:spa:atletico-madrid",
+"atletico madrid": "team:spa:atletico-madrid",
+"sporting lisbon": "team:por:sporting-lisbon",
+"sport lisbon": "team:por:sporting-lisbon"
 }

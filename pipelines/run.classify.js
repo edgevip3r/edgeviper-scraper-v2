@@ -1,6 +1,6 @@
 //
-// pipelines/run.classify.js
-// Patched to respect composer skipType and single WTN passthrough.
+// pipelines/run.classify.js  (V2-only)
+//
 import fs from 'fs/promises';
 import fss from 'fs';
 import path from 'path';
@@ -17,7 +17,7 @@ async function loadCfg(){
     const txt = await fs.readFile(p, 'utf8');
     return JSON.parse(txt);
   } catch {
-    return { features: { bettypesV2Default: 'off' }, bettypes: {} };
+    return { features: { bettypesV2Default: 'on' }, bettypes: { registryV2: [] } };
   }
 }
 
@@ -37,7 +37,9 @@ const fileArg=a.in?path.resolve(a.in):null;
 (async()=>{
   try {
     const cfg = await loadCfg();
-    const MODE = (process.env.EV_BETTYPES_V2 || (cfg?.features?.bettypesV2Default ?? 'off')).toLowerCase();
+    const MODE = (process.env.EV_BETTYPES_V2 || (cfg?.features?.bettypesV2Default ?? 'on')).toLowerCase(); // default 'on'
+    const regV2 = Array.isArray(cfg?.bettypes?.registryV2) ? cfg.bettypes.registryV2 : [];
+    const ordered = regV2; // V2 only
 
     if(!a.book && !fileArg){
       console.error('Usage: node pipelines/run.classify.js --book= [--in=...rawoffers.json] [--debug]');
@@ -63,14 +65,21 @@ const fileArg=a.in?path.resolve(a.in):null;
     const raw = await readJson(inPath);
     const items = Array.isArray(raw.rawOffers)?raw.rawOffers:Array.isArray(raw.offers)?raw.offers:Array.isArray(raw.raw)?raw.raw:[];
 
-    const regLegacy = Array.isArray(cfg?.bettypes?.registry)&&cfg.bettypes.registry.length?
-      cfg.bettypes.registry : await loadRegistryFallback();
-    const regV2 = Array.isArray(cfg?.bettypes?.registryV2)? cfg.bettypes.registryV2 : [];
-    const ordered = (MODE==='off') ? regLegacy : [...regV2, ...regLegacy]; // V2 first
-    const allIds = Array.from(new Set([...regV2, ...regLegacy]));
+    if (debug) {
+      console.log(`[classify] MODE=${MODE} (V2 only) | regV2=${regV2.join(',') || '(empty)'}`);
+    }
 
-    const preloaded = await Promise.all(allIds.map(async(typeId)=>({ typeId, rec: await loadRecognisers(typeId, bookKey), extractor: await loadExtractor(typeId) })));
+    const preloaded = await Promise.all(ordered.map(async(typeId)=>({ typeId, rec: await loadRecognisers(typeId, bookKey), extractor: await loadExtractor(typeId) })));
     const byId = new Map(preloaded.map(t=>[t.typeId, t]));
+
+    if (debug) {
+      for (const t of preloaded) {
+        const posN = Array.isArray(t.rec?.positive) ? t.rec.positive.length : 0;
+        const negN = Array.isArray(t.rec?.negative) ? t.rec.negative.length : 0;
+        const hasEx = !!t.extractor;
+        console.log(`[rec:${t.typeId}] pos=${posN} neg=${negN} extractor=${hasEx?'yes':'no'}`);
+      }
+    }
 
     const outputs=[];
     let inCount=0,outCount=0;
@@ -85,7 +94,7 @@ const fileArg=a.in?path.resolve(a.in):null;
       }
       inCount++;
 
-      // ---- COMPOSER PASS ----
+      // ---- COMPOSER PASS (football; extend via config for other sports) ----
       const composed = composeFootballMultiAnd(
         { title: titleOriginal, text: titleOriginal, rawText: titleOriginal,
           teams: Array.isArray(it.teams)? it.teams: undefined,
@@ -108,14 +117,14 @@ const fileArg=a.in?path.resolve(a.in):null;
           marketingPrefix: composed.marketingPrefix || '',
           boostedOddsFrac, boostedOddsDec,
           sourceUrl: srcUrl,
-          legs: (Array.isArray(composed.legs)? composed.legs: []).map(L=>({ team:L.team, kind:L.kind }))
+          legs: (Array.isArray(composed.legs)? composed.legs: []).map(L=>({ team:L.team, kind:L.kind, params:L.params||{ team:L.team } }))
         });
         outCount++;
-        if (debug) console.log(`[emit:${composed.typeId || 'FOOTBALL_MULTI_AND'}.detector]`, JSON.stringify({legs:(composed.legs||[]).length, title: titleOriginal}));
+        if (debug) console.log(`[emit:${composed.typeId || 'FOOTBALL_MULTI_AND'}.composer]`, JSON.stringify({legs:(composed.legs||[]).length, title: titleOriginal}));
         continue;
       }
 
-      // ---- LEGACY/V2 RECOGNISERS LOOP ----
+      // ---- V2 RECOGNISERS LOOP ----
       const hits=[];
       for(const typeId of ordered){
         const T=byId.get(typeId);
@@ -132,23 +141,17 @@ const fileArg=a.in?path.resolve(a.in):null;
         }
       }
 
-      if (hits.some(h => h.typeId === 'FOOTBALL_TEAM_WIN')) {
-        for (let i = hits.length - 1; i >= 0; i--) if (hits[i].typeId === 'ALL_TO_WIN') hits.splice(i, 1);
-      }
-      if (hits.some(h => h.typeId === 'FOOTBALL_SGM_MO_BTTS')) {
-        for (let i = hits.length - 1; i >= 0; i--) if (hits[i].typeId === 'WIN_AND_BTTS') hits.splice(i, 1);
-      }
-
       if(hits.length===0) {
         if(debug) console.log('[skip:type]', preview(titleOriginal));
         continue;
       }
 
-      if (MODE==='on' && hits.length>1){
+      // If multiple V2 bettypes matched, emit a generic container with legs.kind = typeId (no hard-coded list)
+      if (hits.length>1){
         const prefix = hits.find(h=>h.marketingPrefix)?.marketingPrefix || '';
-        const legs = deDupeLegs(flattenToContainerLegs(hits));
+        const legs = genericContainerLegs(hits);
         outputs.push({
-          typeId: 'FOOTBALL_MULTI_AND',
+          typeId: 'FOOTBALL_MULTI_AND', // current sport; later can be chosen per-sport
           bookie:(it.bookie||bookKey||'').toLowerCase(),
           sport: it.sportHint || 'Football',
           text: titleOriginal, textOriginal: titleOriginal,
@@ -158,7 +161,7 @@ const fileArg=a.in?path.resolve(a.in):null;
           legs
         });
         outCount++;
-        if (debug) console.log('[emit:FOOTBALL_MULTI_AND]', JSON.stringify({legs: legs.length, title: titleOriginal}));
+        if (debug) console.log('[emit:FOOTBALL_MULTI_AND.generic]', JSON.stringify({legs: legs.length, title: titleOriginal}));
         continue;
       }
 
@@ -212,16 +215,6 @@ async function findLatestRawOffers(bookKey){
   }
   await walk(root);
   return latest?.path||null;
-}
-
-async function loadRegistryFallback(){
-  const p=path.resolve(__dirname,'..','bettypes','registry.json');
-  try{
-    const j=JSON.parse(await fs.readFile(p,'utf8'));
-    return Array.isArray(j)&&j.length? j : ['ALL_TO_WIN'];
-  }catch{
-    return ['ALL_TO_WIN'];
-  }
 }
 
 async function loadRecognisers(typeId, bookKey){
@@ -296,35 +289,18 @@ function preview(t){
   return s.length>100? s.slice(0,97)+'…':s;
 }
 
-function flattenToContainerLegs(hits){
+function genericContainerLegs(hits){
+  // No hard-coded type list; each hit becomes a leg with kind=typeId
   const out = [];
-  for (const h of hits){
-    const typeId = h.typeId;
-    const legs = Array.isArray(h.legs) ? h.legs : [];
-    if (typeId === 'ALL_TO_WIN' || typeId === 'FOOTBALL_TEAM_WIN'){
-      for (const team of legs) out.push({ kind:'FOOTBALL_TEAM_WIN', params:{ team } });
-    } else if (typeId === 'WIN_AND_BTTS' || typeId === 'FOOTBALL_SGM_MO_BTTS'){
-      for (const team of legs) out.push({ kind:'FOOTBALL_SGM_MO_BTTS', params:{ team } });
-    } else if (typeId === 'FOOTBALL_WIN_TO_NIL'){
-      for (const team of legs) out.push({ kind:'FOOTBALL_WIN_TO_NIL', params:{ team } });
-    } else if (typeId === 'FOOTBALL_TEAM_TO_DRAW' || typeId === 'MO_DRAW'){
-      for (const team of legs) out.push({ kind:'MO_DRAW', params:{ team } });
-    } else {
-      if (legs.length) for (const team of legs) out.push({ kind:typeId, params:{ team } });
-      else out.push({ kind:typeId, params:{ team:'' } });
-    }
-  }
-  return out;
-}
-
-function deDupeLegs(legs){
   const seen = new Set();
-  const out = [];
-  for (const L of legs){
-    const key = `${L.kind}|${(L.params?.team||'').toLowerCase()}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(L);
+  for (const h of hits){
+    for (const team of (h.legs || [])){
+      const kind = String(h.typeId);
+      const key = `${kind}|${String(team).toLowerCase()}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push({ kind, params:{ team }, team });
+    }
   }
   return out;
 }

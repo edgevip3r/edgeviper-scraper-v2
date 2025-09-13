@@ -104,6 +104,15 @@
   "maidstone united": [
     "team:eng:maidstone-united"
   ],
+  "elche": [
+    "team:spa:elche"
+  ],
+  "atletico madrid": [
+    "team:spa:atletico-madrid"
+  ],
+  "sporting lisbon": [
+    "team:por:sporting-lisbon"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -167,6 +176,12 @@
   "maidstone utd": [
     "team:eng:maidstone-united"
   ],
+  "atleti madrid": [
+    "team:spa:atletico-madrid"
+  ],
+  "sport lisbon": [
+    "team:por:sporting-lisbon"
+  ],
   "fluminense rj": [
     "team:bra:fluminense"
   ],
@@ -187,6 +202,9 @@
   ],
   "isreal": [
     "team:isr:israel"
+  ],
+  "elche cf": [
+    "team:spa:elche"
   ],
   "copenhagen": [
     "team:den:fc-copenhagen"
@@ -211,5 +229,8 @@
   ],
   "czech republic": [
     "team:cze:czechia"
+  ],
+  "sporting cp": [
+    "team:por:sporting-lisbon"
   ]
 }

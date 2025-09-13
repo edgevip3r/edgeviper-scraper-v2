@@ -1,9 +1,6 @@
 {
   "bettypes": {
-    "registry": [
-      "ALL_TO_WIN",
-      "WIN_AND_BTTS"
-    ],
+    "registry": [],
     "registryV2": [
       "FOOTBALL_WIN_TO_NIL",
       "FOOTBALL_SGM_MO_BTTS",
