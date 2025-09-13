@@ -35,5 +35,8 @@
 	{ "id": "team:bra:fluminense", "name": "Fluminense", "country": "BRA", "sport": "football" },
 	{ "id": "team:ger:bayer-leverkusen", "name": "Bayer Leverkusen", "country": "GER", "sport": "football" },
 	{ "id": "team:sco:partick-thistle", "name": "Partick Thistle", "country": "SCO", "sport": "football" },
-	{ "id": "team:eng:ipswich", "name": "Ipswich", "country": "ENG", "sport": "football" }
+	{ "id": "team:eng:ipswich", "name": "Ipswich", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:sheffield-united", "name": "Sheffield United", "country": "ENG", "sport": "football" },
+	{ "id": "team:eng:maidstone-united", "name": "Maidstone United", "country": "ENG", "sport": "football" },
+	{ "id": "team:spa:elche", "name": "Elche", "country": "SPA", "sport": "football" }
 ]

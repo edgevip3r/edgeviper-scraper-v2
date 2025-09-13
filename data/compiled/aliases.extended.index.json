@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "generatedAt": "2025-09-12T07:41:47.142Z",
+  "generatedAt": "2025-09-12T09:20:21.640Z",
   "index": {
     "fc copenhagen": [
       {
@@ -370,6 +370,26 @@
         "priority": 100
       }
     ],
+    "sheffield united": [
+      {
+        "id": "team:eng:sheffield-united",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
+    "maidstone united": [
+      {
+        "id": "team:eng:maidstone-united",
+        "kind": "team",
+        "sport": "football",
+        "country": "ENG",
+        "source": "master",
+        "priority": 100
+      }
+    ],
     "premier league": [
       {
         "id": "competition:football:eng-premier-league",
@@ -569,6 +589,24 @@
       {
         "id": "team:sco:partick-thistle",
         "kind": "team",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "sheff utd": [
+      {
+        "id": "team:eng:sheffield-united",
+        "kind": "team",
+        "sport": "football",
+        "source": "betfair",
+        "priority": 60
+      }
+    ],
+    "maidstone utd": [
+      {
+        "id": "team:eng:maidstone-united",
+        "kind": "team",
+        "sport": "football",
         "source": "betfair",
         "priority": 60
       }
@@ -1069,6 +1107,26 @@
           "priority": 100
         }
       ],
+      "sheffield united": [
+        {
+          "id": "team:eng:sheffield-united",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
+      "maidstone united": [
+        {
+          "id": "team:eng:maidstone-united",
+          "kind": "team",
+          "sport": "football",
+          "country": "ENG",
+          "source": "master",
+          "priority": 100
+        }
+      ],
       "betis": [
         {
           "id": "team:esp:real-betis",
@@ -1229,6 +1287,24 @@
         {
           "id": "team:sco:partick-thistle",
           "kind": "team",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "sheff utd": [
+        {
+          "id": "team:eng:sheffield-united",
+          "kind": "team",
+          "sport": "football",
+          "source": "betfair",
+          "priority": 60
+        }
+      ],
+      "maidstone utd": [
+        {
+          "id": "team:eng:maidstone-united",
+          "kind": "team",
+          "sport": "football",
           "source": "betfair",
           "priority": 60
         }

@@ -98,6 +98,12 @@
   "ipswich": [
     "team:eng:ipswich"
   ],
+  "sheffield united": [
+    "team:eng:sheffield-united"
+  ],
+  "maidstone united": [
+    "team:eng:maidstone-united"
+  ],
   "betis": [
     "team:esp:real-betis"
   ],
@@ -154,6 +160,12 @@
   ],
   "partick": [
     "team:sco:partick-thistle"
+  ],
+  "sheff utd": [
+    "team:eng:sheffield-united"
+  ],
+  "maidstone utd": [
+    "team:eng:maidstone-united"
   ],
   "fluminense rj": [
     "team:bra:fluminense"
